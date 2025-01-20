@@ -117,7 +117,7 @@
             </g>
         </g>
     </g>
-   <!-- Main Content -->
+  <!-- Main Content -->
 <g transform="translate(360, 90)">
     <!-- Quick Stats Row - No changes -->
     <g>
@@ -235,4 +235,5 @@
             </g>
         </g>
     </g>
+</g>
 </svg>
