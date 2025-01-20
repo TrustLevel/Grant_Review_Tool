@@ -120,9 +120,34 @@
   <!-- Main Content -->
 <g transform="translate(360, 90)">
     <!-- Quick Stats Row - No changes -->
-    <g>
-        <!-- Stats Cards (same as before) -->
-        <!-- ... Stats cards content ... -->
+     <g>
+        <!-- Stats Card 1 -->
+        <rect width="250" height="120" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+        <g transform="translate(24, 24)">
+            <text x="0" y="25" font-family="Arial" font-size="28" font-weight="bold" fill="#1e293b">12</text>
+            <text x="0" y="50" font-family="Arial" font-size="15" fill="#64748b">Pending Reviews</text>
+            <text x="0" y="75" font-family="Arial" font-size="14" fill="#22c55e">↑ 8% vs last week</text>
+        </g>
+
+        <!-- Stats Card 2 -->
+        <g transform="translate(270, 0)">
+            <rect width="250" height="120" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+            <g transform="translate(24, 24)">
+                <text x="0" y="25" font-family="Arial" font-size="28" font-weight="bold" fill="#1e293b">₳45</text>
+                <text x="0" y="50" font-family="Arial" font-size="15" fill="#64748b">Rewards Earned</text>
+                <text x="0" y="75" font-family="Arial" font-size="14" fill="#22c55e">↑ 12% vs last week</text>
+            </g>
+        </g>
+
+        <!-- Stats Card 3 -->
+        <g transform="translate(540, 0)">
+            <rect width="250" height="120" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+            <g transform="translate(24, 24)">
+                <text x="0" y="25" font-family="Arial" font-size="28" font-weight="bold" fill="#1e293b">95</text>
+                <text x="0" y="50" font-family="Arial" font-size="15" fill="#64748b">Ranking Points</text>
+                <text x="0" y="75" font-family="Arial" font-size="14" fill="#22c55e">Top 5%</text>
+            </g>
+        </g>
     </g>
 
     <!-- Assigned Tasks Section -->
