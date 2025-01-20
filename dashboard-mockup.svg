@@ -1,164 +1,252 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
-    <!-- Background -->
-    <rect width="1200" height="900" fill="#f8fafc" />
-    
-    <!-- Top Navigation Bar -->
-    <rect x="0" y="0" width="1200" height="64" fill="#ffffff" filter="url(#shadow)" />
-    <text x="40" y="40" font-family="Arial" font-size="24" fill="#1a1a1a">Catalyst Review Tool</text>
-    <circle cx="1100" cy="32" r="20" fill="#e2e8f0" />
-    <circle cx="1150" cy="32" r="20" fill="#e2e8f0" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1200">
+    <!-- Background with subtle gradient -->
+    <defs>
+        <linearGradient id="bg-gradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f8fafc"/>
+            <stop offset="100%" stop-color="#f1f5f9"/>
+        </linearGradient>
+        
+        <!-- Enhanced shadow effects -->
+        <filter id="card-shadow">
+            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+        </filter>
+    </defs>
 
-    <!-- Main Content Container -->
-    <g transform="translate(0, 64)">
+    <!-- Main Background -->
+    <rect width="1440" height="1200" fill="url(#bg-gradient)" />
+
+    <!-- Top Navigation -->
+    <rect x="0" y="0" width="1440" height="70" fill="#ffffff" filter="url(#card-shadow)" />
+    <g transform="translate(40, 0)">
+        <!-- Logo Area -->
+        <text x="0" y="43" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b">Catalyst Review</text>
+        
+        <!-- Navigation Items -->
+        <g transform="translate(200, 0)">
+            <text x="0" y="43" font-family="Arial" font-size="15" fill="#64748b">Dashboard</text>
+            <text x="100" y="43" font-family="Arial" font-size="15" fill="#94a3b8">Reviews</text>
+            <text x="200" y="43" font-family="Arial" font-size="15" fill="#94a3b8">Reports</text>
+        </g>
+        
+        <!-- User Menu -->
+        <g transform="translate(1200, 20)">
+            <circle cx="15" cy="15" r="15" fill="#e2e8f0"/>
+            <text x="40" y="22" font-family="Arial" font-size="15" fill="#64748b">John Doe</text>
+        </g>
+    </g>
+
+    <!-- Main Content Area -->
+    <g transform="translate(0, 90)">
         <!-- Left Column -->
-        <g transform="translate(40, 20)">
-            <!-- Guidelines Banner -->
-            <rect width="740" height="60" rx="8" fill="#eef2ff" />
-            <text x="24" y="38" font-family="Arial" font-size="16" fill="#4338ca">📖 Review Rules and Best Practices</text>
-            <text x="600" y="38" font-family="Arial" font-size="16" fill="#4338ca">View Guidelines →</text>
-
-            <!-- Quick Stats Grid -->
-            <g transform="translate(0, 80)">
-                <!-- Stats Card 1 -->
-                <rect width="175" height="100" rx="8" fill="#ffffff" filter="url(#shadow)" />
-                <text x="20" y="35" font-family="Arial" font-size="14" fill="#64748b">Completed</text>
-                <text x="20" y="70" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a1a">12</text>
+        <g transform="translate(40, 0)">
+            <!-- Profile Summary -->
+            <rect width="280" height="160" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+            <g transform="translate(24, 24)">
+                <circle cx="32" cy="32" r="32" fill="#e2e8f0"/>
+                <text x="80" y="35" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">John Doe</text>
+                <text x="80" y="55" font-family="Arial" font-size="14" fill="#64748b">Senior Reviewer</text>
                 
-                <!-- Stats Card 2 -->
-                <rect x="190" width="175" height="100" rx="8" fill="#ffffff" filter="url(#shadow)" />
-                <text x="210" y="35" font-family="Arial" font-size="14" fill="#64748b">Pending</text>
-                <text x="210" y="70" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a1a">5</text>
-                
-                <!-- Stats Card 3 -->
-                <rect x="380" width="175" height="100" rx="8" fill="#ffffff" filter="url(#shadow)" />
-                <text x="400" y="35" font-family="Arial" font-size="14" fill="#64748b">ADA Earned</text>
-                <text x="400" y="70" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a1a">₳45.00</text>
-                
-                <!-- Stats Card 4 -->
-                <rect x="570" width="170" height="100" rx="8" fill="#ffffff" filter="url(#shadow)" />
-                <text x="590" y="35" font-family="Arial" font-size="14" fill="#64748b">Rating</text>
-                <text x="590" y="70" font-family="Arial" font-size="24" font-weight="bold" fill="#1a1a1a">4.8/5.0</text>
+                <!-- Stats Row -->
+                <g transform="translate(0, 80)">
+                    <text x="0" y="20" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">156</text>
+                    <text x="0" y="40" font-family="Arial" font-size="14" fill="#64748b">Reviews</text>
+                    
+                    <text x="120" y="20" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">4.9</text>
+                    <text x="120" y="40" font-family="Arial" font-size="14" fill="#64748b">Rating</text>
+                </g>
             </g>
 
-            <!-- Primary CTA -->
-            <g transform="translate(0, 200)">
-                <rect width="740" height="100" rx="8" fill="#4338ca" />
-                <text x="270" y="45" font-family="Arial" font-size="24" font-weight="bold" fill="#ffffff">Start Your First Review</text>
-                <text x="240" y="75" font-family="Arial" font-size="16" fill="#ffffff">You have 5 proposals waiting for review</text>
+            <!-- Navigation Menu -->
+            <g transform="translate(0, 180)">
+                <rect width="280" height="50" rx="8" fill="#eef2ff"/>
+                <text x="24" y="32" font-family="Arial" font-size="15" fill="#4338ca">🏠 Dashboard</text>
+                <text x="24" y="82" font-family="Arial" font-size="15" fill="#64748b">📝 My Reviews</text>
+                <text x="24" y="132" font-family="Arial" font-size="15" fill="#64748b">🎯 Missions</text>
+                <text x="24" y="182" font-family="Arial" font-size="15" fill="#64748b">📊 Analytics</text>
             </g>
 
-            <!-- Pending Tasks -->
-            <g transform="translate(0, 320)">
-                <rect width="740" height="400" rx="8" fill="#ffffff" filter="url(#shadow)" />
-                <text x="24" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a1a">Pending Tasks</text>
-                
-                <!-- Tabs -->
-                <rect x="24" y="60" width="120" height="30" rx="15" fill="#eef2ff" />
-                <text x="44" y="80" font-family="Arial" font-size="14" fill="#4338ca">Proposals (3)</text>
-                
-                <rect x="154" y="60" width="140" height="30" rx="15" fill="#f8fafc" />
-                <text x="174" y="80" font-family="Arial" font-size="14" fill="#64748b">Peer Reviews (2)</text>
+            <!-- Leaderboard -->
+            <g transform="translate(0, 260)">
+                <rect width="280" height="400" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                <g transform="translate(24, 24)">
+                    <text x="0" y="20" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Top Reviewers</text>
+                    
+                    <!-- Tabs -->
+                    <rect x="0" y="40" width="70" height="30" rx="15" fill="#eef2ff"/>
+                    <text x="20" y="60" font-family="Arial" font-size="13" fill="#4338ca">Weekly</text>
+                    
+                    <rect x="80" y="40" width="70" height="30" rx="15" fill="#f1f5f9"/>
+                    <text x="100" y="60" font-family="Arial" font-size="13" fill="#64748b">Monthly</text>
 
-                <!-- Task Items -->
-                <g transform="translate(24, 100)">
-                    <!-- Task 1 -->
-                    <rect width="692" height="80" rx="8" fill="#f8fafc" />
-                    <text x="20" y="30" font-family="Arial" font-size="16" fill="#1a1a1a">DeFi Integration Proposal</text>
-                    <text x="20" y="55" font-family="Arial" font-size="14" fill="#64748b">Due in 2 days • Rewards: ₳15</text>
-                    <rect x="572" y="25" width="100" height="36" rx="18" fill="#4338ca" />
-                    <text x="597" y="48" font-family="Arial" font-size="14" fill="#ffffff">Review →</text>
-
-                    <!-- Task 2 -->
+                    <!-- Leaderboard Items -->
                     <g transform="translate(0, 90)">
-                        <rect width="692" height="80" rx="8" fill="#f8fafc" />
-                        <text x="20" y="30" font-family="Arial" font-size="16" fill="#1a1a1a">Smart Contract Implementation</text>
-                        <text x="20" y="55" font-family="Arial" font-size="14" fill="#64748b">Due in 3 days • Rewards: ₳12</text>
-                        <rect x="572" y="25" width="100" height="36" rx="18" fill="#4338ca" />
-                        <text x="597" y="48" font-family="Arial" font-size="14" fill="#ffffff">Review →</text>
-                    </g>
+                        <!-- Top 3 Reviewers -->
+                        <g>
+                            <circle cx="20" cy="20" r="20" fill="#4338ca"/>
+                            <text x="50" y="15" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Alex M.</text>
+                            <text x="50" y="35" font-family="Arial" font-size="13" fill="#64748b">95 pts • 15 reviews</text>
+                            <text x="200" y="25" font-family="Arial" font-size="16" fill="#4338ca">#1</text>
+                        </g>
 
-                    <!-- Task 3 -->
-                    <g transform="translate(0, 180)">
-                        <rect width="692" height="80" rx="8" fill="#f8fafc" />
-                        <text x="20" y="30" font-family="Arial" font-size="16" fill="#1a1a1a">Community Governance Tool</text>
-                        <text x="20" y="55" font-family="Arial" font-size="14" fill="#64748b">Due in 4 days • Rewards: ₳10</text>
-                        <rect x="572" y="25" width="100" height="36" rx="18" fill="#4338ca" />
-                        <text x="597" y="48" font-family="Arial" font-size="14" fill="#ffffff">Review →</text>
+                        <g transform="translate(0, 60)">
+                            <circle cx="20" cy="20" r="20" fill="#6366f1"/>
+                            <text x="50" y="15" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Sarah K.</text>
+                            <text x="50" y="35" font-family="Arial" font-size="13" fill="#64748b">87 pts • 12 reviews</text>
+                            <text x="200" y="25" font-family="Arial" font-size="16" fill="#4338ca">#2</text>
+                        </g>
+
+                        <g transform="translate(0, 120)">
+                            <circle cx="20" cy="20" r="20" fill="#818cf8"/>
+                            <text x="50" y="15" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">John D.</text>
+                            <text x="50" y="35" font-family="Arial" font-size="13" fill="#64748b">82 pts • 11 reviews</text>
+                            <text x="200" y="25" font-family="Arial" font-size="16" fill="#4338ca">#3</text>
+                        </g>
                     </g>
                 </g>
             </g>
         </g>
 
-        <!-- Right Column -->
-        <g transform="translate(800, 20)">
-            <!-- Active Missions -->
-            <rect width="360" height="240" rx="8" fill="#ffffff" filter="url(#shadow)" />
-            <text x="24" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a1a">Active Missions</text>
-            
-            <!-- Mission Items -->
-            <g transform="translate(24, 60)">
-                <!-- Mission 1 -->
-                <rect width="312" height="70" rx="8" fill="#f8fafc" />
-                <text x="20" y="30" font-family="Arial" font-size="16" fill="#1a1a1a">Review Champion</text>
-                <text x="20" y="50" font-family="Arial" font-size="14" fill="#64748b">Complete 5 reviews (3/5)</text>
-                <text x="240" y="40" font-family="Arial" font-size="14" fill="#4338ca">+10 pts</text>
+        <!-- Main Content -->
+        <g transform="translate(360, 0)">
+            <!-- Quick Stats Row -->
+            <g>
+                <!-- Stats Card 1 -->
+                <rect width="250" height="120" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                <g transform="translate(24, 24)">
+                    <text x="0" y="25" font-family="Arial" font-size="28" font-weight="bold" fill="#1e293b">12</text>
+                    <text x="0" y="50" font-family="Arial" font-size="15" fill="#64748b">Pending Reviews</text>
+                    <text x="0" y="75" font-family="Arial" font-size="14" fill="#22c55e">↑ 8% vs last week</text>
+                </g>
 
-                <!-- Mission 2 -->
-                <g transform="translate(0, 80)">
-                    <rect width="312" height="70" rx="8" fill="#f8fafc" />
-                    <text x="20" y="30" font-family="Arial" font-size="16" fill="#1a1a1a">Peer Review Expert</text>
-                    <text x="20" y="50" font-family="Arial" font-size="14" fill="#64748b">Review 3 peer reviews (1/3)</text>
-                    <text x="240" y="40" font-family="Arial" font-size="14" fill="#4338ca">+15 pts</text>
+                <!-- Stats Card 2 -->
+                <g transform="translate(270, 0)">
+                    <rect width="250" height="120" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                    <g transform="translate(24, 24)">
+                        <text x="0" y="25" font-family="Arial" font-size="28" font-weight="bold" fill="#1e293b">₳45</text>
+                        <text x="0" y="50" font-family="Arial" font-size="15" fill="#64748b">Rewards Earned</text>
+                        <text x="0" y="75" font-family="Arial" font-size="14" fill="#22c55e">↑ 12% vs last week</text>
+                    </g>
+                </g>
+
+                <!-- Stats Card 3 -->
+                <g transform="translate(540, 0)">
+                    <rect width="250" height="120" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                    <g transform="translate(24, 24)">
+                        <text x="0" y="25" font-family="Arial" font-size="28" font-weight="bold" fill="#1e293b">95</text>
+                        <text x="0" y="50" font-family="Arial" font-size="15" fill="#64748b">Ranking Points</text>
+                        <text x="0" y="75" font-family="Arial" font-size="14" fill="#22c55e">Top 5%</text>
+                    </g>
                 </g>
             </g>
 
-            <!-- Leaderboard -->
-            <g transform="translate(0, 260)">
-                <rect width="360" height="460" rx="8" fill="#ffffff" filter="url(#shadow)" />
-                <text x="24" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a1a">Top Reviewers</text>
+            <!-- Reviews Section -->
+            <g transform="translate(0, 140)">
+                <!-- Tab Navigation -->
+                <rect width="820" height="50" rx="8" fill="#ffffff" filter="url(#card-shadow)"/>
+                <g transform="translate(24, 0)">
+                    <rect width="150" height="50" rx="8" fill="#eef2ff"/>
+                    <text x="35" y="32" font-family="Arial" font-size="15" fill="#4338ca">Proposals (3)</text>
+                    
+                    <rect x="160" width="150" height="50" rx="8" fill="#ffffff"/>
+                    <text x="195" y="32" font-family="Arial" font-size="15" fill="#64748b">Peer Reviews (2)</text>
+                </g>
 
-                <!-- Tabs -->
-                <rect x="24" y="60" width="100" height="30" rx="15" fill="#eef2ff" />
-                <text x="44" y="80" font-family="Arial" font-size="14" fill="#4338ca">Weekly</text>
+                <!-- Review Cards -->
+                <g transform="translate(0, 70)">
+                    <!-- Review Card 1 -->
+                    <rect width="820" height="100" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                    <g transform="translate(24, 24)">
+                        <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">DeFi Integration Proposal</text>
+                        <text x="0" y="45" font-family="Arial" font-size="14" fill="#64748b">Due in 2 days • ₳15 reward</text>
+                        
+                        <!-- Tags -->
+                        <rect x="0" y="55" width="60" height="24" rx="12" fill="#f0fdf4"/>
+                        <text x="12" y="72" font-family="Arial" font-size="12" fill="#22c55e">DeFi</text>
+                        
+                        <!-- Action Button -->
+                        <rect x="650" y="-15" width="120" height="40" rx="20" fill="#4338ca"/>
+                        <text x="678" y="10" font-family="Arial" font-size="14" fill="#ffffff">Review →</text>
+                    </g>
+                </g>
+            </g>
+
+            <!-- Active Missions -->
+            <g transform="translate(0, 360)">
+                <text x="0" y="35" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Active Missions</text>
                 
-                <rect x="134" y="60" width="100" height="30" rx="15" fill="#f8fafc" />
-                <text x="154" y="80" font-family="Arial" font-size="14" fill="#64748b">Monthly</text>
-
-                <!-- Leaderboard Items -->
-                <g transform="translate(24, 100)">
-                    <!-- Leader 1 -->
-                    <rect width="312" height="70" rx="8" fill="#f8fafc" />
-                    <circle cx="35" cy="35" r="20" fill="#4338ca" />
-                    <text x="70" y="32" font-family="Arial" font-size="16" fill="#1a1a1a">Alex M.</text>
-                    <text x="70" y="50" font-family="Arial" font-size="14" fill="#64748b">95 pts • 15 reviews</text>
-                    <text x="240" y="40" font-family="Arial" font-size="16" fill="#4338ca">#1</text>
-
-                    <!-- Leader 2 -->
-                    <g transform="translate(0, 80)">
-                        <rect width="312" height="70" rx="8" fill="#f8fafc" />
-                        <circle cx="35" cy="35" r="20" fill="#6366f1" />
-                        <text x="70" y="32" font-family="Arial" font-size="16" fill="#1a1a1a">Sarah K.</text>
-                        <text x="70" y="50" font-family="Arial" font-size="14" fill="#64748b">87 pts • 12 reviews</text>
-                        <text x="240" y="40" font-family="Arial" font-size="16" fill="#4338ca">#2</text>
+                <!-- Mission Cards -->
+                <g transform="translate(0, 60)">
+                    <!-- Mission Card 1 -->
+                    <rect width="400" height="140" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                    <g transform="translate(24, 24)">
+                        <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Review Champion</text>
+                        <text x="0" y="45" font-family="Arial" font-size="14" fill="#64748b">Complete 5 reviews</text>
+                        
+                        <!-- Progress Bar -->
+                        <rect x="0" y="65" width="352" height="8" rx="4" fill="#f1f5f9"/>
+                        <rect x="0" y="65" width="211" height="8" rx="4" fill="#4338ca"/>
+                        
+                        <text x="0" y="95" font-family="Arial" font-size="14" fill="#64748b">3/5 completed</text>
+                        <text x="280" y="95" font-family="Arial" font-size="14" fill="#4338ca">+10 points</text>
                     </g>
 
-                    <!-- Leader 3 -->
-                    <g transform="translate(0, 160)">
-                        <rect width="312" height="70" rx="8" fill="#f8fafc" />
-                        <circle cx="35" cy="35" r="20" fill="#818cf8" />
-                        <text x="70" y="32" font-family="Arial" font-size="16" fill="#1a1a1a">John D.</text>
-                        <text x="70" y="50" font-family="Arial" font-size="14" fill="#64748b">82 pts • 11 reviews</text>
-                        <text x="240" y="40" font-family="Arial" font-size="16" fill="#4338ca">#3</text>
+                    <!-- Mission Card 2 -->
+                    <g transform="translate(420, 0)">
+                        <rect width="400" height="140" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                        <g transform="translate(24, 24)">
+                            <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Peer Review Expert</text>
+                            <text x="0" y="45" font-family="Arial" font-size="14" fill="#64748b">Review 3 peer reviews</text>
+                            
+                            <!-- Progress Bar -->
+                            <rect x="0" y="65" width="352" height="8" rx="4" fill="#f1f5f9"/>
+                            <rect x="0" y="65" width="117" height="8" rx="4" fill="#4338ca"/>
+                            
+                            <text x="0" y="95" font-family="Arial" font-size="14" fill="#64748b">1/3 completed</text>
+                            <text x="280" y="95" font-family="Arial" font-size="14" fill="#4338ca">+15 points</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+
+            <!-- Peer Reviews Section -->
+            <g transform="translate(0, 580)">
+                <text x="0" y="35" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Pending Peer Reviews</text>
+                
+                <!-- Peer Review Cards -->
+                <g transform="translate(0, 60)">
+                    <!-- Peer Review Card 1 -->
+                    <rect width="820" height="100" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                    <g transform="translate(24, 24)">
+                        <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Review by Sarah K. - DeFi Integration</text>
+                        <text x="0" y="45" font-family="Arial" font-size="14" fill="#64748b">Due in 1 day • ₳5 reward</text>
+                        
+                        <!-- Tags -->
+                        <rect x="0" y="55" width="90" height="24" rx="12" fill="#f0fdf4"/>
+                        <text x="12" y="72" font-family="Arial" font-size="12" fill="#22c55e">Peer Review</text>
+                        
+                        <!-- Action Button -->
+                        <rect x="650" y="-15" width="120" height="40" rx="20" fill="#4338ca"/>
+                        <text x="678" y="10" font-family="Arial" font-size="14" fill="#ffffff">Review →</text>
+                    </g>
+
+                    <!-- Peer Review Card 2 -->
+                    <g transform="translate(0, 120)">
+                        <rect width="820" height="100" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+                        <g transform="translate(24, 24)">
+                            <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Review by Alex M. - Smart Contract</text>
+                            <text x="0" y="45" font-family="Arial" font-size="14" fill="#64748b">Due in 2 days • ₳5 reward</text>
+                            
+                            <!-- Tags -->
+                            <rect x="0" y="55" width="90" height="24" rx="12" fill="#f0fdf4"/>
+                            <text x="12" y="72" font-family="Arial" font-size="12" fill="#22c55e">Peer Review</text>
+                            
+                            <!-- Action Button -->
+                            <rect x="650" y="-15" width="120" height="40" rx="20" fill="#4338ca"/>
+                            <text x="678" y="10" font-family="Arial" font-size="14" fill="#ffffff">Review →</text>
+                        </g>
                     </g>
                 </g>
             </g>
         </g>
     </g>
-
-    <!-- Filters -->
-    <defs>
-        <filter id="shadow" x="-5" y="-5" width="110%" height="110%">
-            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
-        </filter>
-    </defs>
 </svg>
