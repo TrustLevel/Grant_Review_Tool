@@ -146,15 +146,20 @@
             <g transform="translate(24, 24)">
                 <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Review Form: Relevance</text>
                 
-                <!-- Step 1: Feedback -->
+                <!-- Step 1: Feedback with adjusted text wrapping -->
                 <g transform="translate(0, 60)">
                     <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Provide Feedback</text>
-                    <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">What specific problem or opportunity does this proposal address, and how does it align with the goals of the challenge?</text>
-                    
-                    <rect x="0" y="45" width="632" height="200" rx="8" fill="#f8fafc"/>
-                    <text x="0" y="265" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
+        
+                    <!-- Question text split into multiple lines -->
+                    <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">What specific problem or opportunity does this proposal</text>
+                    <text x="0" y="50" font-family="Arial" font-size="14" fill="#64748b">address, and how does it align with the goals of the</text>
+                    <text x="0" y="70" font-family="Arial" font-size="14" fill="#64748b">challenge?</text>
+        
+                    <!-- Adjusted position of text input box -->
+                    <rect x="0" y="85" width="632" height="200" rx="8" fill="#f8fafc"/>
+                    <text x="0" y="305" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
                 </g>
-
+                
                 <!-- Step 2: Rating -->
                 <g transform="translate(0, 380)">
                     <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 2: Rate Relevance</text>
