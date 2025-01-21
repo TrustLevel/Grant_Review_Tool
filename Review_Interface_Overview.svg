@@ -81,8 +81,14 @@
 
                      <!-- Team Information -->
                     <g transform="translate(0, 300)">
-                        <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Team Stats</text>
-                        <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">Proposals this rounds: 2; Completed proposals: 1 of 3</text>
+                        <text x="0" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Team Stats</text>
+                        <rect width="632" height="160" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(16, 25)">
+                            <text x="0" y="20" font-family="Arial" font-size="15" fill="#1e293b">• Team Size: 5 members</text>
+                            <text x="0" y="50" font-family="Arial" font-size="15" fill="#1e293b">• Previous Catalyst Projects: 2</text>
+                            <text x="0" y="80" font-family="Arial" font-size="15" fill="#1e293b">• GitHub Activity: High</text>
+                            <text x="0" y="110" font-family="Arial" font-size="15" fill="#1e293b">• Completion Rate: 100%</text>
+                        </g>
                     </g>
                 </g>
             </g>
