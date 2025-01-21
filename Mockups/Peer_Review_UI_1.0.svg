@@ -45,12 +45,118 @@
 
                 <!-- Review Criteria -->
                 <g transform="translate(0, 80)">
-                    <!-- Content of center panel remains the same... -->
-                    <!-- Copy all the review criteria (Relevance through Budget) here -->
+                    <!-- Relevance -->
+                    <g transform="translate(0, 0)">
+                        <rect width="652" height="100" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(20, 20)">
+                            <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Relevance</text>
+                            <g transform="translate(0, 30)">
+                                <rect width="400" height="6" rx="3" fill="#e2e8f0"/>
+                                <rect width="280" height="6" rx="3" fill="#4338ca"/>
+                                <text x="420" y="0" font-family="Arial" font-size="14" fill="#64748b">+2</text>
+                            </g>
+                            <g transform="translate(580, -10)">
+                                <rect width="32" height="32" rx="16" fill="#f1f5f9"/>
+                                <text x="12" y="22" font-family="Arial" font-size="20" fill="#64748b">↓</text>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- Innovation (Expanded) -->
+                    <g transform="translate(0, 120)">
+                        <rect width="652" height="240" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(20, 20)">
+                            <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Innovation</text>
+                            <g transform="translate(0, 30)">
+                                <rect width="400" height="6" rx="3" fill="#e2e8f0"/>
+                                <rect width="240" height="6" rx="3" fill="#4338ca"/>
+                                <text x="420" y="0" font-family="Arial" font-size="14" fill="#64748b">+2</text>
+                            </g>
+                            <g transform="translate(580, -10)">
+                                <rect width="32" height="32" rx="16" fill="#f1f5f9"/>
+                                <text x="12" y="22" font-family="Arial" font-size="20" fill="#64748b">↑</text>
+                            </g>
+                            <g transform="translate(0, 60)">
+                                <rect width="612" height="140" rx="6" fill="#ffffff"/>
+                                <text x="16" y="30" font-family="Arial" font-size="14" fill="#1e293b">The proposal demonstrates innovative thinking in its approach to DeFi</text>
+                                <text x="16" y="55" font-family="Arial" font-size="14" fill="#1e293b">integration. The use of novel consensus mechanisms and cross-chain</text>
+                                <text x="16" y="80" font-family="Arial" font-size="14" fill="#1e293b">compatibility shows clear understanding of current limitations and</text>
+                                <text x="16" y="105" font-family="Arial" font-size="14" fill="#1e293b">provides unique solutions.</text>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- Feasibility -->
+                    <g transform="translate(0, 380)">
+                        <rect width="652" height="100" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(20, 20)">
+                            <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Feasibility</text>
+                            <g transform="translate(0, 30)">
+                                <rect width="400" height="6" rx="3" fill="#e2e8f0"/>
+                                <rect width="200" height="6" rx="3" fill="#4338ca"/>
+                                <text x="420" y="0" font-family="Arial" font-size="14" fill="#64748b">+1</text>
+                            </g>
+                            <g transform="translate(580, -10)">
+                                <rect width="32" height="32" rx="16" fill="#f1f5f9"/>
+                                <text x="12" y="22" font-family="Arial" font-size="20" fill="#64748b">↓</text>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- Impact -->
+                    <g transform="translate(0, 500)">
+                        <rect width="652" height="100" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(20, 20)">
+                            <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Impact</text>
+                            <g transform="translate(0, 30)">
+                                <rect width="400" height="6" rx="3" fill="#e2e8f0"/>
+                                <rect width="320" height="6" rx="3" fill="#4338ca"/>
+                                <text x="420" y="0" font-family="Arial" font-size="14" fill="#64748b">+3</text>
+                            </g>
+                            <g transform="translate(580, -10)">
+                                <rect width="32" height="32" rx="16" fill="#f1f5f9"/>
+                                <text x="12" y="22" font-family="Arial" font-size="20" fill="#64748b">↓</text>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- Team -->
+                    <g transform="translate(0, 620)">
+                        <rect width="652" height="100" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(20, 20)">
+                            <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Team</text>
+                            <g transform="translate(0, 30)">
+                                <rect width="400" height="6" rx="3" fill="#e2e8f0"/>
+                                <rect width="240" height="6" rx="3" fill="#4338ca"/>
+                                <text x="420" y="0" font-family="Arial" font-size="14" fill="#64748b">+2</text>
+                            </g>
+                            <g transform="translate(580, -10)">
+                                <rect width="32" height="32" rx="16" fill="#f1f5f9"/>
+                                <text x="12" y="22" font-family="Arial" font-size="20" fill="#64748b">↓</text>
+                            </g>
+                        </g>
+                    </g>
+
+                    <!-- Budget -->
+                    <g transform="translate(0, 740)">
+                        <rect width="652" height="100" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(20, 20)">
+                            <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Budget</text>
+                            <g transform="translate(0, 30)">
+                                <rect width="400" height="6" rx="3" fill="#e2e8f0"/>
+                                <rect width="160" height="6" rx="3" fill="#4338ca"/>
+                                <text x="420" y="0" font-family="Arial" font-size="14" fill="#64748b">0</text>
+                            </g>
+                            <g transform="translate(580, -10)">
+                                <rect width="32" height="32" rx="16" fill="#f1f5f9"/>
+                                <text x="12" y="22" font-family="Arial" font-size="20" fill="#64748b">↓</text>
+                            </g>
+                        </g>
+                    </g>
                 </g>
             </g>
         </g>
-
+        
         <!-- Right Panel - Assessment -->
         <g transform="translate(820, 0)">
             <rect width="540" height="1080" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
