@@ -68,22 +68,25 @@
                     <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">This proposal aims to integrate advanced DeFi capabilities into the existing Cardano infrastructure...</text>
                     
                     <!-- Problem Section -->
-                    <g transform="translate(0, 80)">
+                    <g transform="translate(0, 100)">
                         <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Problem Statement</text>
                         <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">Current DeFi solutions lack seamless integration with...</text>
                     </g>
 
                     <!-- Solution Section -->
-                    <g transform="translate(0, 160)">
+                    <g transform="translate(0, 200)">
                         <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Proposed Solution</text>
                         <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">Our team proposes to develop a comprehensive integration layer...</text>
                     </g>
 
                      <!-- Team Information -->
-                    <g transform="translate(0, 240)">
+                    <g transform="translate(0, 300)">
+                        <!-- Title first -->
                         <text x="0" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Team Stats</text>
-                        <rect width="632" height="160" rx="8" fill="#f8fafc"/>
-                        <g transform="translate(16, 25)">
+                        <!-- Background rectangle with adjusted position -->
+                        <rect x="0" y="40" width="632" height="160" rx="8" fill="#f8fafc"/>
+                        <!-- Stats text with adjusted positioning -->
+                        <g transform="translate(16, 65)">
                             <text x="0" y="20" font-family="Arial" font-size="15" fill="#1e293b">• Team Size: 5 members</text>
                             <text x="0" y="50" font-family="Arial" font-size="15" fill="#1e293b">• Previous Catalyst Projects: 2</text>
                             <text x="0" y="80" font-family="Arial" font-size="15" fill="#1e293b">• GitHub Activity: High</text>
