@@ -95,7 +95,7 @@
             <g transform="translate(0, 210)">
                 <rect width="680" height="580" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
                 <g transform="translate(24, 24)">
-                    <text x="0" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Proposal Description</text>
+                    <text x="0" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Solution</text>
                     <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">This proposal aims to integrate advanced DeFi capabilities into the existing Cardano infrastructure...</text>
                     
                     <!-- Impact Section -->
@@ -114,12 +114,12 @@
             <rect width="640" height="790" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
             <g transform="translate(24, 24)">
                 <!-- Form Header -->
-                <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Review Form: Idea</text>
+                <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Review Form: Relevance</text>
                 
                 <!-- Step 1: Rating -->
                 <g transform="translate(0, 60)">
-                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Rate Proposal Impact</text>
-                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b"> “This proposal will have a positive impact on the Cardano Ecosystem ”</text>
+                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Rate Proposal Relevancet</text>
+                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b"> “The proposal directly aligns with the goals and objectives of this challenge.”</text>
                     
                     <!-- Rating Scale -->
                     <g transform="translate(0, 45)">
@@ -139,7 +139,7 @@
                     
                     <!-- Question 1 -->
                     <g transform="translate(0, 30)">
-                        <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Is the problem statement clearly defined?</text>
+                        <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">What specific problem or opportunity does this proposal address, and how does it align with the goals of the challenge?</text>
                         <rect x="0" y="15" width="592" height="100" rx="8" fill="#f8fafc"/>
                         <text x="0" y="130" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
                     </g>
@@ -172,7 +172,7 @@
                 <!-- Submit Button -->
                 <g transform="translate(0, 670)">
                     <rect width="592" height="50" rx="25" fill="#4338ca"/>
-                    <text x="255" y="32" font-family="Arial" font-size="16" fill="#ffffff">Continue Step 2</text>
+                    <text x="255" y="32" font-family="Arial" font-size="16" fill="#ffffff">Continue with "Innovation"</text>
                 </g>
             </g>
         </g>
