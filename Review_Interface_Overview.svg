@@ -55,7 +55,7 @@
                 <g transform="translate(24, 0)">
                     <!-- Summary Tab -->
                     <rect width="120" height="50" rx="8" fill="#eef2ff"/>
-                    <text x="35" y="32" font-family="Arial" font-size="15" fill="#4338ca">Project Overview</text>
+                    <text x="35" y="32" font-family="Arial" font-size="15" fill="#64748b">Proposal Overview</text>
                     
                 </g>
             </g>
