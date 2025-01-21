@@ -118,7 +118,7 @@
                 
                 <!-- Step 1: Rating -->
                 <g transform="translate(0, 60)">
-                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Rate Proposal Relevancet</text>
+                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Rate Relevance of this proposal:</text>
                     <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b"> “The proposal directly aligns with the goals and objectives of this challenge.”</text>
                     
                     <!-- Rating Scale -->
@@ -144,29 +144,6 @@
                         <text x="0" y="130" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
                     </g>
 
-                    <!-- Question 2 -->
-                    <g transform="translate(0, 160)">
-                        <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">How feasible is the proposed solution?</text>
-                        <rect x="0" y="15" width="592" height="100" rx="8" fill="#f8fafc"/>
-                        <text x="0" y="130" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
-                    </g>
-                </g>
-
-                <!-- Confidence Level -->
-                <g transform="translate(0, 550)">
-                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Review Confidence</text>
-                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b">How confident are you in this review?</text>
-                    
-                    <!-- Confidence Scale -->
-                    <g transform="translate(0, 45)">
-                        <rect width="592" height="60" rx="8" fill="#f8fafc"/>
-                        <g transform="translate(24, 20)">
-                            <text x="0" y="12" font-family="Arial" font-size="14" fill="#64748b">Low</text>
-                            <rect x="50" y="0" width="400" height="8" rx="4" fill="#e2e8f0"/>
-                            <rect x="50" y="0" width="300" height="8" rx="4" fill="#4338ca"/>
-                            <text x="470" y="12" font-family="Arial" font-size="14" fill="#64748b">Strong</text>
-                        </g>
-                    </g>
                 </g>
 
                 <!-- Submit Button -->
