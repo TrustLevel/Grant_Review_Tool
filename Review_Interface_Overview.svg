@@ -94,71 +94,54 @@
             </g>
         </g>
 
-        <!-- Right Panel - Review Form -->
+        <!-- Right Panel - Expertise Rating -->
         <g transform="translate(760, 0)">
-            <!-- Review Form Container -->
-            <rect width="640" height="790" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+            <rect width="640" height="400" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
             <g transform="translate(24, 24)">
-                <!-- Form Header -->
-                <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Review Form</text>
-                
-                <!-- Step 1: Rating -->
-                <g transform="translate(0, 60)">
-                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Rate your expertice</text>
-                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b"> “Rate how closely this proposal aligns with your expertise and interests.”</text>
-                    
-                    <!-- Rating Scale -->
-                    <g transform="translate(0, 45)">
-                        <rect width="592" height="60" rx="8" fill="#f8fafc"/>
-                        <g transform="translate(24, 20)">
-                            <text x="0" y="12" font-family="Arial" font-size="14" fill="#64748b">Not aligned</text>
-                            <rect x="100" y="0" width="350" height="8" rx="4" fill="#e2e8f0"/>
-                            <rect x="100" y="0" width="175" height="8" rx="4" fill="#4338ca"/>
-                            <text x="470" y="12" font-family="Arial" font-size="14" fill="#64748b">Fully aligned</text>
+                <!-- Rating Header -->
+                <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Rate Your Expertise</text>
+                <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">How familiar are you with the subject matter of this proposal?</text>
+
+                <!-- Rating Scale -->
+                <g transform="translate(0, 80)">
+                    <rect width="592" height="160" rx="8" fill="#f8fafc"/>
+                    <g transform="translate(24, 24)">
+                        <!-- Scale Labels -->
+                        <text x="0" y="20" font-family="Arial" font-size="14" fill="#64748b">Not familiar</text>
+                        <text x="460" y="20" font-family="Arial" font-size="14" fill="#64748b">Expert</text>
+
+                        <!-- Scale Points -->
+                        <g transform="translate(0, 40)">
+                            <rect x="0" y="0" width="544" height="4" fill="#e2e8f0"/>
+                            <!-- Scale Points -->
+                            <circle cx="0" cy="2" r="8" fill="#4338ca"/>
+                            <circle cx="136" cy="2" r="8" fill="#4338ca"/>
+                            <circle cx="272" cy="2" r="8" fill="#4338ca"/>
+                            <circle cx="408" cy="2" r="8" fill="#4338ca"/>
+                            <circle cx="544" cy="2" r="8" fill="#4338ca"/>
+
+                            <!-- Scale Numbers -->
+                            <text x="0" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">1</text>
+                            <text x="136" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">2</text>
+                            <text x="272" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">3</text>
+                            <text x="408" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">4</text>
+                            <text x="544" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">5</text>
                         </g>
+
+                        <!-- Selected Rating Display -->
+                        <text x="0" y="100" font-family="Arial" font-size="14" fill="#64748b">Selected: 3 - Intermediate knowledge</text>
                     </g>
                 </g>
 
-                <!-- Step 2: Feedback -->
-                <g transform="translate(0, 180)">
-                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 2: Provide Feedback</text>
-                    
-                    <!-- Question 1 -->
-                    <g transform="translate(0, 30)">
-                        <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Is the problem statement clearly defined?</text>
-                        <rect x="0" y="15" width="592" height="100" rx="8" fill="#f8fafc"/>
-                        <text x="0" y="130" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
-                    </g>
+                <!-- Action Buttons -->
+                <g transform="translate(0, 280)">
+                    <!-- Start Review Button -->
+                    <rect width="380" height="50" rx="25" fill="#4338ca"/>
+                    <text x="150" y="32" font-family="Arial" font-size="16" fill="#ffffff">Start Review</text>
 
-                    <!-- Question 2 -->
-                    <g transform="translate(0, 160)">
-                        <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">How feasible is the proposed solution?</text>
-                        <rect x="0" y="15" width="592" height="100" rx="8" fill="#f8fafc"/>
-                        <text x="0" y="130" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
-                    </g>
-                </g>
-
-                <!-- Confidence Level -->
-                <g transform="translate(0, 550)">
-                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Review Confidence</text>
-                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b">How confident are you in this review?</text>
-                    
-                    <!-- Confidence Scale -->
-                    <g transform="translate(0, 45)">
-                        <rect width="592" height="60" rx="8" fill="#f8fafc"/>
-                        <g transform="translate(24, 20)">
-                            <text x="0" y="12" font-family="Arial" font-size="14" fill="#64748b">Low</text>
-                            <rect x="50" y="0" width="400" height="8" rx="4" fill="#e2e8f0"/>
-                            <rect x="50" y="0" width="300" height="8" rx="4" fill="#4338ca"/>
-                            <text x="470" y="12" font-family="Arial" font-size="14" fill="#64748b">Strong</text>
-                        </g>
-                    </g>
-                </g>
-
-                <!-- Submit Button -->
-                <g transform="translate(0, 670)">
-                    <rect width="592" height="50" rx="25" fill="#4338ca"/>
-                    <text x="255" y="32" font-family="Arial" font-size="16" fill="#ffffff">Continue Step 2</text>
+                    <!-- Skip Button -->
+                    <rect x="400" width="192" height="50" rx="25" fill="#f1f5f9"/>
+                    <text x="440" y="32" font-family="Arial" font-size="16" fill="#64748b">Skip Review</text>
                 </g>
             </g>
         </g>
