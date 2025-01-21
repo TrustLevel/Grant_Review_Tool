@@ -161,7 +161,7 @@
                 </g>
                 
                 <!-- Step 2: Rating -->
-                <g transform="translate(0, 380)">
+                <g transform="translate(0, 430)">
                     <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 2: Rate Relevance</text>
                     <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">"The proposal directly aligns with the goals and objectives of this challenge."</text>
                     
