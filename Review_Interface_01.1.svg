@@ -95,12 +95,12 @@
             <g transform="translate(0, 210)">
                 <rect width="680" height="580" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
                 <g transform="translate(24, 24)">
-                    <text x="0" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Solution</text>
+                    <text x="0" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Challenge Description</text>
                     <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">This proposal aims to integrate advanced DeFi capabilities into the existing Cardano infrastructure...</text>
                     
                     <!-- Impact Section -->
                     <g transform="translate(0, 100)">
-                        <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Proposal Impact</text>
+                        <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Solution</text>
                         <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">Current DeFi solutions lack seamless integration with...</text>
 
                     </g>
