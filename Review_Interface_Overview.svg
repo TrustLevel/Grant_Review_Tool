@@ -38,15 +38,27 @@
             <!-- Proposal Header -->
             <rect width="680" height="120" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
             <g transform="translate(24, 24)">
-                <text x="0" y="25" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">DeFi Integration Proposal</text>
-                <text x="0" y="50" font-family="Arial" font-size="15" fill="#64748b">by Cardano Labs • Requested Funds: ₳45,000</text>
+                <!-- Proposal Number -->
+                <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b">Proposal #1200193</text>
+
+                <!-- Title -->
+                <text x="0" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">DeFi Integration Proposal</text>
+                
+                <!-- Author and Amount -->
+                <text x="0" y="75" font-family="Arial" font-size="15" fill="#64748b">by Cardano Labs • Requested Funds: ₳45,000</text>
+                
+                <!-- Link to Proposal -->
+                <g transform="translate(0, 85)">
+                    <rect width="120" height="24" rx="12" fill="#f1f5f9"/>
+                    <text x="12" y="17" font-family="Arial" font-size="12" fill="#4338ca">View Proposal ↗</text>
+                </g>
                 
                 <!-- Tags -->
-                <rect x="0" y="65" width="60" height="24" rx="12" fill="#f0fdf4"/>
-                <text x="12" y="82" font-family="Arial" font-size="12" fill="#22c55e">DeFi</text>
+                <rect x="130" y="85" width="60" height="24" rx="12" fill="#f0fdf4"/>
+                <text x="142" y="102" font-family="Arial" font-size="12" fill="#22c55e">DeFi</text>
                 
-                <rect x="70" y="65" width="100" height="24" rx="12" fill="#f0f7ff"/>
-                <text x="82" y="82" font-family="Arial" font-size="12" fill="#3b82f6">Integration</text>
+                <rect x="200" y="85" width="100" height="24" rx="12" fill="#f0f7ff"/>
+                <text x="212" y="102" font-family="Arial" font-size="12" fill="#3b82f6">Integration</text>
             </g>
 
             <!-- Tabs Navigation -->
