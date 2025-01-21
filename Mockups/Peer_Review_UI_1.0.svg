@@ -158,7 +158,7 @@
         </g>
 
         <!-- Right Panel - Assessment -->
-        <g transform="translate(860, 90)">
+        <g transform="translate(820, 0)">
             <rect width="540" height="1080" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
             <g transform="translate(24, 24)">
                 <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Quality Assessment</text>
