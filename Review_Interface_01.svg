@@ -29,17 +29,6 @@
         <rect x="220" y="15" width="180" height="40" rx="20" fill="#eef2ff"/>
         <text x="245" y="40" font-family="Arial" font-size="15" fill="#4338ca">Catalyst Fund 13</text>
 
-        <!-- Progress Indicator -->
-        <g transform="translate(500, 25)">
-            <rect width="200" height="8" rx="4" fill="#f1f5f9"/>
-            <rect width="100" height="8" rx="4" fill="#4338ca"/>
-            <text x="0" y="-8" font-family="Arial" font-size="14" fill="#64748b">Review Progress: 1/5</text>
-        </g>
-        
-        <!-- Timer -->
-        <g transform="translate(800, 25)">
-            <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Timer</text>
-            <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">2:45 min</text>
         </g>
     </g>
 
@@ -67,23 +56,8 @@
                 <g transform="translate(24, 0)">
                     <!-- Summary Tab -->
                     <rect width="120" height="50" rx="8" fill="#eef2ff"/>
-                    <text x="35" y="32" font-family="Arial" font-size="15" fill="#4338ca">Summary</text>
+                    <text x="35" y="32" font-family="Arial" font-size="15" fill="#64748b">Proposal Overview</text>
                     
-                    <!-- Team Tab -->
-                    <rect x="130" width="100" height="50" rx="8" fill="#ffffff"/>
-                    <text x="155" y="32" font-family="Arial" font-size="15" fill="#64748b">Team</text>
-
-                    <!-- Idea Tab -->
-                    <rect x="240" width="100" height="50" rx="8" fill="#ffffff"/>
-                    <text x="265" y="32" font-family="Arial" font-size="15" fill="#64748b">Idea</text>
-
-                    <!-- BPlan Tab -->
-                    <rect x="350" width="100" height="50" rx="8" fill="#ffffff"/>
-                    <text x="375" y="32" font-family="Arial" font-size="15" fill="#64748b">Plan</text>
-
-                    <!-- Budget Tab -->
-                    <rect x="460" width="100" height="50" rx="8" fill="#ffffff"/>
-                    <text x="485" y="32" font-family="Arial" font-size="15" fill="#64748b">Budget</text>
                 </g>
             </g>
 
@@ -108,8 +82,13 @@
 
                      <!-- Team Information -->
                     <g transform="translate(0, 300)">
-                        <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Team Stats</text>
-                        <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">Proposals this rounds: 2; Completed proposals: 1 of 3</text>
+                       <text x="0" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Team Stats</text>
+                        <rect width="632" height="160" rx="8" fill="#f8fafc"/>
+                        <g transform="translate(16, 25)">
+                            <text x="0" y="20" font-family="Arial" font-size="15" fill="#1e293b">• Team Size: 5 members</text>
+                            <text x="0" y="50" font-family="Arial" font-size="15" fill="#1e293b">• Previous Catalyst Projects: 2</text>
+                            <text x="0" y="80" font-family="Arial" font-size="15" fill="#1e293b">• GitHub Activity: High</text>
+                            <text x="0" y="110" font-family="Arial" font-size="15" fill="#1e293b">• Completion Rate: 100%</text>
                     </g>
                 </g>
             </g>
