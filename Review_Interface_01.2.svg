@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1000">
-    <!-- Background with subtle gradient -->
+    <!-- Background with darker subtle gradient -->
     <defs>
         <linearGradient id="bg-gradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#f8fafc"/>
-            <stop offset="100%" stop-color="#f1f5f9"/>
+            <stop offset="0%" stop-color="#e2e8f0"/>
+            <stop offset="100%" stop-color="#cbd5e1"/>
         </linearGradient>
         
         <!-- Enhanced shadow effects -->
@@ -15,7 +15,7 @@
     <!-- Main Background -->
     <rect width="1440" height="1000" fill="url(#bg-gradient)" />
 
-    <!-- Top Navigation -->
+    <!-- Full Width Top Navigation -->
     <rect x="0" y="0" width="1440" height="70" fill="#ffffff" filter="url(#card-shadow)" />
     <g transform="translate(40, 0)">
         <!-- Logo and Back Button -->
@@ -30,35 +30,35 @@
         <text x="245" y="40" font-family="Arial" font-size="15" fill="#4338ca">Catalyst Fund 13</text>
     </g>
 
-    <!-- Header Info Bar - Increased Height -->
-    <rect x="0" y="70" width="1440" height="120" fill="#ffffff" filter="url(#card-shadow)" />
-    
-    <!-- Left Side Header Info -->
-    <g transform="translate(40, 85)">
-        <!-- Proposal Number -->
-        <text x="0" y="20" font-family="Arial" font-size="14" fill="#64748b">#1200193</text>
+    <!-- Content-Width Header Info Bar -->
+    <g transform="translate(40, 100)">
+        <!-- Header Background -->
+        <rect width="1360" height="130" rx="12" fill="#ffffff" filter="url(#card-shadow)" />
         
-        <!-- Title and Details -->
-        <text x="0" y="45" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">DeFi Integration Proposal</text>
-        <text x="0" y="70" font-family="Arial" font-size="15" fill="#64748b">by Cardano Labs • Requested Funds: ₳45,000</text>
-        
-        <!-- Tags and Link -->
-        <g transform="translate(0, 85)">
-            <rect width="60" height="24" rx="12" fill="#f0fdf4"/>
-            <text x="12" y="17" font-family="Arial" font-size="12" fill="#22c55e">DeFi</text>
+        <!-- Left Side Header Info -->
+        <g transform="translate(24, 24)">
+            <!-- Proposal Number -->
+            <text x="0" y="20" font-family="Arial" font-size="14" fill="#64748b">#1200193</text>
             
-            <rect x="70" width="100" height="24" rx="12" fill="#f0f7ff"/>
-            <text x="82" y="17" font-family="Arial" font-size="12" fill="#3b82f6">Integration</text>
+            <!-- Title and Details -->
+            <text x="0" y="45" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">DeFi Integration Proposal</text>
+            <text x="0" y="70" font-family="Arial" font-size="15" fill="#64748b">by Cardano Labs • Requested Funds: ₳45,000</text>
             
-            <rect x="180" width="80" height="24" rx="12" fill="#f1f5f9"/>
-            <text x="192" y="17" font-family="Arial" font-size="12" fill="#4338ca">Link ↗</text>
+            <!-- Tags and Link -->
+            <g transform="translate(0, 82)">
+                <rect width="60" height="24" rx="12" fill="#f0fdf4"/>
+                <text x="12" y="17" font-family="Arial" font-size="12" fill="#22c55e">DeFi</text>
+                
+                <rect x="70" width="100" height="24" rx="12" fill="#f0f7ff"/>
+                <text x="82" y="17" font-family="Arial" font-size="12" fill="#3b82f6">Integration</text>
+                
+                <rect x="180" width="80" height="24" rx="12" fill="#f1f5f9"/>
+                <text x="192" y="17" font-family="Arial" font-size="12" fill="#4338ca">Link ↗</text>
+            </g>
         </g>
-    </g>
 
-    <!-- Right Side Header Info - Improved Progress Section -->
-    <g transform="translate(720, 85)">
-        <!-- Progress Section -->
-        <g>
+        <!-- Right Side Header Info -->
+        <g transform="translate(680, 24)">
             <!-- Progress Steps -->
             <g transform="translate(0, 10)">
                 <!-- Relevance - Active -->
@@ -102,10 +102,10 @@
     </g>
 
     <!-- Main Content Area -->
-    <g transform="translate(0, 210)">
+    <g transform="translate(40, 260)">
         <!-- Left Side - Proposal Content -->
-        <g transform="translate(40, 0)">
-            <rect width="660" height="770" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+        <g transform="translate(0, 0)">
+            <rect width="660" height="700" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
             <g transform="translate(24, 24)">
                 <!-- Navigation Tabs -->
                 <rect width="612" height="50" rx="8" fill="#f8fafc"/>
@@ -128,21 +128,21 @@
                     <!-- Challenge Description -->
                     <g transform="translate(0, 20)">
                         <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Solution Description</text>
-                        <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">This proposal aims to integrate advanced DeFi capabilities...</text>
+                        <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">This proposal aims to integrate advanced DeFi capabilities into the existing Cardano infrastructure...</text>
                     </g>
                     
                     <!-- Solution -->
                     <g transform="translate(0, 120)">
                         <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Impact</text>
-                        <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">Our comprehensive solution addresses the current limitations in DeFi ...</text>
+                        <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">Our comprehensive solution addresses the current limitations...</text>
                     </g>
                 </g>
             </g>
         </g>
 
         <!-- Right Side - Review Form -->
-        <g transform="translate(720, 0)">
-            <rect width="680" height="770" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+        <g transform="translate(680, 0)">
+            <rect width="680" height="700" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
             <g transform="translate(24, 24)">
                 <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Review Form: Relevance</text>
                 
@@ -155,7 +155,7 @@
                     <text x="0" y="265" font-family="Arial" font-size="12" fill="#64748b">0/500 characters</text>
                 </g>
 
-                <!-- Step 2: Rating - Moved down -->
+                <!-- Step 2: Rating -->
                 <g transform="translate(0, 380)">
                     <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 2: Rate Relevance</text>
                     <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">"The proposal directly aligns with the goals and objectives of this challenge."</text>
@@ -178,7 +178,7 @@
                 </g>
 
                 <!-- Continue Button -->
-                <g transform="translate(0, 650)">
+                <g transform="translate(0, 580)">
                     <rect width="632" height="50" rx="25" fill="#4338ca"/>
                     <text x="240" y="32" font-family="Arial" font-size="16" fill="#ffffff">Continue with "Innovation"</text>
                 </g>
