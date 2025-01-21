@@ -28,7 +28,6 @@
         <!-- Fund Indicator -->
         <rect x="220" y="15" width="180" height="40" rx="20" fill="#eef2ff"/>
         <text x="245" y="40" font-family="Arial" font-size="15" fill="#4338ca">Catalyst Fund 13</text>
-
         </g>
     </g>
 
