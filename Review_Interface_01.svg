@@ -33,13 +33,13 @@
         <g transform="translate(500, 25)">
             <rect width="200" height="8" rx="4" fill="#f1f5f9"/>
             <rect width="100" height="8" rx="4" fill="#4338ca"/>
-            <text x="0" y="-8" font-family="Arial" font-size="14" fill="#64748b">Review Progress: 2/4</text>
+            <text x="0" y="-8" font-family="Arial" font-size="14" fill="#64748b">Review Progress: 1/5</text>
         </g>
         
         <!-- Timer -->
         <g transform="translate(800, 25)">
             <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Timer</text>
-            <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">18:45</text>
+            <text x="0" y="20" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">2:45 min</text>
         </g>
     </g>
 
@@ -125,17 +125,17 @@
                 
                 <!-- Step 1: Rating -->
                 <g transform="translate(0, 60)">
-                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Rate Proposal</text>
-                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b">How well does this align with your expertise?</text>
+                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Step 1: Rate your expertice</text>
+                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b"> “Rate how closely this proposal aligns with your expertise and interests.”</text>
                     
                     <!-- Rating Scale -->
                     <g transform="translate(0, 45)">
                         <rect width="592" height="60" rx="8" fill="#f8fafc"/>
                         <g transform="translate(24, 20)">
-                            <text x="0" y="12" font-family="Arial" font-size="14" fill="#64748b">Not Relevant</text>
+                            <text x="0" y="12" font-family="Arial" font-size="14" fill="#64748b">Not aligned</text>
                             <rect x="100" y="0" width="350" height="8" rx="4" fill="#e2e8f0"/>
                             <rect x="100" y="0" width="175" height="8" rx="4" fill="#4338ca"/>
-                            <text x="470" y="12" font-family="Arial" font-size="14" fill="#64748b">Highly Relevant</text>
+                            <text x="470" y="12" font-family="Arial" font-size="14" fill="#64748b">Fully aligned</text>
                         </g>
                     </g>
                 </g>
@@ -179,7 +179,7 @@
                 <!-- Submit Button -->
                 <g transform="translate(0, 670)">
                     <rect width="592" height="50" rx="25" fill="#4338ca"/>
-                    <text x="255" y="32" font-family="Arial" font-size="16" fill="#ffffff">Submit Review</text>
+                    <text x="255" y="32" font-family="Arial" font-size="16" fill="#ffffff">Continue Step 2</text>
                 </g>
             </g>
         </g>
