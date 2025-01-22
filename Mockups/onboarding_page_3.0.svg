@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600">
+    <defs>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+        </filter>
+        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4338ca"/>
+            <stop offset="100%" style="stop-color:#6366f1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="1600" fill="#f8fafc"/>
+
+    <!-- Header Section -->
+    <g transform="translate(100, 40)">
+        <text x="0" y="0" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Welcome to TrustLevel</text>
+        <text x="0" y="30" font-family="Arial" font-size="16" fill="#64748b">Let's set up your reviewer profile</text>
+        
+        <!-- Progress Bar -->
+        <rect x="0" y="60" width="1000" height="8" rx="4" fill="#e2e8f0"/>
+        <rect x="0" y="60" width="750" height="8" rx="4" fill="url(#progressGradient)"/>
+        
+        <!-- Step Indicators -->
+        <g transform="translate(0, 90)">
+            <text x="0" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 1: Basic Information</text>
+            <text x="200" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 2: Expertise</text>
+            <text x="400" y="0" font-family="Arial" font-size="14" fill="#4338ca">Step 3: Validation</text>
+            <text x="600" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 4: Summary</text>
+        </g>
+    </g>
+
+    <!-- Main Form Container -->
+    <g transform="translate(100, 180)">
+        <rect width="1000" height="1200" rx="12" fill="white" filter="url(#shadow)"/>
+        
+        <!-- Form Content -->
+        <g transform="translate(40, 40)">
+            <!-- Professional Links Section -->
+            <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Professional Profile Links</text>
+            <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">Add links to your professional profiles to verify your expertise</text>
+
+            <!-- LinkedIn -->
+            <g transform="translate(0, 60)">
+                <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+                <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">LinkedIn Profile</text>
+                <rect x="24" y="45" width="860" height="20" rx="4" fill="white" stroke="#e2e8f0"/>
+                <text x="34" y="60" font-family="Arial" font-size="14" fill="#94a3b8">https://linkedin.com/in/your-profile</text>
+            </g>
+
+            <!-- GitHub -->
+            <g transform="translate(0, 160)">
+                <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+                <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">GitHub Profile</text>
+                <rect x="24" y="45" width="860" height="20" rx="4" fill="white" stroke="#e2e8f0"/>
+                <text x="34" y="60" font-family="Arial" font-size="14" fill="#94a3b8">https://github.com/your-profile</text>
+            </g>
+
+            <!-- Portfolio -->
+            <g transform="translate(0, 260)">
+                <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+                <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Portfolio/Personal Website</text>
+                <rect x="24" y="45" width="860" height="20" rx="4" fill="white" stroke="#e2e8f0"/>
+                <text x="34" y="60" font-family="Arial" font-size="14" fill="#94a3b8">https://your-website.com</text>
+            </g>
+
+            <!-- Previous Experience Section -->
+            <g transform="translate(0, 380)">
+                <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Catalyst Experience</text>
+                <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">Share your previous experience with Project Catalyst</text>
+
+                <!-- Previous Proposals -->
+                <g transform="translate(0, 60)">
+                    <rect width="920" height="120" rx="8" fill="#f8fafc"/>
+                    <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Previous Proposals</text>
+                    <text x="24" y="60" font-family="Arial" font-size="14" fill="#64748b">Have you submitted proposals to Catalyst before?</text>
+
+                    <!-- Radio Buttons -->
+                    <g transform="translate(24, 80)">
+                        <circle cx="12" cy="12" r="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="6" fill="#4338ca"/>
+                        <text x="35" y="17" font-family="Arial" font-size="14" fill="#1e293b">Yes</text>
+
+                        <g transform="translate(100, 0)">
+                            <circle cx="12" cy="12" r="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+                            <text x="35" y="17" font-family="Arial" font-size="14" fill="#1e293b">No</text>
+                        </g>
+                    </g>
+                </g>
+
+                <!-- Previous Reviews -->
+                <g transform="translate(0, 200)">
+                    <rect width="920" height="120" rx="8" fill="#f8fafc"/>
+                    <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Previous Reviews</text>
+                    <text x="24" y="60" font-family="Arial" font-size="14" fill="#64748b">Have you reviewed proposals in past funding rounds?</text>
+
+                    <!-- Radio Buttons -->
+                    <g transform="translate(24, 80)">
+                        <circle cx="12" cy="12" r="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+                        <text x="35" y="17" font-family="Arial" font-size="14" fill="#1e293b">Yes</text>
+
+                        <g transform="translate(100, 0)">
+                            <circle cx="12" cy="12" r="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="6" fill="#4338ca"/>
+                            <text x="35" y="17" font-family="Arial" font-size="14" fill="#1e293b">No</text>
+                        </g>
+                    </g>
+                </g>
+
+                <!-- Additional Information -->
+                <g transform="translate(0, 340)">
+                    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Additional Information</text>
+                    <text x="0" y="25" font-family="Arial" font-size="14" fill="#64748b">Share any other relevant experience or certifications</text>
+                    <rect x="0" y="45" width="920" height="120" rx="8" fill="#f8fafc"/>
+                    <text x="24" y="75" font-family="Arial" font-size="14" fill="#94a3b8">Write about your experience...</text>
+                </g>
+            </g>
+
+            <!-- Navigation Buttons -->
+            <g transform="translate(0, 1000)">
+                <!-- Previous Button -->
+                <g transform="translate(200, 0)">
+                    <rect width="200" height="50" rx="25" fill="#f1f5f9"/>
+                    <text x="70" y="32" font-family="Arial" font-size="16" fill="#64748b">← Previous</text>
+                </g>
+
+                <!-- Next Button -->
+                <g transform="translate(500, 0)">
+                    <rect width="200" height="50" rx="25" fill="#4338ca"/>
+                    <text x="65" y="32" font-family="Arial" font-size="16" fill="white">Next Step →</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
