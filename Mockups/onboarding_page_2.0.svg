@@ -214,7 +214,7 @@
             </g>
 
             <!-- Navigation Buttons -->
-            <g transform="translate(0, 950)">
+            <g transform="translate(0, 850)">
                 <!-- Previous Button -->
                 <g transform="translate(200, 0)">
                     <rect width="200" height="50" rx="25" fill="#f1f5f9"/>
