@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600">
+    <defs>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+        </filter>
+        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4338ca"/>
+            <stop offset="100%" style="stop-color:#6366f1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Community & Education Skills -->
+    <g transform="translate(100, 40)">
+        <text x="0" y="0" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Community &amp; Education Skills</text>
+        
+        <!-- Skills Container -->
+        <g transform="translate(0, 60)">
+            <!-- Community Management & Engagement -->
+            <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+            <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Community Management &amp; Engagement</text>
+            <text x="24" y="55" font-family="Arial" font-size="14" fill="#64748b">Community building, moderation, event organization</text>
+            
+            <g transform="translate(400, 20)">
+                <rect width="100" height="40" rx="20" fill="#fee2e2"/>
+                <text x="50" y="25" font-family="Arial" font-size="14" fill="#991b1b" text-anchor="middle">None</text>
+                
+                <rect x="110" width="100" height="40" rx="20" fill="#fef3c7"/>
+                <text x="160" y="25" font-family="Arial" font-size="14" fill="#92400e" text-anchor="middle">Basic</text>
+                
+                <rect x="220" width="100" height="40" rx="20" fill="#ecfdf5"/>
+                <text x="270" y="25" font-family="Arial" font-size="14" fill="#065f46" text-anchor="middle">Advanced</text>
+                
+                <rect x="330" width="100" height="40" rx="20" fill="#eef2ff"/>
+                <text x="380" y="25" font-family="Arial" font-size="14" fill="#3730a3" text-anchor="middle">Expert</text>
+            </g>
+
+            <!-- Educational Content Development -->
+            <g transform="translate(0, 100)">
+                <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+                <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Educational Content Development</text>
+                <text x="24" y="55" font-family="Arial" font-size="14" fill="#64748b">Course creation, documentation, technical writing</text>
+                
+                <g transform="translate(400, 20)">
+                    <rect width="100" height="40" rx="20" fill="#fee2e2"/>
+                    <text x="50" y="25" font-family="Arial" font-size="14" fill="#991b1b" text-anchor="middle">None</text>
+                    
+                    <rect x="110" width="100" height="40" rx="20" fill="#fef3c7"/>
+                    <text x="160" y="25" font-family="Arial" font-size="14" fill="#92400e" text-anchor="middle">Basic</text>
+                    
+                    <rect x="220" width="100" height="40" rx="20" fill="#ecfdf5"/>
+                    <text x="270" y="25" font-family="Arial" font-size="14" fill="#065f46" text-anchor="middle">Advanced</text>
+                    
+                    <rect x="330" width="100" height="40" rx="20" fill="#eef2ff"/>
+                    <text x="380" y="25" font-family="Arial" font-size="14" fill="#3730a3" text-anchor="middle">Expert</text>
+                </g>
+            </g>
+
+            <!-- Marketing & Communication -->
+            <g transform="translate(0, 200)">
+                <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+                <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Marketing &amp; Communication</text>
+                <text x="24" y="55" font-family="Arial" font-size="14" fill="#64748b">Social media, content strategy, outreach</text>
+                
+                <g transform="translate(400, 20)">
+                    <rect width="100" height="40" rx="20" fill="#fee2e2"/>
+                    <text x="50" y="25" font-family="Arial" font-size="14" fill="#991b1b" text-anchor="middle">None</text>
+                    
+                    <rect x="110" width="100" height="40" rx="20" fill="#fef3c7"/>
+                    <text x="160" y="25" font-family="Arial" font-size="14" fill="#92400e" text-anchor="middle">Basic</text>
+                    
+                    <rect x="220" width="100" height="40" rx="20" fill="#ecfdf5"/>
+                    <text x="270" y="25" font-family="Arial" font-size="14" fill="#065f46" text-anchor="middle">Advanced</text>
+                    
+                    <rect x="330" width="100" height="40" rx="20" fill="#eef2ff"/>
+                    <text x="380" y="25" font-family="Arial" font-size="14" fill="#3730a3" text-anchor="middle">Expert</text>
+                </g>
+            </g>
+        </g>
+    </g>
+
+    <!-- Product & Innovation Skills -->
+    <g transform="translate(100, 500)">
+        <text x="0" y="0" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Product &amp; Innovation Skills</text>
+        
+        <!-- Skills Container -->
+        <g transform="translate(0, 60)">
+            <!-- Product Strategy & Management -->
+            <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+            <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Product Strategy &amp; Management</text>
+            <text x="24" y="55" font-family="Arial" font-size="14" fill="#64748b">Product lifecycle, roadmap planning, market fit</text>
+            
+            <g transform="translate(400, 20)">
+                <rect width="100" height="40" rx="20" fill="#fee2e2"/>
+                <text x="50" y="25" font-family="Arial" font-size="14" fill="#991b1b" text-anchor="middle">None</text>
+                
+                <rect x="110" width="100" height="40" rx="20" fill="#fef3c7"/>
+                <text x="160" y="25" font-family="Arial" font-size="14" fill="#92400e" text-anchor="middle">Basic</text>
+                
+                <rect x="220" width="100" height="40" rx="20" fill="#ecfdf5"/>
+                <text x="270" y="25" font-family="Arial" font-size="14" fill="#065f46" text-anchor="middle">Advanced</text>
+                
+                <rect x="330" width="100" height="40" rx="20" fill="#eef2ff"/>
+                <text x="380" y="25" font-family="Arial" font-size="14" fill="#3730a3" text-anchor="middle">Expert</text>
+            </g>
+
+            <!-- Research & Analysis -->
+            <g transform="translate(0, 100)">
+                <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+                <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Research &amp; Analysis</text>
+                <text x="24" y="55" font-family="Arial" font-size="14" fill="#64748b">Market research, data analysis, user research</text>
+                
+                <g transform="translate(400, 20)">
+                    <rect width="100" height="40" rx="20" fill="#fee2e2"/>
+                    <text x="50" y="25" font-family="Arial" font-size="14" fill="#991b1b" text-anchor="middle">None</text>
+                    
+                    <rect x="110" width="100" height="40" rx="20" fill="#fef3c7"/>
+                    <text x="160" y="25" font-family="Arial" font-size="14" fill="#92400e" text-anchor="middle">Basic</text>
+                    
+                    <rect x="220" width="100" height="40" rx="20" fill="#ecfdf5"/>
+                    <text x="270" y="25" font-family="Arial" font-size="14" fill="#065f46" text-anchor="middle">Advanced</text>
+                    
+                    <rect x="330" width="100" height="40" rx="20" fill="#eef2ff"/>
+                    <text x="380" y="25" font-family="Arial" font-size="14" fill="#3730a3" text-anchor="middle">Expert</text>
+                </g>
+            </g>
+
+            <!-- Innovation Process Design -->
+            <g transform="translate(0, 200)">
+                <rect width="920" height="80" rx="8" fill="#f8fafc"/>
+                <text x="24" y="35" font-family="Arial" font-size="16" fill="#1e293b">Innovation Process Design</text>
+                <text x="24" y="55" font-family="Arial" font-size="14" fill="#64748b">Design thinking, prototyping, testing methodologies</text>
+                
+                <g transform="translate(400, 20)">
+                    <rect width="100" height="40" rx="20" fill="#fee2e2"/>
+                    <text x="50" y="25" font-family="Arial" font-size="14" fill="#991b1b" text-anchor="middle">None</text>
+                    
+                    <rect x="110" width="100" height="40" rx="20" fill="#fef3c7"/>
+                    <text x="160" y="25" font-family="Arial" font-size="14" fill="#92400e" text-anchor="middle">Basic</text>
+                    
+                    <rect x="220" width="100" height="40" rx="20" fill="#ecfdf5"/>
+                    <text x="270" y="25" font-family="Arial" font-size="14" fill="#065f46" text-anchor="middle">Advanced</text>
+                    
+                    <rect x="330" width="100" height="40" rx="20" fill="#eef2ff"/>
+                    <text x="380" y="25" font-family="Arial" font-size="14" fill="#3730a3" text-anchor="middle">Expert</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
