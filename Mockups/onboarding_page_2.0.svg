@@ -154,7 +154,7 @@
             </g>
 
             <!-- Areas of Interest Section -->
-            <g transform="translate(0, 720)">
+            <g transform="translate(0, 820)">
                 <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Areas of Interest</text>
                 <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">Select all areas you're interested in reviewing (multiple selection allowed)</text>
                 
@@ -212,7 +212,7 @@
             </g>
 
             <!-- Navigation Buttons -->
-            <g transform="translate(0, 1000)">
+            <g transform="translate(0, 1100)">
                 <!-- Previous Button -->
                 <g transform="translate(200, 0)">
                     <rect width="200" height="50" rx="25" fill="#f1f5f9"/>
