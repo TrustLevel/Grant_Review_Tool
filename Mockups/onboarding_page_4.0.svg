@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600">
+    <defs>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+        </filter>
+        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4338ca"/>
+            <stop offset="100%" style="stop-color:#6366f1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="1600" fill="#f8fafc"/>
+
+    <!-- Header Section -->
+    <g transform="translate(100, 40)">
+        <text x="0" y="0" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Almost Done!</text>
+        <text x="0" y="30" font-family="Arial" font-size="16" fill="#64748b">Review your profile information</text>
+        
+        <!-- Progress Bar -->
+        <rect x="0" y="60" width="1000" height="8" rx="4" fill="#e2e8f0"/>
+        <rect x="0" y="60" width="1000" height="8" rx="4" fill="url(#progressGradient)"/>
+        
+        <!-- Step Indicators -->
+        <g transform="translate(0, 90)">
+            <text x="0" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 1: Basic Information</text>
+            <text x="200" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 2: Expertise</text>
+            <text x="400" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 3: Validation</text>
+            <text x="600" y="0" font-family="Arial" font-size="14" fill="#4338ca">Step 4: Summary</text>
+        </g>
+    </g>
+
+    <!-- Main Content Container -->
+    <g transform="translate(100, 180)">
+        <rect width="1000" height="1200" rx="12" fill="white" filter="url(#shadow)"/>
+        
+        <!-- Content Sections -->
+        <g transform="translate(40, 40)">
+            <!-- Basic Information -->
+            <g>
+                <g transform="translate(0, 0)">
+                    <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Basic Information</text>
+                    <rect x="840" y="-10" width="40" height="20" rx="4" fill="#f1f5f9"/>
+                    <text x="850" y="5" font-family="Arial" font-size="12" fill="#4338ca">Edit</text>
+                </g>
+                
+                <rect width="920" height="120" rx="8" fill="#f8fafc" transform="translate(0, 20)"/>
+                
+                <g transform="translate(24, 45)">
+                    <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Full Name</text>
+                    <text x="0" y="25" font-family="Arial" font-size="16" fill="#1e293b">John Doe</text>
+                    
+                    <text x="300" y="0" font-family="Arial" font-size="14" fill="#64748b">Email</text>
+                    <text x="300" y="25" font-family="Arial" font-size="16" fill="#1e293b">john.doe@example.com</text>
+
+                    <text x="600" y="0" font-family="Arial" font-size="14" fill="#64748b">Username</text>
+                    <text x="600" y="25" font-family="Arial" font-size="16" fill="#1e293b">johndoe</text>
+                </g>
+            </g>
+
+            <!-- Expertise -->
+            <g transform="translate(0, 180)">
+                <g transform="translate(0, 0)">
+                    <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Expertise &amp; Skills</text>
+                    <rect x="840" y="-10" width="40" height="20" rx="4" fill="#f1f5f9"/>
+                    <text x="850" y="5" font-family="Arial" font-size="12" fill="#4338ca">Edit</text>
+                </g>
+
+                <rect width="920" height="200" rx="8" fill="#f8fafc" transform="translate(0, 20)"/>
+                
+                <g transform="translate(24, 45)">
+                    <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Primary Expertise</text>
+                    <text x="0" y="25" font-family="Arial" font-size="16" fill="#1e293b">Technical Development</text>
+
+                    <text x="0" y="60" font-family="Arial" font-size="14" fill="#64748b">Key Skills</text>
+                    <g transform="translate(0, 80)">
+                        <rect width="200" height="24" rx="12" fill="#eef2ff"/>
+                        <text x="100" y="16" font-family="Arial" font-size="12" fill="#4338ca" text-anchor="middle">Smart Contracts (Expert)</text>
+
+                        <rect x="210" width="200" height="24" rx="12" fill="#eef2ff"/>
+                        <text x="310" y="16" font-family="Arial" font-size="12" fill="#4338ca" text-anchor="middle">Frontend Dev (Advanced)</text>
+
+                        <rect x="420" width="200" height="24" rx="12" fill="#eef2ff"/>
+                        <text x="520" y="16" font-family="Arial" font-size="12" fill="#4338ca" text-anchor="middle">System Architecture (Advanced)</text>
+                    </g>
+
+                    <text x="0" y="120" font-family="Arial" font-size="14" fill="#64748b">Areas of Interest</text>
+                    <g transform="translate(0, 140)">
+                        <rect width="100" height="24" rx="12" fill="#f1f5f9"/>
+                        <text x="50" y="16" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">DeFi</text>
+
+                        <rect x="110" width="140" height="24" rx="12" fill="#f1f5f9"/>
+                        <text x="180" y="16" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">Smart Contracts</text>
+
+                        <rect x="260" width="160" height="24" rx="12" fill="#f1f5f9"/>
+                        <text x="340" y="16" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">Identity &amp; Security</text>
+                    </g>
+                </g>
+            </g>
+
+            <!-- Validation -->
+            <g transform="translate(0, 420)">
+                <g transform="translate(0, 0)">
+                    <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Profile Validation</text>
+                    <rect x="840" y="-10" width="40" height="20" rx="4" fill="#f1f5f9"/>
+                    <text x="850" y="5" font-family="Arial" font-size="12" fill="#4338ca">Edit</text>
+                </g>
+
+                <rect width="920" height="160" rx="8" fill="#f8fafc" transform="translate(0, 20)"/>
+                
+                <g transform="translate(24, 45)">
+                    <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Professional Profiles</text>
+                    <text x="0" y="25" font-family="Arial" font-size="16" fill="#1e293b">LinkedIn, GitHub</text>
+
+                    <text x="300" y="0" font-family="Arial" font-size="14" fill="#64748b">Catalyst Experience</text>
+                    <text x="300" y="25" font-family="Arial" font-size="16" fill="#1e293b">Previous Reviewer: No</text>
+                    <text x="300" y="50" font-family="Arial" font-size="16" fill="#1e293b">Previous Proposer: Yes</text>
+
+                    <text x="600" y="0" font-family="Arial" font-size="14" fill="#64748b">Additional Info</text>
+                    <text x="600" y="25" font-family="Arial" font-size="16" fill="#1e293b">Provided</text>
+                </g>
+            </g>
+
+            <!-- Final Notes -->
+            <g transform="translate(0, 620)">
+                <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Almost Ready!</text>
+                <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">Please review your information above. You can edit any section by clicking the 'Edit' button.</text>
+                <text x="0" y="50" font-family="Arial" font-size="14" fill="#64748b">By submitting, you agree to our reviewing guidelines and code of conduct.</text>
+            </g>
+
+            <!-- Navigation Buttons -->
+            <g transform="translate(0, 750)">
+                <!-- Previous Button -->
+                <g transform="translate(200, 0)">
+                    <rect width="200" height="50" rx="25" fill="#f1f5f9"/>
+                    <text x="70" y="32" font-family="Arial" font-size="16" fill="#64748b">← Previous</text>
+                </g>
+
+                <!-- Submit Button -->
+                <g transform="translate(500, 0)">
+                    <rect width="200" height="50" rx="25" fill="#4338ca"/>
+                    <text x="65" y="32" font-family="Arial" font-size="16" fill="white">Submit Profile</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
