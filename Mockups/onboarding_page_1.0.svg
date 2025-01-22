@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600">
+    <!-- Define Styles -->
+    <defs>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+        </filter>
+        <!-- Progress Bar Gradient -->
+        <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4338ca"/>
+            <stop offset="100%" style="stop-color:#6366f1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="1600" fill="#f8fafc"/>
+
+    <!-- Header Section -->
+    <g transform="translate(100, 40)">
+        <text x="0" y="0" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Welcome to TrustLevel</text>
+        <text x="0" y="30" font-family="Arial" font-size="16" fill="#64748b">Let's set up your reviewer profile</text>
+        
+        <!-- Progress Bar Background -->
+        <rect x="0" y="60" width="1000" height="8" rx="4" fill="#e2e8f0"/>
+        <!-- Progress Bar Fill (25% complete) -->
+        <rect x="0" y="60" width="125" height="8" rx="4" fill="url(#progressGradient)"/>
+        
+        <!-- Step Indicators -->
+        <g transform="translate(0, 90)">
+            <text x="0" y="0" font-family="Arial" font-size="14" fill="#4338ca">Step 1: Basic Information</text>
+            <text x="200" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 2: Expertise</text>
+            <text x="400" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 3: Community</text>
+            <text x="600" y="0" font-family="Arial" font-size="14" fill="#94a3b8">Step 4: Validation</text>
+        </g>
+    </g>
+
+    <!-- Main Form Container -->
+    <g transform="translate(100, 200)">
+        <rect width="1000" height="1300" rx="12" fill="white" filter="url(#shadow)"/>
+        
+        <!-- Form Content -->
+        <g transform="translate(40, 40)">
+            <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">Basic Information</text>
+            
+            <!-- Full Name Field -->
+            <g transform="translate(0, 40)">
+                <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Full Name *</text>
+                <rect x="0" y="10" width="920" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+            </g>
+
+            <!-- Email Field -->
+            <g transform="translate(0, 120)">
+                <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Email Address *</text>
+                <rect x="0" y="10" width="920" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+            </g>
+
+            <!-- Username Field -->
+            <g transform="translate(0, 200)">
+                <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Username (Optional)</text>
+                <rect x="0" y="10" width="920" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+            </g>
+
+            <!-- Professional Title Field -->
+            <g transform="translate(0, 280)">
+                <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Professional Title *</text>
+                <rect x="0" y="10" width="920" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+            </g>
+
+            <!-- Organization Field -->
+            <g transform="translate(0, 360)">
+                <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Organization/Affiliation</text>
+                <rect x="0" y="10" width="920" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+            </g>
+
+            <!-- Years of Experience Dropdown -->
+            <g transform="translate(0, 440)">
+                <text x="0" y="0" font-family="Arial" font-size="14" fill="#64748b">Years of Experience *</text>
+                <rect x="0" y="10" width="920" height="50" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+                <text x="880" y="40" font-family="Arial" font-size="16" fill="#64748b">▼</text>
+            </g>
+
+            <!-- Navigation Buttons -->
+            <g transform="translate(0, 1100)">
+                <rect x="720" width="200" height="50" rx="25" fill="#4338ca"/>
+                <text x="785" y="32" font-family="Arial" font-size="16" fill="white">Next Step →</text>
+            </g>
+        </g>
+    </g>
+</svg>
