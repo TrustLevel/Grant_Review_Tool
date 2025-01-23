@@ -1,168 +1,231 @@
 from dataclasses import dataclass
-from typing import List, Set, Optional
+from typing import List, Set, Optional, Dict
 from enum import Enum
-from decimal import Decimal
+from datetime import datetime
 
-class CatalystCategory(str, Enum):
-    CONCEPT = "concept"
-    PRODUCT = "product"
-    OPEN_DEV = "open_dev"
-    OPEN_ECOSYSTEM = "open_ecosystem"
-    PARTNERSHIP = "partnership"
+class ReviewScope(str, Enum):
+    ALL = "all"
+    CATEGORY = "category"
+    MAX_EXPERTISE = "max_expertise"
+    RANDOM = "random"
 
-class ConceptType(str, Enum):
-    TECHNICAL = "technical"
-    PRODUCT = "product"
-    RESEARCH = "research"
+@dataclass
+class FundPreferences:
+    """Reviewer preferences for a specific fund"""
+    reviewer_id: str
+    fund_id: str
+    review_scope: ReviewScope
+    max_reviews: Optional[int]
+    selected_categories: Set[str]
+    excluded_proposals: Set[str]
 
-class ProposalTag(str, Enum):
-    # Technical tags
-    SMART_CONTRACTS = "smart_contracts"
-    DEFI = "defi"
-    NFT = "nft"
-    SCALABILITY = "scalability"
-    INTEROPERABILITY = "interoperability"
-    DEV_TOOLS = "dev_tools"
-    
-    # Product/Business tags
-    WALLET = "wallet"
-    PAYMENTS = "payments"
-    IDENTITY = "identity"
-    GOVERNANCE = "governance"
-    RWA = "real_world_assets"
-    GAMING = "gaming"
-    
-    # Community/Ecosystem tags
-    EDUCATION = "education"
-    EVENTS = "events"
-    MARKETING = "marketing"
-    COMMUNITY = "community"
-    ONBOARDING = "onboarding"
-    ADOPTION = "adoption"
+@dataclass
+class ReviewerProfile:
+    """Reviewer profile with expertise and interests"""
+    reviewer_id: str
+    technical_level: int  # 0-5
+    product_level: int   # 0-5
+    community_level: int # 0-5
+    interests: Set[str]  # Tags they're interested in
+    active_reviews: int
+    max_capacity: int
 
 @dataclass
 class ProposalInfo:
+    """Proposal information"""
     proposal_id: str
-    title: str
-    category: CatalystCategory
-    concept_type: Optional[ConceptType] = None  # Only for CONCEPT category
-    tags: Set[ProposalTag]
-    requested_funds: Decimal
-    
-    def __post_init__(self):
-        # Validate concept type is provided for concept proposals
-        if self.category == CatalystCategory.CONCEPT and not self.concept_type:
-            raise ValueError("Concept proposals must specify a concept type")
+    category: str
+    tags: Set[str]
+    current_reviews: int
+    min_required_reviews: int = 5
+    review_confidence: float = 0.0
+
+class ProposalAssignmentService:
+    def __init__(self):
+        self.MIN_REVIEWS_PER_PROPOSAL = 5
+        self.MIN_CONFIDENCE_THRESHOLD = 0.6
+
+    async def create_assignments(
+        self,
+        reviewers: List[ReviewerProfile],
+        proposals: List[ProposalInfo],
+        fund_preferences: Dict[str, FundPreferences]
+    ) -> List[tuple[str, str]]:  # List of (reviewer_id, proposal_id) pairs
+        assignments = []
+        
+        # Filter proposals needing reviews
+        needs_review = [p for p in proposals if p.current_reviews < self.MIN_REVIEWS_PER_PROPOSAL]
+        
+        for proposal in needs_review:
+            # Find eligible reviewers based on fund preferences
+            eligible_reviewers = self._filter_eligible_reviewers(
+                proposal, 
+                reviewers, 
+                fund_preferences
+            )
             
-        # Validate partnership category funding
-        if self.category == CatalystCategory.PARTNERSHIP and self.requested_funds > Decimal('2000000'):
-            raise ValueError("Partnership proposals cannot exceed 2M ADA")
+            # Calculate how many more reviews needed
+            reviews_needed = self.MIN_REVIEWS_PER_PROPOSAL - proposal.current_reviews
+            
+            # Sort reviewers by match score
+            matched_reviewers = self._rank_reviewers(proposal, eligible_reviewers)
+            
+            # Create assignments
+            for reviewer in matched_reviewers[:reviews_needed]:
+                assignments.append((reviewer.reviewer_id, proposal.proposal_id))
+                reviewer.active_reviews += 1
+        
+        return assignments
 
-def get_category_expertise_requirements(category: CatalystCategory, concept_type: Optional[ConceptType] = None) -> List[str]:
-    """Define expertise requirements based on category"""
-    if category == CatalystCategory.CONCEPT:
-        if concept_type == ConceptType.TECHNICAL:
-            return ["technical", "smart_contracts", "development"]
-        elif concept_type == ConceptType.PRODUCT:
-            return ["product", "business", "market_analysis"]
-        elif concept_type == ConceptType.RESEARCH:
-            return ["research", "technical", "analysis"]
-    elif category == CatalystCategory.PRODUCT:
-        return ["product", "development", "business"]
-    elif category == CatalystCategory.OPEN_DEV:
-        return ["technical", "development", "open_source"]
-    elif category == CatalystCategory.OPEN_ECOSYSTEM:
-        return ["community", "marketing", "events"]
-    elif category == CatalystCategory.PARTNERSHIP:
-        return ["business", "integration", "enterprise"]
-    return []
+    def _filter_eligible_reviewers(
+        self,
+        proposal: ProposalInfo,
+        reviewers: List[ReviewerProfile],
+        fund_preferences: Dict[str, FundPreferences]
+    ) -> List[ReviewerProfile]:
+        """Filter reviewers based on fund preferences and availability"""
+        eligible = []
+        
+        for reviewer in reviewers:
+            pref = fund_preferences.get(reviewer.reviewer_id)
+            if not pref:
+                continue
+                
+            # Check if reviewer has capacity
+            if reviewer.active_reviews >= reviewer.max_capacity:
+                continue
+                
+            # Check exclusions
+            if proposal.proposal_id in pref.excluded_proposals:
+                continue
+                
+            # Apply review scope rules
+            if pref.review_scope == ReviewScope.CATEGORY:
+                if proposal.category not in pref.selected_categories:
+                    continue
+            elif pref.review_scope == ReviewScope.MAX_EXPERTISE:
+                if reviewer.active_reviews >= pref.max_reviews:
+                    continue
+                    
+            eligible.append(reviewer)
+            
+        return eligible
 
-@dataclass
-class ReviewerExpertise:
-    """Expanded reviewer expertise structure to match Catalyst categories"""
-    # Primary expertise areas
-    technical_level: int  # 0-5 scale
-    product_level: int   # 0-5 scale
-    community_level: int # 0-5 scale
-    
-    # Specific tags expertise
-    tag_expertise: dict[ProposalTag, int]  # tag -> expertise level (0-5)
-    
-    def matches_category(self, category: CatalystCategory, concept_type: Optional[ConceptType] = None) -> bool:
-        """Check if reviewer expertise matches category requirements"""
-        if category == CatalystCategory.CONCEPT:
-            if concept_type == ConceptType.TECHNICAL:
-                return self.technical_level >= 3
-            elif concept_type == ConceptType.PRODUCT:
-                return self.product_level >= 3
-            elif concept_type == ConceptType.RESEARCH:
-                return self.technical_level >= 3
-        elif category == CatalystCategory.PRODUCT:
-            return self.product_level >= 3
-        elif category == CatalystCategory.OPEN_DEV:
-            return self.technical_level >= 4  # Higher requirement for Open Dev
-        elif category == CatalystCategory.OPEN_ECOSYSTEM:
-            return self.community_level >= 3
-        elif category == CatalystCategory.PARTNERSHIP:
-            return self.product_level >= 4  # Higher requirement for Partnership
-        return False
+    def _rank_reviewers(
+        self,
+        proposal: ProposalInfo,
+        reviewers: List[ReviewerProfile]
+    ) -> List[ReviewerProfile]:
+        """Rank reviewers by match score for a proposal"""
+        scored_reviewers = []
+        
+        for reviewer in reviewers:
+            score = self._calculate_match_score(proposal, reviewer)
+            scored_reviewers.append((score, reviewer))
+            
+        # Sort by score descending
+        scored_reviewers.sort(reverse=True)
+        return [r for _, r in scored_reviewers]
 
-    def calculate_proposal_match(self, proposal: ProposalInfo) -> float:
-        """Calculate match score (0-1) between reviewer and proposal"""
-        # Base score from category match
-        if not self.matches_category(proposal.category, proposal.concept_type):
+    def _calculate_match_score(
+        self,
+        proposal: ProposalInfo,
+        reviewer: ReviewerProfile
+    ) -> float:
+        """Calculate match score between reviewer and proposal"""
+        # Calculate interest match
+        matching_tags = proposal.tags.intersection(reviewer.interests)
+        interest_score = len(matching_tags) / max(len(proposal.tags), 1)
+        
+        # Calculate expertise match based on category
+        expertise_score = self._get_expertise_score(proposal.category, reviewer)
+        
+        # Weighted combination
+        # Prioritize interest match (0.6) over expertise (0.4)
+        # Since expertise will be used in confidence calculations
+        return (0.6 * interest_score) + (0.4 * expertise_score)
+
+    def _get_expertise_score(
+        self,
+        category: str,
+        reviewer: ReviewerProfile
+    ) -> float:
+        """Get expertise score based on proposal category"""
+        # Map category to relevant expertise
+        if category in ["development", "smart_contracts"]:
+            return reviewer.technical_level / 5
+        elif category in ["defi", "product"]:
+            return reviewer.product_level / 5
+        elif category in ["community", "education"]:
+            return reviewer.community_level / 5
+        else:
+            # For general categories, take highest expertise
+            return max(
+                reviewer.technical_level,
+                reviewer.product_level,
+                reviewer.community_level
+            ) / 5
+
+    def calculate_review_confidence(
+        self,
+        proposal: ProposalInfo,
+        reviews: List[tuple[ReviewerProfile, float]]  # (reviewer, rating) pairs
+    ) -> float:
+        """Calculate confidence score for a proposal's reviews"""
+        if not reviews:
             return 0.0
             
-        # Calculate tag expertise match
-        tag_scores = [self.tag_expertise.get(tag, 0) / 5 for tag in proposal.tags]
-        avg_tag_score = sum(tag_scores) / len(tag_scores) if tag_scores else 0
+        # Coverage factor (0-1)
+        coverage = min(len(reviews) / self.MIN_REVIEWS_PER_PROPOSAL, 1.0)
         
-        # Combine category and tag matching
-        return (0.6 * self._get_category_score(proposal) + 
-                0.4 * avg_tag_score)
-
-    def _get_category_score(self, proposal: ProposalInfo) -> float:
-        """Get score (0-1) based on category expertise"""
-        if proposal.category == CatalystCategory.OPEN_DEV:
-            return self.technical_level / 5
-        elif proposal.category == CatalystCategory.OPEN_ECOSYSTEM:
-            return self.community_level / 5
-        elif proposal.category == CatalystCategory.PRODUCT:
-            return self.product_level / 5
-        elif proposal.category == CatalystCategory.PARTNERSHIP:
-            return max(self.product_level, self.technical_level) / 5
-        elif proposal.category == CatalystCategory.CONCEPT:
-            if proposal.concept_type == ConceptType.TECHNICAL:
-                return self.technical_level / 5
-            elif proposal.concept_type == ConceptType.PRODUCT:
-                return self.product_level / 5
-            elif proposal.concept_type == ConceptType.RESEARCH:
-                return max(self.technical_level, self.product_level) / 5
-        return 0.0
+        # Quality factor based on reviewer expertise
+        expertise_scores = []
+        for reviewer, _ in reviews:
+            expertise_score = self._get_expertise_score(proposal.category, reviewer)
+            expertise_scores.append(expertise_score)
+            
+        avg_expertise = sum(expertise_scores) / len(expertise_scores)
+        
+        # Combine coverage and quality
+        confidence = (0.5 * coverage) + (0.5 * avg_expertise)
+        
+        return confidence
 
 # Example usage
 if __name__ == "__main__":
-    # Example proposal
-    example_proposal = ProposalInfo(
-        proposal_id="prop_123",
-        title="DeFi Integration Platform",
-        category=CatalystCategory.OPEN_DEV,
-        tags={ProposalTag.DEFI, ProposalTag.SMART_CONTRACTS, ProposalTag.INTEROPERABILITY},
-        requested_funds=Decimal('100000')
-    )
-    
-    # Example reviewer expertise
-    example_expertise = ReviewerExpertise(
+    # Example setup
+    reviewer1 = ReviewerProfile(
+        reviewer_id="r1",
         technical_level=4,
         product_level=3,
         community_level=2,
-        tag_expertise={
-            ProposalTag.DEFI: 4,
-            ProposalTag.SMART_CONTRACTS: 5,
-            ProposalTag.INTEROPERABILITY: 3
-        }
+        interests={"defi", "smart_contracts"},
+        active_reviews=0,
+        max_capacity=5
     )
     
-    # Calculate match
-    match_score = example_expertise.calculate_proposal_match(example_proposal)
-    print(f"Match score: {match_score:.2f}")
+    proposal1 = ProposalInfo(
+        proposal_id="p1",
+        category="defi",
+        tags={"defi", "smart_contracts"},
+        current_reviews=2
+    )
+    
+    preferences = {
+        "r1": FundPreferences(
+            reviewer_id="r1",
+            fund_id="f1",
+            review_scope=ReviewScope.ALL,
+            max_reviews=None,
+            selected_categories=set(),
+            excluded_proposals=set()
+        )
+    }
+    
+    # Create service and assignments
+    service = ProposalAssignmentService()
+    assignments = service.create_assignments(
+        reviewers=[reviewer1],
+        proposals=[proposal1],
+        fund_preferences=preferences
+    )
