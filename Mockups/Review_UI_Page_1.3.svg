@@ -1,206 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1200" viewBox="0 0 1440 1200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 900">
     <defs>
-        <linearGradient id="bg-gradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#e2e8f0"/>
-            <stop offset="100%" stop-color="#cbd5e1"/>
-        </linearGradient>
         <filter id="card-shadow">
-            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+            <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.08"/>
         </filter>
     </defs>
 
-    <!-- Background -->
-    <rect width="1440" height="1200" fill="url(#bg-gradient)"/>
+    <!-- Main Container -->
+    <rect width="660" height="900" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+    
+    <!-- Quick Quality Check Section -->
+    <g transform="translate(24, 24)">
+        <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Quick Quality Check</text>
+        <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">What's your first impression of this proposal?</text>
 
-    <!-- Top Navigation Bar -->
-    <rect x="0" y="0" width="1440" height="70" fill="#ffffff" filter="url(#card-shadow)"/>
-    <g transform="translate(40, 20)">
-        <rect width="40" height="30" rx="6" fill="#f1f5f9"/>
-        <text x="12" y="22" font-family="Arial" font-size="18" fill="#64748b">←</text>
-        <text x="60" y="23" font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">TrustLevel</text>
-        
-        <rect x="220" y="-5" width="180" height="40" rx="20" fill="#eef2ff"/>
-        <text x="245" y="20" font-family="Arial" font-size="15" fill="#4338ca">Catalyst Fund 13</text>
-    </g>
+        <!-- Promising Button -->
+        <g transform="translate(0, 80)">
+            <rect width="612" height="60" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+            <text x="24" y="38" font-family="Arial" font-size="15" fill="#166534">✨ This proposal seems promising</text>
+        </g>
 
-    <!-- Header Info Bar -->
-    <g transform="translate(40, 100)">
-        <rect width="1360" height="130" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
-        <g transform="translate(24, 24)">
-            <text x="0" y="20" font-family="Arial" font-size="14" fill="#64748b">#1200193</text>
-            <text x="0" y="45" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">DeFi Integration Proposal</text>
-            <text x="0" y="70" font-family="Arial" font-size="15" fill="#64748b">by Cardano Labs • Requested Funds: ₳45,000</text>
+        <!-- Low Quality Button -->
+        <g transform="translate(0, 150)">
+            <rect width="612" height="60" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+            <text x="24" y="38" font-family="Arial" font-size="15" fill="#991b1b">⚠️ This proposal seems low quality</text>
+        </g>
+
+        <!-- Quick Rejection Section -->
+        <g transform="translate(0, 220)">
+            <!-- Container -->
+            <rect width="612" height="280" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
             
-            <g transform="translate(0, 82)">
-                <rect width="120" height="24" rx="12" fill="#f1f5f9"/>
-                <text x="12" y="17" font-family="Arial" font-size="12" fill="#4338ca">View Proposal ↗</text>
-                <rect x="130" width="60" height="24" rx="12" fill="#f0fdf4"/>
-                <text x="142" y="17" font-family="Arial" font-size="12" fill="#22c55e">DeFi</text>
-                <rect x="200" width="100" height="24" rx="12" fill="#f0f7ff"/>
-                <text x="212" y="17" font-family="Arial" font-size="12" fill="#3b82f6">Integration</text>
+            <!-- Tags Section -->
+            <text x="24" y="30" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Select issues:</text>
+            
+            <!-- Tags -->
+            <g transform="translate(24, 45)">
+                <rect width="100" height="32" rx="16" fill="#f1f5f9"/>
+                <text x="50" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Incomplete</text>
+
+                <rect x="110" width="120" height="32" rx="16" fill="#f1f5f9"/>
+                <text x="170" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Unclear Scope</text>
+
+                <rect x="240" width="100" height="32" rx="16" fill="#f1f5f9"/>
+                <text x="290" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Duplicate</text>
+
+                <rect x="350" width="140" height="32" rx="16" fill="#f1f5f9"/>
+                <text x="420" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Poor Formatting</text>
+            </g>
+
+            <!-- Comment Field -->
+            <g transform="translate(24, 95)">
+                <text x="0" y="20" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Brief comment (optional):</text>
+                <rect x="0" y="35" width="564" height="80" rx="8" fill="#f8fafc"/>
+            </g>
+
+            <!-- Action Buttons -->
+            <g transform="translate(24, 200)">
+                <!-- Submit & Next -->
+                <rect width="270" height="50" rx="25" fill="#ef4444"/>
+                <text x="75" y="32" font-family="Arial" font-size="15" fill="#ffffff">Submit & Next Proposal</text>
+
+                <!-- Continue to Full Review -->
+                <rect x="290" width="270" height="50" rx="25" fill="#f1f5f9"/>
+                <text x="355" y="32" font-family="Arial" font-size="15" fill="#64748b">Continue to Full Review</text>
             </g>
         </g>
 
-        <!-- Progress Steps -->
-        <g transform="translate(680, 34)">
-            <g transform="translate(0, 10)">
-                <!-- Step circles and labels -->
-                <circle cx="55" cy="20" r="20" fill="#e2e8f0"/>
-                <text x="55" y="25" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">1</text>
-                <text x="55" y="55" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Relevance</text>
+        <!-- Expertise Rating Section -->
+        <g transform="translate(0, 520)">
+            <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Rate Your Expertise</text>
+            <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">How familiar are you with the subject matter of this proposal?</text>
 
-                <circle cx="165" cy="20" r="20" fill="#e2e8f0"/>
-                <text x="165" y="25" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">2</text>
-                <text x="165" y="55" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Innovation</text>
+            <!-- Rating Scale -->
+            <g transform="translate(0, 80)">
+                <rect width="612" height="160" rx="8" fill="#f8fafc"/>
+                <g transform="translate(24, 24)">
+                    <!-- Scale Labels -->
+                    <text x="0" y="20" font-family="Arial" font-size="14" fill="#64748b">Not familiar</text>
+                    <text x="480" y="20" font-family="Arial" font-size="14" fill="#64748b">Expert</text>
 
-                <circle cx="275" cy="20" r="20" fill="#e2e8f0"/>
-                <text x="275" y="25" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">3</text>
-                <text x="275" y="55" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Impact</text>
+                    <!-- Scale Points -->
+                    <g transform="translate(0, 40)">
+                        <rect x="0" y="0" width="544" height="4" fill="#e2e8f0"/>
+                        <circle cx="0" cy="2" r="8" fill="#4338ca"/>
+                        <circle cx="136" cy="2" r="8" fill="#4338ca"/>
+                        <circle cx="272" cy="2" r="8" fill="#4338ca"/>
+                        <circle cx="408" cy="2" r="8" fill="#4338ca"/>
+                        <circle cx="544" cy="2" r="8" fill="#4338ca"/>
 
-                <circle cx="385" cy="20" r="20" fill="#e2e8f0"/>
-                <text x="385" y="25" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">4</text>
-                <text x="385" y="55" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Feasibility</text>
-
-                <circle cx="495" cy="20" r="20" fill="#e2e8f0"/>
-                <text x="495" y="25" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">5</text>
-                <text x="495" y="55" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Team</text>
-
-                <circle cx="605" cy="20" r="20" fill="#e2e8f0"/>
-                <text x="605" y="25" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">6</text>
-                <text x="605" y="55" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Budget</text>
-
-                <!-- Connecting lines -->
-                <line x1="75" y1="20" x2="145" y2="20" stroke="#e2e8f0" stroke-width="2"/>
-                <line x1="185" y1="20" x2="255" y2="20" stroke="#e2e8f0" stroke-width="2"/>
-                <line x1="295" y1="20" x2="365" y2="20" stroke="#e2e8f0" stroke-width="2"/>
-                <line x1="405" y1="20" x2="475" y2="20" stroke="#e2e8f0" stroke-width="2"/>
-                <line x1="515" y1="20" x2="585" y2="20" stroke="#e2e8f0" stroke-width="2"/>
-            </g>
-        </g>
-    </g>
-
-    <!-- Main Content Area -->
-    <g transform="translate(40, 260)">
-        <!-- Left Column - Proposal Content -->
-        <rect width="680" height="900" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
-        <g transform="translate(24, 24)">
-            <!-- Navigation Tabs -->
-            <rect width="632" height="50" rx="8" fill="#f8fafc"/>
-            <rect width="160" height="50" rx="8" fill="#eef2ff"/>
-            <text x="30" y="32" font-family="Arial" font-size="14" fill="#4338ca">Proposal Overview</text>
-            <text x="190" y="32" font-family="Arial" font-size="14" fill="#64748b">Complete Proposal</text>
-            <text x="350" y="32" font-family="Arial" font-size="14" fill="#64748b">Challenge Description</text>
-
-            <!-- Content Sections -->
-            <g transform="translate(0, 90)">
-                <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">AI Summary</text>
-                <text x="0" y="30" font-family="Arial" font-size="15" fill="#64748b">This proposal aims to integrate advanced DeFi capabilities into the existing Cardano infrastructure...</text>
-
-                <text x="0" y="80" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Problem Statement</text>
-                <text x="0" y="110" font-family="Arial" font-size="15" fill="#64748b">Current DeFi solutions lack seamless integration with...</text>
-
-                <text x="0" y="160" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Solution</text>
-                <text x="0" y="190" font-family="Arial" font-size="15" fill="#64748b">Our team proposes to develop a comprehensive integration layer...</text>
-
-                <text x="0" y="240" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">Team Stats</text>
-                <rect x="0" y="260" width="632" height="160" rx="8" fill="#f8fafc"/>
-                <text x="16" y="290" font-family="Arial" font-size="15" fill="#1e293b">• Team Size: 5 members</text>
-                <text x="16" y="320" font-family="Arial" font-size="15" fill="#1e293b">• Previous Catalyst Projects: 2</text>
-                <text x="16" y="350" font-family="Arial" font-size="15" fill="#1e293b">• GitHub Activity: High</text>
-                <text x="16" y="380" font-family="Arial" font-size="15" fill="#1e293b">• Completion Rate: 100%</text>
-            </g>
-        </g>
-
-        <!-- Right Column - Review Form -->
-        <g transform="translate(700, 0)">
-            <rect width="660" height="900" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
-            <g transform="translate(24, 24)">
-                <!-- Quality Check Section -->
-                <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Quick Quality Check</text>
-                <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">What's your first impression of this proposal?</text>
-
-                <!-- Quality Check Buttons -->
-                <rect y="80" width="612" height="60" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-                <text x="24" y="118" font-family="Arial" font-size="15" fill="#166534">✨ This proposal seems promising</text>
-
-                <rect y="150" width="612" height="60" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
-                <text x="24" y="188" font-family="Arial" font-size="15" fill="#991b1b">⚠️ This proposal seems low quality</text>
-
-                <!-- Quick Rejection Section -->
-                <g transform="translate(0, 220)">
-                    <rect width="612" height="280" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-                    <text x="24" y="30" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Select issues:</text>
-
-                    <!-- Issue Tags -->
-                    <g transform="translate(24, 45)">
-                        <rect width="100" height="32" rx="16" fill="#f1f5f9"/>
-                        <text x="50" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Incomplete</text>
-
-                        <rect x="110" width="120" height="32" rx="16" fill="#f1f5f9"/>
-                        <text x="170" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Unclear Scope</text>
-
-                        <rect x="240" width="100" height="32" rx="16" fill="#f1f5f9"/>
-                        <text x="290" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Duplicate</text>
-
-                        <rect x="350" width="140" height="32" rx="16" fill="#f1f5f9"/>
-                        <text x="420" y="21" font-family="Arial" font-size="13" fill="#64748b" text-anchor="middle">Poor Formatting</text>
+                        <!-- Scale Numbers -->
+                        <text x="0" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">1</text>
+                        <text x="136" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">2</text>
+                        <text x="272" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">3</text>
+                        <text x="408" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">4</text>
+                        <text x="544" y="30" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">5</text>
                     </g>
 
-                    <!-- Comment Field -->
-                    <text x="24" y="115" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Brief comment (optional):</text>
-                    <rect x="24" y="130" width="564" height="80" rx="8" fill="#f8fafc"/>
-
-                    <!-- Action Buttons -->
-                    <rect x="24" y="224" width="270" height="50" rx="25" fill="#ef4444"/>
-                    <text x="99" y="256" font-family="Arial" font-size="15" fill="#ffffff">Submit & Next Proposal</text>
-
-                    <rect x="314" y="224" width="270" height="50" rx="25" fill="#f1f5f9"/>
-                    <text x="379" y="256" font-family="Arial" font-size="15" fill="#64748b">Continue to Full Review</text>
-                </g>
-
-                <!-- Expertise Rating Section -->
-                <g transform="translate(0, 520)">
-                    <text x="0" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Rate Your Expertise</text>
-                    <text x="0" y="55" font-family="Arial" font-size="15" fill="#64748b">How familiar are you with the subject matter of this proposal?</text>
-
-                    <rect y="80" width="612" height="160" rx="8" fill="#f8fafc"/>
-                    <g transform="translate(24, 104)">
-                        <text x="0" y="20" font-family="Arial" font-size="14" fill="#64748b">Not familiar</text>
-                        <text x="480" y="20" font-family="Arial" font-size="14" fill="#64748b">Expert</text>
-
-                        <rect y="40" width="544" height="4" fill="#e2e8f0"/>
-                        <circle cx="0" cy="42" r="8" fill="#4338ca"/>
-                        <circle cx="136" cy="42" r="8" fill="#4338ca"/>
-                        <circle cx="272" cy="42" r="8" fill="#4338ca"/>
-                        <circle cx="408" cy="42" r="8" fill="#4338ca"/>
-                        <circle cx="544" cy="42" r="8" fill="#4338ca"/>
-
-                        <text x="0" y="70" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">1</text>
-                        <text x="136" y="70" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">2</text>
-                        <text x="272" y="70" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">3</text>
-                        <text x="408" y="70" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">4</text>
-                        <text x="544" y="70" font-family="Arial" font-size="12" fill="#64748b" text-anchor="middle">5</text>
-
-                        <text x="0" y="100" font-family="Arial" font-size="14" fill="#64748b">Selected: 3 - Intermediate knowledge</text>
-                    </g>
-                </g>
-
-                <!-- Final Action Buttons -->
-                <g transform="translate(0, 800)">
-                    <!-- Start Review Button -->
-                    <rect width="290" height="50" rx="25" fill="#4338ca"/>
-                    <text x="105" y="32" font-family="Arial" font-size="16" fill="#ffffff">Start Review</text>
-
-                    <!-- Review Later Button -->
-                    <rect x="310" width="140" height="50" rx="25" fill="#f1f5f9"/>
-                    <text x="335" y="32" font-family="Arial" font-size="16" fill="#64748b">Review Later</text>
-
-                    <!-- Skip Button -->
-                    <rect x="470" width="122" height="50" rx="25" fill="#f1f5f9"/>
-                    <text x="510" y="32" font-family="Arial" font-size="16" fill="#64748b">Skip</text>
+                    <!-- Selected Rating Display -->
+                    <text x="0" y="100" font-family="Arial" font-size="14" fill="#64748b">Selected: 3 - Intermediate knowledge</text>
                 </g>
             </g>
+        </g>
+
+        <!-- Final Action Buttons -->
+        <g transform="translate(0, 800)">
+            <!-- Start Review Button -->
+            <rect width="290" height="50" rx="25" fill="#4338ca"/>
+            <text x="105" y="32" font-family="Arial" font-size="16" fill="#ffffff">Start Review</text>
+
+            <!-- Review Later Button -->
+            <rect x="310" width="140" height="50" rx="25" fill="#f1f5f9"/>
+            <text x="335" y="32" font-family="Arial" font-size="16" fill="#64748b">Review Later</text>
+
+            <!-- Skip Button -->
+            <rect x="470" width="122" height="50" rx="25" fill="#f1f5f9"/>
+            <text x="510" y="32" font-family="Arial" font-size="16" fill="#64748b">Don't Review</text>
         </g>
     </g>
 </svg>
