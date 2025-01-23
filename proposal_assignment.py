@@ -22,6 +22,7 @@ class FundPreferences:
 @dataclass
 class ReviewerProfile:
     """Reviewer profile with expertise and interests"""
+    # See onboarding form:
     reviewer_id: str
     technical_level: int  # 0-5
     product_level: int   # 0-5
