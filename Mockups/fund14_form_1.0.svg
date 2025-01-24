@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+    <!-- Background -->
+    <rect width="800" height="900" fill="#f8fafc"/>
+    
+    <!-- Header -->
+    <g transform="translate(50, 50)">
+        <text font-family="Arial" font-size="24" font-weight="bold" fill="#1e293b">Fund 14 Reviewer Onboarding</text>
+        <text x="0" y="30" font-family="Arial" font-size="14" fill="#64748b">Set your review preferences for Fund 14</text>
+        
+        <!-- Progress bar -->
+        <rect x="0" y="50" width="700" height="6" rx="3" fill="#e2e8f0"/>
+        <rect x="0" y="50" width="350" height="6" rx="3" fill="#4338ca"/>
+    </g>
+
+    <!-- Review Preference Section -->
+    <g transform="translate(50, 150)">
+        <text font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">How would you like to review?</text>
+        
+        <!-- Option 1: All Proposals -->
+        <g transform="translate(0, 40)">
+            <rect width="700" height="70" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <circle cx="30" cy="35" r="12" fill="#4338ca"/>
+            <circle cx="30" cy="35" r="5" fill="#ffffff"/>
+            <text x="60" y="30" font-family="Arial" font-size="16" fill="#1e293b">Review all proposals</text>
+            <text x="60" y="50" font-family="Arial" font-size="14" fill="#64748b">I want to review any proposal, regardless of category</text>
+        </g>
+
+        <!-- Option 2: Category Specific -->
+        <g transform="translate(0, 120)">
+            <rect width="700" height="140" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <circle cx="30" cy="35" r="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <text x="60" y="30" font-family="Arial" font-size="16" fill="#1e293b">Review all proposals from a specific category</text>
+            <text x="60" y="50" font-family="Arial" font-size="14" fill="#64748b">Select which category you'd like to focus on</text>
+            
+            <!-- Category Dropdown -->
+            <rect x="60" y="70" width="300" height="40" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="80" y="95" font-family="Arial" font-size="14" fill="#64748b">Select category...</text>
+            <text x="320" y="95" font-family="Arial" font-size="14" fill="#64748b">▼</text>
+        </g>
+
+        <!-- Option 3: Expertise Based -->
+        <g transform="translate(0, 270)">
+            <rect width="700" height="140" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <circle cx="30" cy="35" r="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <text x="60" y="30" font-family="Arial" font-size="16" fill="#1e293b">Review maximum number of proposals matching my expertise</text>
+            <text x="60" y="50" font-family="Arial" font-size="14" fill="#64748b">Set maximum number of proposals you'd like to review</text>
+            
+            <!-- Number Input -->
+            <rect x="60" y="70" width="120" height="40" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="80" y="95" font-family="Arial" font-size="14" fill="#64748b">Enter number...</text>
+        </g>
+
+        <!-- Option 4: Random -->
+        <g transform="translate(0, 420)">
+            <rect width="700" height="70" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <circle cx="30" cy="35" r="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <text x="60" y="30" font-family="Arial" font-size="16" fill="#1e293b">Assign me random proposals</text>
+            <text x="60" y="50" font-family="Arial" font-size="14" fill="#64748b">I'll review any proposals that are assigned to me</text>
+        </g>
+    </g>
+
+    <!-- Affiliations Section -->
+    <g transform="translate(50, 680)">
+        <text font-family="Arial" font-size="18" font-weight="bold" fill="#1e293b">Do you have any affiliations with Fund 14 proposals?</text>
+        
+        <!-- No Affiliations -->
+        <g transform="translate(0, 40)">
+            <rect width="700" height="70" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <circle cx="30" cy="35" r="12" fill="#4338ca"/>
+            <circle cx="30" cy="35" r="5" fill="#ffffff"/>
+            <text x="60" y="30" font-family="Arial" font-size="16" fill="#1e293b">No affiliations</text>
+            <text x="60" y="50" font-family="Arial" font-size="14" fill="#64748b">I'm not affiliated with any proposals in Fund 14</text>
+        </g>
+
+        <!-- Has Affiliations -->
+        <g transform="translate(0, 120)">
+            <rect width="700" height="140" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <circle cx="30" cy="35" r="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+            <text x="60" y="30" font-family="Arial" font-size="16" fill="#1e293b">I have affiliations with specific proposals</text>
+            <text x="60" y="50" font-family="Arial" font-size="14" fill="#64748b">Select categories or specific proposals you're affiliated with</text>
+            
+            <!-- Affiliations Input -->
+            <rect x="60" y="70" width="600" height="40" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="80" y="95" font-family="Arial" font-size="14" fill="#64748b">Start typing category or proposal name...</text>
+        </g>
+    </g>
+
+    <!-- Navigation Buttons -->
+    <g transform="translate(50, 920)">
+        <!-- Back Button -->
+        <rect width="100" height="40" rx="20" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="50" y="25" font-family="Arial" font-size="14" fill="#64748b" text-anchor="middle">Back</text>
+        
+        <!-- Next Button -->
+        <rect x="600" width="100" height="40" rx="20" fill="#4338ca"/>
+        <text x="650" y="25" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Next</text>
+    </g>
+</svg>
