@@ -19,22 +19,13 @@ class ExpertiseArea(str, Enum):
     COMMUNITY = "community"
     PRODUCT = "product"
 
-# Mapping zwischen Expertise und Challenges
-class ExpertiseChallengeMapping(BaseModel):
-    TECHNICAL: Set[ChallengeCategory] = {
-        ChallengeCategory.OPENSOURCE,
-        ChallengeCategory.CONCEPT,
-        ChallengeCategory.PRODUCT,
-        ChallengeCategory.PARTNERSHIP
-    }
-    COMMUNITY: Set[ChallengeCategory] = {
-        ChallengeCategory.ECOSYSTEM
-    }
-    PRODUCT: Set[ChallengeCategory] = {
-        ChallengeCategory.CONCEPT,
-        ChallengeCategory.PRODUCT,
-        ChallengeCategory.PARTNERSHIP
-    }
+class ReviewCriteria(str, Enum):
+    RELEVANCE = "relevance"
+    INNOVATION = "innovation"
+    IMPACT = "impact"
+    FEASIBILITY = "feasibility"
+    TEAM = "team"
+    BUDGET = "budget"
 
 class ExpertiseLevel(str, Enum):
     NONE = "none"
@@ -48,7 +39,75 @@ class ReviewScope(str, Enum):
     EXPERTISE = "expertise"
     RANDOM = "random"
 
+class ProposalIssue(str, Enum): # Do we need to change the tags?
+    INCOMPLETE = "incomplete"
+    UNCLEAR_SCOPE = "unclear_scope"
+    DUPLICATE = "duplicate"
+    AI_CREATED = "ai_created"
+
+class TagCategory(str, Enum):
+    GOVERNANCE = "governance"
+    EDUCATION = "education"
+    COMMUNITY = "community_outreach"
+    DEVELOPMENT = "development_tools"
+    IDENTITY = "identity_security"
+    DEFI = "defi"
+    RWA = "real_world_applications"
+    EVENTS = "events_marketing"
+    INTEROP = "interoperability"
+    SUSTAINABILITY = "sustainability"
+    SMART_CONTRACTS = "smart_contracts"
+    GAMEFI = "gamefi"
+    NFT = "nft"
+
+class ReviewStatus(str, Enum):
+    DRAFT = "draft"
+    IN_PROGRESS = "in_progress"
+    COMPLETED = "completed"
+    FLAGGED = "flagged"
+
+
+
+# --- Constants/Mappings ---
+
+# Mapping zwischen Expertise und Challenges
+EXPERTISE_CHALLENGE_MAPPING: Dict[ExpertiseArea, Set[ChallengeCategory]] = {
+    ExpertiseArea.TECHNICAL: {
+        ChallengeCategory.OPENSOURCE,
+        ChallengeCategory.CONCEPT,
+        ChallengeCategory.PRODUCT,
+        ChallengeCategory.PARTNERSHIP
+    },
+    ExpertiseArea.COMMUNITY: {
+        ChallengeCategory.ECOSYSTEM
+    },
+    ExpertiseArea.PRODUCT: {
+        ChallengeCategory.CONCEPT,
+        ChallengeCategory.PRODUCT,
+        ChallengeCategory.PARTNERSHIP
+    }
+}
+
+TAG_MAPPING: Dict[TagCategory, Set[str]] = {
+    TagCategory.GOVERNANCE: {"governance", "dao"},
+    TagCategory.EDUCATION: {"education", "learn_to_earn", "training", "translation"},
+    TagCategory.COMMUNITY: {"connected_community", "community", "community_outreach", "social_media"},
+    TagCategory.DEVELOPMENT: {"developer_tools", "l2", "infrastructure", "analytics", "ai", "research", "utxo", "p2p"},
+    TagCategory.IDENTITY: {"identity_verification", "cybersecurity", "security", "authentication", "privacy"},
+    TagCategory.DEFI: {"defi", "payments", "stablecoin", "risk_management", "yield", "staking", "lending"},
+    TagCategory.RWA: {"wallet", "marketplace", "manufacturing", "iot", "financial_services", "ecommerce", 
+                     "business_services", "supply_chain", "real_estate", "healthcare", "tourism", 
+                     "entertainment", "rwa", "music", "tokenization"},
+    TagCategory.EVENTS: {"events", "marketing", "hackathons", "accelerator", "incubator"},
+    TagCategory.INTEROP: {"cross_chain", "interoperability", "off_chain", "legal", "policy_advocacy", "standards"},
+    TagCategory.SUSTAINABILITY: {"sustainability", "environment", "agriculture"},
+    TagCategory.SMART_CONTRACTS: {"smart_contract", "smart_contracts", "audit", "oracles"},
+    TagCategory.GAMEFI: {"gaming", "gamefi", "entertainment", "metaverse"},
+    TagCategory.NFT: {"nft", "cnft", "collectibles", "digital_twin"}
+}
+
 # --- Core Models ---
+
 class FundPreferences(BaseModel):
    reviewer_id: str
    fund_id: str
@@ -84,59 +143,38 @@ class Proposal(BaseModel):
     created_at: datetime
     external_id: str
 
+class CriteriaReview(BaseModel):
+    feedback: str
+    score: int  # -3 to +3 scale wie im Mockup
+    completed: bool = False
+
+class TemperatureCheck(BaseModel):
+    review_id: str
+    is_promising: bool
+    issues: Set[str]  # Selected issues like "incomplete", "unclear_scope", etc
+    comment: Optional[str]
+
 class Review(BaseModel):
    id: str
    proposal_id: str  # Reference to Proposal
    reviewer_id: str  # Reference to ReviewerProfile
-   content: str
-   scores: Dict[str, int]  # Flexible scoring structure
-   status: str
+   temperature_check: Optional[TemperatureCheck]
+   criteria_reviews: Dict[ReviewCriteria, CriteriaReview] = {}
+   expertise_level: int  # 1-5 scale from the expertise rating
+   status: ReviewStatus
+   current_criteria: ReviewCriteria  # Tracks which criteria is being reviewed 
    created_at: datetime
    updated_at: datetime
+
+
 
 class PeerEvaluation(BaseModel):
    id: str
    review_id: str       # Reference to Review
-   evaluator_id: str    # Reference to ReviewerProfile
+   evaluator_id: str    # Reference to ReviewerProfile - Why this?
    quality_score: int
    feedback: str
    created_at: datetime
-
-class TagCategory(str, Enum):
-    GOVERNANCE = "governance"
-    EDUCATION = "education"
-    COMMUNITY = "community_outreach"
-    DEVELOPMENT = "development_tools"
-    IDENTITY = "identity_security"
-    DEFI = "defi"
-    RWA = "real_world_applications"
-    EVENTS = "events_marketing"
-    INTEROP = "interoperability"
-    SUSTAINABILITY = "sustainability"
-    SMART_CONTRACTS = "smart_contracts"
-    GAMEFI = "gamefi"
-    NFT = "nft"
-
-class TagMapping(BaseModel):
-    """Mapping zwischen Hauptkategorien und ihren spezifischen Tags"""
-    MAPPING: Dict[TagCategory, Set[str]] = {
-        TagCategory.GOVERNANCE: {"governance", "dao"},
-        TagCategory.EDUCATION: {"education", "learn_to_earn", "training", "translation"},
-        TagCategory.COMMUNITY: {"connected_community", "community", "community_outreach", "social_media"},
-        TagCategory.DEVELOPMENT: {"developer_tools", "l2", "infrastructure", "analytics", "ai", "research", "utxo", "p2p"},
-        TagCategory.IDENTITY: {"identity_verification", "cybersecurity", "security", "authentication", "privacy"},
-        TagCategory.DEFI: {"defi", "payments", "stablecoin", "risk_management", "yield", "staking", "lending"},
-        TagCategory.RWA: {"wallet", "marketplace", "manufacturing", "iot", "financial_services", "ecommerce", 
-                         "business_services", "supply_chain", "real_estate", "healthcare", "tourism", 
-                         "entertainment", "rwa", "music", "tokenization"},
-        TagCategory.EVENTS: {"events", "marketing", "hackathons", "accelerator", "incubator"},
-        TagCategory.INTEROP: {"cross_chain", "interoperability", "off_chain", "legal", "policy_advocacy", "standards"},
-        TagCategory.SUSTAINABILITY: {"sustainability", "environment", "agriculture"},
-        TagCategory.SMART_CONTRACTS: {"smart_contract", "smart_contracts", "audit", "oracles"},
-        TagCategory.GAMEFI: {"gaming", "gamefi", "entertainment", "metaverse"},
-        TagCategory.NFT: {"nft", "cnft", "collectibles", "digital_twin"}
-    }
-
 
 # Assignment related
 class AssignmentGroup(BaseModel):
