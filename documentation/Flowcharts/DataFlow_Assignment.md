@@ -1,0 +1,59 @@
+flowchart TD
+    %% Input Sources
+    Proposals[Available Proposals] --> Filter
+    Reviewers[Active Reviewers] --> Filter
+    Preferences[Fund Preferences] --> Filter
+    
+    %% Initial Filtering
+    subgraph Filter[Filtering Phase]
+        CheckCapacity{Check Reviewer Capacity}
+        CheckPreferences{Apply Preferences}
+        FilterProposals{Filter Eligible Proposals}
+        
+        CheckCapacity --> CheckPreferences
+        CheckPreferences --> FilterProposals
+    end
+    
+    %% Matching Process
+    subgraph Matching[Matching Phase]
+        GroupByExpertise[Group by Expertise Match]
+        
+        subgraph MatchGroups[Assignment Groups]
+            Direct[Direct Matches]
+            Related[Related Matches]
+            Other[Other Matches]
+        end
+        
+        GroupByExpertise --> Direct
+        GroupByExpertise --> Related
+        GroupByExpertise --> Other
+    end
+    
+    %% Assignment Creation
+    FilterProposals --> GroupByExpertise
+    MatchGroups --> CreateAssignments[Create Assignments]
+    
+    %% Post Assignment
+    CreateAssignments --> UpdateCounts[Update Review Counts]
+    CreateAssignments --> NotifyReviewer[Notify Reviewer]
+    CreateAssignments --> SetDeadline[Set Review Deadline]
+    
+    %% Final States
+    UpdateCounts & NotifyReviewer & SetDeadline --> Complete([Assignment Complete])
+
+    %% Special Cases
+    CheckCapacity -->|Over Capacity| Skip[Skip Reviewer]
+    FilterProposals -->|No Matches| Skip
+    Skip --> NextReviewer([Process Next Reviewer])
+
+    classDef input fill:#eef2ff,stroke:#4338ca
+    classDef process fill:#f0fdf4,stroke:#22c55e
+    classDef decision fill:#fef2f2,stroke:#991b1b
+    classDef group fill:#f8fafc,stroke:#64748b
+    classDef final fill:#4338ca,stroke:#4338ca,color:#fff
+
+    class Proposals,Reviewers,Preferences input
+    class Filter,Matching process
+    class CheckCapacity,CheckPreferences,FilterProposals decision
+    class Direct,Related,Other group
+    class Complete,NextReviewer final
