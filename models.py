@@ -66,7 +66,49 @@ class ReviewStatus(str, Enum):
     COMPLETED = "completed"
     FLAGGED = "flagged"
 
+class PeerEvaluationCriteria(str, Enum):
+    SPECIFICITY = "specificity"    # "How specific is the review..."
+    CLARITY = "clarity"           # "How clearly does the reviewer state..."
+    INSIGHT = "insight"           # "Does the review provide meaningful insights..."
 
+class OnboardingStep(str, Enum):
+    BASIC_INFO = "basic_info"
+    EXPERTISE = "expertise"
+    COMMUNITY = "community" 
+    VALIDATION = "validation"
+    COMPLETED = "completed"
+
+class ReviewerStatus(str, Enum):
+    PENDING = "pending"        # Warten auf Approval
+    APPROVED = "approved"      # Kann Reviews durchführen
+    INACTIVE = "inactive"      # Noch nicht onboarded
+
+class ReviewerTier(str, Enum):
+    JUNIOR = "junior"
+    SENIOR = "senior"      # "Senior Reviewer" in Dashboard
+    EXPERT = "expert"
+
+class TaskType(str, Enum):
+    PROPOSAL_REVIEW = "proposal_review"
+    PEER_REVIEW = "peer_review"
+
+class ReviewPriority(str, Enum):
+    HIGH = "high"     # Mit rotem Priority Tag
+    NORMAL = "normal"
+
+class ReviewTab(str, Enum):
+    ASSIGNED = "assigned"
+    AVAILABLE = "available"
+    COMPLETED = "completed"
+
+class NotificationType(str, Enum):
+    NEW_ASSIGNMENTS = "new_review_assignments"
+    DEADLINE_REMINDERS = "review_deadline_reminders"
+    MISSION_UPDATES = "mission_updates"
+
+class MissionType(str, Enum):
+    REVIEW_MILESTONE = "review_milestone"      # z.B. "Complete 5 reviews"
+    PEER_REVIEW_MILESTONE = "peer_milestone"   # z.B. "Complete 3 peer reviews"
 
 # --- Constants/Mappings ---
 
@@ -108,27 +150,34 @@ TAG_MAPPING: Dict[TagCategory, Set[str]] = {
 
 # --- Core Models ---
 
-class FundPreferences(BaseModel):
-   reviewer_id: str
-   fund_id: str
-   review_scope: ReviewScope
-   max_reviews: Optional[int]
-   selected_categories: Set[str]
-   excluded_proposals: Set[str]
+# Fund related Models
 
-class ReviewerProfile(BaseModel):
-   reviewer_id: str
-   primary_expertise: ExpertiseArea
-   expertise_level: ExpertiseLevel  
-   interests: Set[TagCategory]
-   detailed_interests: Set[str] = set()  # Optional: detaillierte Tags
-   active_reviews: int = 0
-   max_capacity: int
-   name: str
-   wallet_address: str
-   created_at: datetime
-   reputation_score: int = 0
-    
+class Fund(BaseModel):
+    id: str
+    name: str           # z.B. "Catalyst Fund 13"
+    status: str         # active, completed, etc.
+    start_date: datetime
+    end_date: datetime
+    total_budget: float
+    challenges: List["Challenge"]  # Liste der Challenges in diesem Fund
+
+class Challenge(BaseModel):
+    id: str
+    fund_id: str       # Reference to Fund
+    category: ChallengeCategory
+    title: str
+    description: str
+    budget: float
+    min_requested_funds: float
+    max_requested_funds: float
+    review_config: Dict[str, any] # Konfiguration für Reviews wie:
+                                  # - Minimum required reviews pro Proposal
+                                  # - Review Deadlines
+                                  # - Reviewer Rewards
+    status: str
+    created_at: datetime
+    updated_at: datetime
+
 class Proposal(BaseModel):
     proposal_id: str
     title: str
@@ -143,6 +192,97 @@ class Proposal(BaseModel):
     created_at: datetime
     external_id: str
 
+# Onboarding related Models
+
+class FundPreferences(BaseModel):
+   reviewer_id: str
+   fund_id: str
+   review_scope: ReviewScope
+   max_reviews: Optional[int]
+   selected_categories: Set[str]
+   excluded_proposals: Set[str]
+
+class CatalystExperience(BaseModel):
+    has_submitted_proposals: bool
+    has_reviewed_proposals: bool
+    additional_info: Optional[str]
+
+class OnboardingStatus(BaseModel):
+    step: OnboardingStep
+    steps_completed: int = 1
+    total_steps: int = 4  # "1/4 steps completed"
+    admin_approved: bool = False
+    approval_date: Optional[datetime]
+
+class NotificationPreferences(BaseModel):
+    new_assignments_enabled: bool = True
+    deadline_reminders_enabled: bool = True
+    mission_updates_enabled: bool = False
+
+class ReviewerProfile(BaseModel):
+   
+   # User Metadata
+   reviewer_id: str
+   name: str
+   username: Optional[str]
+   wallet_address: str
+   email: str
+   telegram: str
+   discord: str
+   created_at: datetime
+   
+   # Onboarding
+   primary_expertise: ExpertiseArea
+   expertise_level: ExpertiseLevel  
+   interests: Set[TagCategory]
+   catalyst_experience: Optional[CatalystExperience]
+   onboarding_status: str  # z.B. "basic_info", "expertise", "community", "validated"
+   onboarding_completed_at: Optional[datetime]
+   max_capacity: int
+    
+   # Tracking der Zustimmung
+   guidelines_accepted: bool = False
+   guidelines_accepted_at: Optional[datetime]
+   code_of_conduct_accepted: bool = False
+   code_of_conduct_accepted_at: Optional[datetime]
+
+   # Meta Felder für Änderungsverfolgung
+   updated_at: Optional[datetime]
+   notification_preferences: NotificationPreferences
+
+   # Optional für später/nicht POC:
+   linkedin_url: Optional[str]
+   github_url: Optional[str]
+   portfolio_url: Optional[str]
+   professional_title: str
+   organization: Optional[str]
+   years_of_experience: int
+   detailed_interests: Set[str] = set()  # Optional: detaillierte Tags
+   profile_picture: Optional[str]  # URL/Path zum Profilbild
+   reputation_score: int = 0
+
+# Review related Models
+
+class Task(BaseModel):
+    id: str
+    type: TaskType
+    title: str
+    due_date: datetime
+    reward: float
+    tags: Set[str]              # "DeFi", "Proposal", "Peer Review" etc.
+    status: str
+    created_at: datetime
+
+class ReviewerStats(BaseModel): # muss noch besser definiert werden
+    reviewer_id: str
+    total_reviews: int = 0
+    total_peer_reviews: int = 0 
+    rewards_earned: float = 0     # ₳ rewards
+    rating: float = 0.0           # Durchschnittliches Rating
+    active_reviews: int = 0
+    pending_reviews: int = 0
+    updated_at: datetime
+
 class CriteriaReview(BaseModel):
     feedback: str
     score: int  # -3 to +3 scale wie im Mockup
@@ -156,29 +296,63 @@ class TemperatureCheck(BaseModel):
 
 class Review(BaseModel):
    id: str
-   proposal_id: str  # Reference to Proposal
-   reviewer_id: str  # Reference to ReviewerProfile
+   proposal_id: str  
+   reviewer_id: str  
    temperature_check: Optional[TemperatureCheck]
    criteria_reviews: Dict[ReviewCriteria, CriteriaReview] = {}
-   expertise_level: int  # 1-5 scale from the expertise rating
+   expertise_level: ExpertiseLevel  # Änderung zu Enum
    status: ReviewStatus
-   current_criteria: ReviewCriteria  # Tracks which criteria is being reviewed 
+   current_criteria: ReviewCriteria
+   priority: ReviewPriority
+   due_date: datetime
+   reward: float
+   is_peer_review: bool
+   progress: Optional[float]
    created_at: datetime
    updated_at: datetime
 
+class ReviewFilter(BaseModel):
+    categories: Optional[Set[str]]
+    status: Optional[str]
+    time_period: Optional[str]  # "This Month" etc.
 
+# Leaderboard and Mission related Models
+
+class LeaderboardEntry(BaseModel):
+    reviewer_id: str
+    username: str        # Für die Anzeige
+    total_reviews: int
+    total_peer_reviews: int
+
+class Mission(BaseModel):
+    id: str
+    type: MissionType
+    target_count: int          # Anzahl der benötigten Reviews
+    current_count: int = 0     # Aktuelle Anzahl
+    reward_points: int         # Belohnungspunkte
+    completed: bool = False
+    created_at: datetime
+    completed_at: Optional[datetime]
+
+class ReviewerMissions(BaseModel):
+    reviewer_id: str
+    active_missions: List[Mission]
+    completed_missions: int = 0
+    total_points: int = 0
+
+# Peer Review Process related:
+
+class PeerEvaluationScore(BaseModel):
+    score: int  # -3 to +3 scale wie im UI gezeigt
+    criteria: PeerEvaluationCriteria
 
 class PeerEvaluation(BaseModel):
-   id: str
-   review_id: str       # Reference to Review
-   evaluator_id: str    # Reference to ReviewerProfile - Why this?
-   quality_score: int
-   feedback: str
-   created_at: datetime
+    id: str
+    review_id: str       # Reference to Review
+    evaluator_id: str    # Reference to ReviewerProfile
+    scores: Dict[PeerEvaluationCriteria, int]  # Score für jedes Kriterium
+    feedback: Optional[str]  # "Optional Feedback" aus der UI
+    created_at: datetime
+    status: str  # z.B. draft, submitted
 
-# Assignment related
-class AssignmentGroup(BaseModel):
-   """Group of proposals based on expertise match level"""
-   direct_match: List[str] = []    # List of proposal_ids
-   related_match: List[str] = []   # List of proposal_ids
-   other_match: List[str] = []     # List of proposal_ids
+Fund.update_forward_refs()
