@@ -65,9 +65,40 @@ class BaseAssignmentService:
             if remaining_capacity <= 0:
                 return assignments
 
-        # Continue with Tier 2 and 3 similarly...
-        # [Rest of tiered logic]
-        
+ 
+        # TIER 2: Interest Matching
+        if remaining_capacity > 0:
+            interest_matches = [
+                p for p in remaining_proposals
+                if len(p.tags.intersection(reviewer.interests)) > 0
+            ]
+            interest_matches.sort(
+                key=lambda p: len(p.tags.intersection(reviewer.interests)),
+                reverse=True
+            )
+            
+            for proposal in interest_matches[:remaining_capacity]:
+                assignments.append((reviewer.reviewer_id, proposal.proposal_id))
+                remaining_capacity -= 1
+                if remaining_capacity <= 0:
+                    return assignments
+
+        # TIER 3: Random Assignment (if still needed)
+        if remaining_capacity > 0:
+            # Update remaining proposals pool
+            assigned_ids = {proposal_id for _, proposal_id in assignments}
+            remaining_proposals = [
+                p for p in remaining_proposals
+                if p.proposal_id not in assigned_ids
+            ]
+            
+            random_assignments = self._create_random_assignments(
+                reviewer.reviewer_id,
+                remaining_proposals,
+                remaining_capacity
+            )
+            assignments.extend(random_assignments)
+
         return assignments
 
     def _matches_expertise(self, proposal: Proposal, expertise: ExpertiseArea) -> bool:
