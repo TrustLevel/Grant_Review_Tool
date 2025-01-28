@@ -1,4 +1,6 @@
-# This file outline the assignemnt service structure, including "base", "bulk", and "individual" assignemnts
+# This file outline the assignemnt service structure, including "base", "bulk", and "individual" assignemnts.
+# It will eventually be deleted and replaced by the mentioned files
+
 
 # base_assignment.py
 from typing import List, Set, Dict, Tuple
