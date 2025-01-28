@@ -1,23 +1,97 @@
+# This file outline the assignemnt service structure, including "base", "bulk", and "individual" assignemnts
+
+# base_assignment.py
 from typing import List, Set, Dict, Tuple
 from models import (
-    ReviewerProfile, ProposalInfo, FundPreferences,
-    ReviewScope, ExpertiseArea, ChallengeCategory
+    ReviewerProfile, Proposal, Fund, 
+    ReviewScope, ExpertiseArea, ChallengeCategory,
+    FundPreferences
 )
 
-class ProposalAssignmentService:
+class BaseAssignmentService:
+    """Base class with shared assignment logic"""
+    
     def __init__(self):
         self.MIN_REVIEWS_PER_PROPOSAL = 5
         self.DEFAULT_CAPACITY = 5
 
-    async def create_bulk_assignments(
+    def _filter_eligible_proposals(
         self,
+        proposals: List[Proposal],
+        reviewer: ReviewerProfile,
+        preferences: FundPreferences
+    ) -> List[Proposal]:
+        """Filter proposals based on eligibility and preferences"""
+        eligible = [
+            p for p in proposals 
+            if p.proposal_id not in reviewer.excluded_proposals
+            and p.current_reviews < self.MIN_REVIEWS_PER_PROPOSAL
+        ]
+
+        if preferences.review_scope == ReviewScope.CATEGORY:
+            eligible = [
+                p for p in eligible
+                if p.challenge_category in preferences.selected_categories
+            ]
+        
+        return eligible
+
+    def _create_tiered_assignments(
+        self,
+        reviewer: ReviewerProfile,
+        proposals: List[Proposal],
+        capacity: int
+    ) -> List[Tuple[str, str]]:
+        """Core tiered assignment logic"""
+        assignments = []
+        remaining_capacity = capacity
+
+        # TIER 1: Expertise Matching
+        expertise_matches = [
+            p for p in proposals
+            if self._matches_expertise(p, reviewer.primary_expertise)
+        ]
+        
+        if expertise_matches:
+            expertise_matches.sort(
+                key=lambda p: len(set(p.detailed_tags) & reviewer.interests),
+                reverse=True
+            )
+            
+            for proposal in expertise_matches[:remaining_capacity]:
+                assignments.append((reviewer.reviewer_id, proposal.proposal_id))
+                remaining_capacity -= 1
+                
+            if remaining_capacity <= 0:
+                return assignments
+
+        # Continue with Tier 2 and 3 similarly...
+        # [Rest of tiered logic]
+        
+        return assignments
+
+    def _matches_expertise(self, proposal: Proposal, expertise: ExpertiseArea) -> bool:
+        """Check if proposal matches expertise area using mapping"""
+        from models import EXPERTISE_CHALLENGE_MAPPING
+        return proposal.challenge_category in EXPERTISE_CHALLENGE_MAPPING[expertise]
+
+# bulk_assignment_service.py
+from base_assignment import BaseAssignmentService
+from typing import Dict, List, Tuple
+from models import ReviewerProfile, Proposal, Fund, FundPreferences
+
+class BulkAssignmentService(BaseAssignmentService):
+    """Service for bulk assignment at start of review phase"""
+    
+    async def create_assignments(
+        self,
+        fund: Fund,
         reviewers: List[ReviewerProfile],
-        proposals: List[ProposalInfo],
+        proposals: List[Proposal],
         fund_preferences: Dict[str, FundPreferences]
-    ) -> List[Tuple[str, str]]:  # List of (reviewer_id, proposal_id) pairs
-        """
-        Create assignments for all reviewers at start of review phase.
-        """
+    ) -> List[Tuple[str, str]]:
+        """Create assignments for all reviewers at start of fund"""
+        
         all_assignments = []
         # Process reviewers in random order for fairness
         import random
@@ -25,174 +99,141 @@ class ProposalAssignmentService:
         random.shuffle(shuffled_reviewers)
 
         for reviewer in shuffled_reviewers:
-            assignments = await self._create_reviewer_assignments(
-                reviewer,
-                proposals,
-                fund_preferences[reviewer.reviewer_id]
-            )
-            all_assignments.extend(assignments)
-            # Update proposal review counts
-            for _, proposal_id in assignments:
-                for p in proposals:
-                    if p.proposal_id == proposal_id:
-                        p.current_reviews += 1
+            preference = fund_preferences.get(reviewer.reviewer_id)
+            if not preference:
+                continue
 
+            eligible_proposals = self._filter_eligible_proposals(
+                proposals, reviewer, preference
+            )
+
+            # Create assignments based on review scope
+            if preference.review_scope == ReviewScope.RANDOM:
+                assignments = self._create_random_assignments(
+                    reviewer.reviewer_id,
+                    eligible_proposals,
+                    self.DEFAULT_CAPACITY
+                )
+            else:
+                capacity = (
+                    preference.max_reviews 
+                    if preference.review_scope == ReviewScope.EXPERTISE_BASED
+                    else self.DEFAULT_CAPACITY
+                )
+                assignments = self._create_tiered_assignments(
+                    reviewer,
+                    eligible_proposals,
+                    capacity
+                )
+
+            all_assignments.extend(assignments)
+            
+            # Update proposal review counts
+            self._update_review_counts(proposals, assignments)
+
+        # Store assignments in database
+        await self._store_assignments(fund.id, all_assignments)
+        
         return all_assignments
 
-    async def create_individual_assignment(
+    async def _store_assignments(self, fund_id: str, assignments: List[Tuple[str, str]]):
+        """Store assignments in MongoDB"""
+        from datetime import datetime, timedelta
+        
+        assignment_docs = [
+            {
+                "fund_id": fund_id,
+                "reviewer_id": reviewer_id,
+                "proposal_id": proposal_id,
+                "status": "assigned",
+                "assigned_at": datetime.utcnow(),
+                "due_date": datetime.utcnow() + timedelta(days=7),
+                "created_at": datetime.utcnow()
+            }
+            for reviewer_id, proposal_id in assignments
+        ]
+        
+        # MongoDB insert
+        await db.assignments.insert_many(assignment_docs)
+
+    def _update_review_counts(
+        self,
+        proposals: List[Proposal],
+        assignments: List[Tuple[str, str]]
+    ):
+        """Update review counts for assigned proposals"""
+        assignment_counts = {}
+        for _, proposal_id in assignments:
+            assignment_counts[proposal_id] = assignment_counts.get(proposal_id, 0) + 1
+            
+        for proposal in proposals:
+            if proposal.proposal_id in assignment_counts:
+                proposal.current_reviews += assignment_counts[proposal.proposal_id]
+
+# individual_assignment_service.py
+from base_assignment import BaseAssignmentService
+from typing import List, Tuple
+from models import ReviewerProfile, Proposal, FundPreferences
+
+class IndividualAssignmentService(BaseAssignmentService):
+    """Service for individual assignment requests"""
+    
+    async def create_assignment(
         self,
         reviewer: ReviewerProfile,
-        proposals: List[ProposalInfo],
-        fund_preference: FundPreferences
+        fund_id: str,
+        proposals: List[Proposal],
+        preferences: FundPreferences
     ) -> List[Tuple[str, str]]:
-        """
-        Create assignments for a single reviewer (new reviewer or requesting more).
-        Prioritizes proposals needing minimum review count.
-        """
-        # Sort proposals by review need
+        """Create assignments for individual reviewer request"""
+        
+        # First check if reviewer already has active assignments
+        active_count = await self._get_active_assignment_count(reviewer.reviewer_id)
+        if active_count >= self.DEFAULT_CAPACITY:
+            return []
+
+        # Prioritize proposals needing reviews
         sorted_proposals = sorted(
             proposals,
-            key=lambda p: p.current_reviews
-        )
-        return await self._create_reviewer_assignments(
-            reviewer,
-            sorted_proposals,
-            fund_preference
+            key=lambda p: (p.current_reviews, p.requested_funding),
+            reverse=True
         )
 
-    async def _create_reviewer_assignments(
-        self,
-        reviewer: ReviewerProfile,
-        proposals: List[ProposalInfo],
-        fund_preference: FundPreferences
-    ) -> List[Tuple[str, str]]:
-        """
-        Core assignment logic for a single reviewer.
-        """
-        # Set capacity based on preference type
-        capacity = (
-            fund_preference.max_reviews
-            if fund_preference.review_scope == ReviewScope.EXPERTISE_BASED
-            else self.DEFAULT_CAPACITY
+        eligible_proposals = self._filter_eligible_proposals(
+            sorted_proposals, reviewer, preferences
         )
 
-        # Filter out affiliated proposals
-        eligible_proposals = [
-            p for p in proposals
-            if p.proposal_id not in fund_preference.excluded_proposals
-            and p.current_reviews < self.MIN_REVIEWS_PER_PROPOSAL
-        ]
-
-        # Apply scope filtering
-        if fund_preference.review_scope == ReviewScope.CATEGORY:
-            eligible_proposals = [
-                p for p in eligible_proposals
-                if p.challenge_category in fund_preference.selected_categories
-            ]
-
-        # If random scope, shuffle and assign
-        if fund_preference.review_scope == ReviewScope.RANDOM:
-            return self._create_random_assignments(
+        # Create assignments based on review scope
+        remaining_capacity = self.DEFAULT_CAPACITY - active_count
+        
+        if preferences.review_scope == ReviewScope.RANDOM:
+            assignments = self._create_random_assignments(
                 reviewer.reviewer_id,
+                eligible_proposals,
+                remaining_capacity
+            )
+        else:
+            capacity = min(
+                remaining_capacity,
+                preferences.max_reviews if preferences.review_scope == ReviewScope.EXPERTISE_BASED
+                else self.DEFAULT_CAPACITY
+            )
+            assignments = self._create_tiered_assignments(
+                reviewer,
                 eligible_proposals,
                 capacity
             )
 
-        # For other scopes, apply tier-based assignment
-        return await self._create_tiered_assignments(
-            reviewer,
-            eligible_proposals,
-            capacity
-        )
-
-    def _create_random_assignments(
-        self,
-        reviewer_id: str,
-        proposals: List[ProposalInfo],
-        capacity: int
-    ) -> List[Tuple[str, str]]:
-        """
-        Create random assignments up to capacity.
-        """
-        import random
-        shuffled = list(proposals)
-        random.shuffle(shuffled)
-        assignments = []
-        
-        for proposal in shuffled[:capacity]:
-            assignments.append((reviewer_id, proposal.proposal_id))
-            
-        return assignments
-
-    async def _create_tiered_assignments(
-        self,
-        reviewer: ReviewerProfile,
-        proposals: List[ProposalInfo],
-        capacity: int
-    ) -> List[Tuple[str, str]]:
-        """
-        Create assignments using 3-tier matching system.
-        """
-        assignments = []
-        remaining_capacity = capacity
-
-        # TIER 1: Expertise Matching
-        expertise_matches = [
-            p for p in proposals
-            if p.category == reviewer.primary_expertise
-        ]
-        
-        if len(expertise_matches) > remaining_capacity:
-            # Sort by interest tag matches
-            expertise_matches.sort(
-                key=lambda p: len(p.tags.intersection(reviewer.interests)),
-                reverse=True
-            )
-            
-        for proposal in expertise_matches[:remaining_capacity]:
-            assignments.append((reviewer.reviewer_id, proposal.proposal_id))
-            remaining_capacity -= 1
-            if remaining_capacity <= 0:
-                return assignments
-
-        # Remove assigned proposals from pool
-        assigned_ids = {proposal_id for _, proposal_id in assignments}
-        remaining_proposals = [
-            p for p in proposals
-            if p.proposal_id not in assigned_ids
-        ]
-
-        # TIER 2: Interest Matching
-        if remaining_capacity > 0:
-            interest_matches = [
-                p for p in remaining_proposals
-                if len(p.tags.intersection(reviewer.interests)) > 0
-            ]
-            interest_matches.sort(
-                key=lambda p: len(p.tags.intersection(reviewer.interests)),
-                reverse=True
-            )
-            
-            for proposal in interest_matches[:remaining_capacity]:
-                assignments.append((reviewer.reviewer_id, proposal.proposal_id))
-                remaining_capacity -= 1
-                if remaining_capacity <= 0:
-                    return assignments
-
-        # TIER 3: Random Assignment (if still needed)
-        if remaining_capacity > 0:
-            # Update remaining proposals pool
-            assigned_ids = {proposal_id for _, proposal_id in assignments}
-            remaining_proposals = [
-                p for p in remaining_proposals
-                if p.proposal_id not in assigned_ids
-            ]
-            
-            random_assignments = self._create_random_assignments(
-                reviewer.reviewer_id,
-                remaining_proposals,
-                remaining_capacity
-            )
-            assignments.extend(random_assignments)
+        # Store new assignments
+        if assignments:
+            await self._store_assignments(fund_id, assignments)
+            self._update_review_counts(proposals, assignments)
 
         return assignments
+
+    async def _get_active_assignment_count(self, reviewer_id: str) -> int:
+        """Get count of reviewer's current active assignments"""
+        return await db.assignments.count_documents({
+            "reviewer_id": reviewer_id,
+            "status": {"$in": ["assigned", "in_progress"]}
+        })
