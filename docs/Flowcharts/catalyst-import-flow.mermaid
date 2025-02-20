@@ -1,0 +1,63 @@
+flowchart TD
+    Start([Start Import Process]) --> PreCheck{Pre-Import Validation}
+    
+    PreCheck -->|Failed| Error1[Log Error]
+    Error1 --> End([End Process])
+    
+    PreCheck -->|Passed| ValidateFund{Validate Fund}
+    
+    ValidateFund --> CheckExists{Fund Exists?}
+    CheckExists -->|Yes| Error2[Log Duplicate]
+    Error2 --> End
+    
+    CheckExists -->|No| FetchFund[Fetch Fund Metadata]
+    
+    FetchFund --> StartTransaction[Start MongoDB Transaction]
+    
+    StartTransaction --> ParallelFetch{Parallel Data Fetch}
+    
+    ParallelFetch --> FetchChallenges[Fetch Challenges]
+    ParallelFetch --> FetchProposals[Fetch Proposals]
+    
+    FetchChallenges --> TransformData[Transform Data]
+    FetchProposals --> TransformData
+    
+    TransformData --> ValidateData{Validate All Data}
+    
+    ValidateData -->|Invalid| RollbackTx[Rollback Transaction]
+    RollbackTx --> Error3[Log Transform Error]
+    Error3 --> End
+    
+    ValidateData -->|Valid| StoreFund[Store Fund Data]
+    StoreFund --> StoreChallenges[Store Challenges]
+    StoreChallenges --> StoreProposals[Store Proposals]
+    
+    StoreProposals --> CommitTx{Commit Transaction}
+    
+    CommitTx -->|Failed| RollbackTx
+    
+    CommitTx -->|Success| UpdateStatus[Update Import Status]
+    UpdateStatus --> LogSuccess[Log Success]
+    LogSuccess --> End
+    
+    subgraph Data Transformation
+        TransformData
+    end
+    
+    subgraph MongoDB Operations
+        StartTransaction
+        StoreFund
+        StoreChallenges
+        StoreProposals
+        CommitTx
+        RollbackTx
+    end
+    
+    style Start fill:#6ee7b7,stroke:#057a55
+    style End fill:#6ee7b7,stroke:#057a55
+    style PreCheck fill:#93c5fd,stroke:#1e40af
+    style ValidateFund fill:#93c5fd,stroke:#1e40af
+    style ValidateData fill:#93c5fd,stroke:#1e40af
+    style CommitTx fill:#fca5a5,stroke:#991b1b
+    style TransformData fill:#f59e0b,stroke:#b45309
+    style ParallelFetch fill:#f59e0b,stroke:#b45309
