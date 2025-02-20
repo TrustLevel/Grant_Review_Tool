@@ -1,0 +1,40 @@
+flowchart TD
+    Start([Start Assignment]) --> TriggerType{Assignment Type?}
+    
+    TriggerType -->|Bulk Initial| BulkSetup[Setup for All Reviewers]
+    TriggerType -->|Individual| IndSetup[Setup Single Reviewer]
+    
+    BulkSetup --> GetPrefs[Get Reviewer Preferences]
+    IndSetup --> GetPrefs
+    
+    GetPrefs --> GetExpertise[Get Expertise Area]
+    GetExpertise --> GetInterests[Get Interest Tags]
+    GetInterests --> GetAffil[Get Affiliations]
+    
+    GetAffil --> FilterProps[Filter Out Affiliated Proposals]
+    
+    FilterProps --> Tier1{Tier 1: Expertise Match?}
+    
+    Tier1 -->|Yes| ExpertiseAssign[Assign Expertise Matches]
+    Tier1 -->|No| Tier2{Tier 2: Interest Match?}
+    
+    ExpertiseAssign --> CheckCapacity{Capacity Full?}
+    
+    CheckCapacity -->|Yes| End([End Assignment])
+    CheckCapacity -->|No| Tier2
+    
+    Tier2 -->|Yes| InterestAssign[Assign Interest Matches]
+    Tier2 -->|No| Tier3[Tier 3: Random Assignment]
+    
+    InterestAssign --> ValidateMin{Min Reviews Met?}
+    Tier3 --> ValidateMin
+    
+    ValidateMin -->|Yes| End
+    ValidateMin -->|No| QueueReview[Queue for Later Assignment]
+    QueueReview --> End
+    
+    style Start fill:#6ee7b7,stroke:#057a55
+    style End fill:#6ee7b7,stroke:#057a55
+    style Tier1 fill:#fca5a5,stroke:#991b1b
+    style Tier2 fill:#fca5a5,stroke:#991b1b
+    style ValidateMin fill:#93c5fd,stroke:#1e40af

@@ -1,0 +1,32 @@
+flowchart TD
+    Start([Start Review]) --> TempCheck{Temperature Check}
+    
+    TempCheck -->|Promising| ExpertiseRate[Rate Expertise Level]
+    TempCheck -->|Low Quality| FlagIssues[Flag Issues]
+    
+    FlagIssues --> AddComment[Add Comment]
+    AddComment --> End([Skip Review])
+    
+    ExpertiseRate --> Criteria1[Rate Relevance]
+    Criteria1 --> Criteria2[Rate Innovation]
+    Criteria2 --> Criteria3[Rate Impact]
+    Criteria3 --> Criteria4[Rate Feasibility]
+    Criteria4 --> Criteria5[Rate Team]
+    Criteria5 --> Criteria6[Rate Budget]
+    
+    Criteria6 --> Validate{Validate Review}
+    
+    Validate -->|Complete| Submit[Submit Review]
+    Validate -->|Incomplete| SaveDraft[Save Draft]
+    
+    Submit --> TriggerPeer[Trigger Peer Review]
+    SaveDraft --> Resume[Resume Later]
+    
+    TriggerPeer --> End2([End Review])
+    Resume --> End2
+    
+    style Start fill:#6ee7b7,stroke:#057a55
+    style End fill:#fca5a5,stroke:#991b1b
+    style End2 fill:#6ee7b7,stroke:#057a55
+    style TempCheck fill:#93c5fd,stroke:#1e40af
+    style Validate fill:#93c5fd,stroke:#1e40af

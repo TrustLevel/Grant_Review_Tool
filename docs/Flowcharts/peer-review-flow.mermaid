@@ -1,0 +1,45 @@
+flowchart TD
+    Start([Start Peer Review]) --> EligCheck[Eligibility Check]
+    
+    EligCheck --> ExcludeOrig[Exclude Original Reviewer]
+    ExcludeOrig --> ExcludeSame[Exclude Same Proposal Reviewers]
+    ExcludeSame --> CheckCapacity[Check Peer Review Capacity]
+    CheckCapacity --> CheckConflicts[Check Conflicts of Interest]
+    
+    CheckConflicts --> SplitPool[Split Reviewer Pool]
+    
+    SplitPool --> SameExp[Same Expertise Pool]
+    SplitPool --> DiffExp[Different Expertise Pool]
+    
+    SameExp --> SortReviewers1[Sort by Interest & Load]
+    DiffExp --> SortReviewers2[Sort by Interest & Load]
+    
+    SortReviewers1 --> FirstAssign{First Assignment}
+    SortReviewers2 --> FirstAssign
+    
+    FirstAssign -->|Same Expertise| ValidateFirst[Validate Assignment]
+    FirstAssign -->|Not Available| TryDiff1[Try Different Expertise]
+    
+    ValidateFirst --> SecondAssign{Second Assignment}
+    TryDiff1 --> SecondAssign
+    
+    SecondAssign -->|Different Expertise| ValidateSecond[Validate Assignment]
+    SecondAssign -->|Not Available| TryAny[Try Any Available]
+    
+    ValidateSecond --> CheckMin{Min Reviews Met?}
+    TryAny --> CheckMin
+    
+    CheckMin -->|Yes| End([End Assignment])
+    CheckMin -->|No| Fallback{Try Fallback}
+    
+    Fallback -->|Available| ExpandPool[Expand Reviewer Pool]
+    Fallback -->|Not Available| QueueReview[Queue for Later]
+    
+    ExpandPool --> End
+    QueueReview --> FlagAdmin[Flag for Admin]
+    FlagAdmin --> End
+    
+    style Start fill:#6ee7b7,stroke:#057a55
+    style End fill:#6ee7b7,stroke:#057a55
+    style CheckMin fill:#93c5fd,stroke:#1e40af
+    style Fallback fill:#fca5a5,stroke:#991b1b
