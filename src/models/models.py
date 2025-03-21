@@ -1,4 +1,5 @@
 # models.py
+
 # Single source of truth for the entire data structure of the tool
 
 from pydantic import BaseModel
@@ -150,49 +151,75 @@ TAG_MAPPING: Dict[TagCategory, Set[str]] = {
 
 # --- Core Models ---
 
-# Fund related Models
+# A: Catalyst Fund related Models -> Data via Catalyst Explorer API (except for config data)
 
 class Fund(BaseModel):
     id: str
-    name: str           # z.B. "Catalyst Fund 13"
-    status: str         # active, completed, etc.
-    start_date: datetime
-    end_date: datetime
+    name: str           # e.g. "Catalyst Fund 13"
     total_budget: float
     challenges: List["Challenge"]  # Liste der Challenges in diesem Fund
 
 class Challenge(BaseModel):
     id: str
-    fund_id: str       # Reference to Fund
-    category: ChallengeCategory
-    title: str
-    description: str
-    budget: float
+    fund_id: str # Reference to Fund
+    title: str # e.g. F13: Cardano Use Cases: Concept
+    fund_amount: float
+    currency: str # = ADA
+    short_description: str
+    campaign_brief: str
     min_requested_funds: float
     max_requested_funds: float
-    review_config: Dict[str, any] # Konfiguration für Reviews wie:
-                                  # - Minimum required reviews pro Proposal
-                                  # - Review Deadlines
-                                  # - Reviewer Rewards
-    status: str
-    created_at: datetime
-    updated_at: datetime
+    proposalsCount: int
+    
+    # Config for Review Process
+        # - Review Deadlines
+        # - Reviewer Rewards
+    review_config: Dict[str, any] 
+    min_required_reviews: int = 5
+    category: ChallengeCategory
 
 class Proposal(BaseModel):
     proposal_id: str
-    title: str
-    description: str
     challenge_category: ChallengeCategory 
-    primary_tag: TagCategory  # Hauptkategorie
-    detailed_tags: Set[str]  # Spezifische Tags
-    current_reviews: int
-    min_required_reviews: int = 5
-    requested_funding: float
-    status: str
+    title: str
+    problem_statement: str # 200 character limit
+    solution_statement: str # 200 character limit
+    name_of_main_applicant: str
+    requested_funds: float
+    currency: str # = ADA
+    auto_translated: bool # yes or no
+    website_url: str
+    catalyst_link: str # URL to Catalyst Proposal
+    dependencies: str # if yes, list them, if no "no dependencies"
+    open_source: bool # yes or no
+    license: str # if yes, list the license, if no "no license"
+    detailed_tags: Set[str]  # Themes
+    solution_description: str
+    impact_description: str
+    capabilites_feasibility: str
+    milestones_description: str
+    resources: str
+    budget_costs: str
+    currency: str # ADA
+    value_for_money: str
     created_at: datetime
-    external_id: str
 
-# Onboarding related Models
+    # Additaional Team Info & Stats (if available via Catalyst Explorer API)
+    team_members: List[str]
+    team_size: int
+    active_projects_count: int
+    completed_projects_count: int
+    failed_projects_count: int # if availabe
+    proposals_this_round_count: int
+    # etc.
+
+    # config for review stage
+    primary_tag: TagCategory
+    ai_summary: str # via OpenAI API
+    current_reviews: int
+    status: str
+
+# B: Onboarding related Models
 
 class FundPreferences(BaseModel):
    reviewer_id: str
@@ -261,7 +288,7 @@ class ReviewerProfile(BaseModel):
    profile_picture: Optional[str]  # URL/Path zum Profilbild
    reputation_score: int = 0
 
-# Review related Models
+# C: Review related Models
 
 class Task(BaseModel):
     id: str
@@ -316,7 +343,7 @@ class ReviewFilter(BaseModel):
     status: Optional[str]
     time_period: Optional[str]  # "This Month" etc.
 
-# Leaderboard and Mission related Models
+# D: Leaderboard and Mission related Models
 
 class LeaderboardEntry(BaseModel):
     reviewer_id: str
@@ -340,7 +367,7 @@ class ReviewerMissions(BaseModel):
     completed_missions: int = 0
     total_points: int = 0
 
-# Peer Review Process related:
+# E: Peer Review Process related:
 
 class PeerEvaluationScore(BaseModel):
     score: int  # -3 to +3 scale wie im UI gezeigt
