@@ -76,10 +76,10 @@ jobs:
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
             CLUSTER=production
-            SERVICE=trustlevel-review-tool-backend-prod
+            SERVICE=review-tool-backend-prod
           else
             CLUSTER=staging
-            SERVICE=trustlevel-review-tool-backend-staging
+            SERVICE=review-tool-backend-staging
           fi
           
           aws ecs update-service --cluster $CLUSTER --service $SERVICE --force-new-deployment
