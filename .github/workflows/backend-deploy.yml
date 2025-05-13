@@ -76,7 +76,7 @@ jobs:
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
             CLUSTER=review-tool-backend-prod
-            SERVICE=review-tool-backend-prod
+            SERVICE=review-tool-backend-prd
           else
             CLUSTER=review-tool-backend-staging
             SERVICE=review-tool-backend-staging
