@@ -75,10 +75,10 @@ jobs:
       - name: Update ECS service
         run: |
           if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            CLUSTER=production
+            CLUSTER=review-tool-backend-prod
             SERVICE=review-tool-backend-prod
           else
-            CLUSTER=staging
+            CLUSTER=review-tool-backend-staging
             SERVICE=review-tool-backend-staging
           fi
           
