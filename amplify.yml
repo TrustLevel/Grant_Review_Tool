@@ -5,10 +5,10 @@ frontend:
       commands:
         - cd frontend
         - npm ci
-        - npm install tailwindcss postcss autoprefixer --save-dev
+
     build:
       commands:
-        - npm run build  # Entfernen Sie "cd frontend" hier
+        - npm run build
   artifacts:
     baseDirectory: frontend/.next
     files:
@@ -16,4 +16,3 @@ frontend:
   cache:
     paths:
       - frontend/node_modules/**/*
-      
