@@ -5,10 +5,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci --prefix frontend
+        - cd frontend
+        - npm ci
+        - npm install tailwindcss postcss autoprefixer --save-dev
     build:
       commands:
-        - npm run build --prefix frontend
+        - cd frontend
+        - npm run build
   artifacts:
     baseDirectory: frontend/.next
     files:
