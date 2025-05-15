@@ -1,15 +1,11 @@
 //alte Version in notes!
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  typescript: {
-    // TypeScript-Fehler während des Builds ignorieren
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    // ESLint-Fehler während des Builds ebenfalls ignorieren
-    ignoreDuringBuilds: true,
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  output: 'standalone', // damit Amplify weiß, wie es die App ausliefern kann
+  experimental: {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
