@@ -1,11 +1,10 @@
 version: 1
-framework: Next.js
 frontend:
   phases:
     preBuild:
       commands:
         - cd frontend
-        - npm ci
+        - NODE_ENV=development npm ci
     build:
       commands:
         - npm run build
