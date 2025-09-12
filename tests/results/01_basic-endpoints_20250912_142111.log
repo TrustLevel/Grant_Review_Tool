@@ -1,0 +1,17 @@
+=== Basic Endpoints Test Suite ===
+Testing Date: Fri Sep 12 14:21:12 CEST 2025
+Server URL: http://localhost:3001
+
+--- Health & Status Tests ---
+Testing Health Endpoint... [0;32m✅ PASS[0m (200, 0.003965s)
+Testing Root Endpoint... [0;32m✅ PASS[0m (200, 0.001592s)
+Testing API Test Endpoint... [0;32m✅ PASS[0m (200, 0.000768s)
+
+--- 404 Error Handling ---
+Testing Non-existent Endpoint... [0;32m✅ PASS[0m (404, 0.001794s)
+
+=== Test Summary ===
+Tests Run: 4
+Tests Passed: 4
+Success Rate: 100%
+[0;32mAll tests passed! ✅[0m

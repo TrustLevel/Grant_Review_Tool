@@ -1,0 +1,86 @@
+=== User Role & Permission Test Suite ===
+Testing Date: Fri Sep 12 14:21:14 CEST 2025
+Server URL: http://localhost:3001
+
+--- Role System Architecture Tests ---
+Checking Admin Middleware... [0;32m✅ FOUND[0m
+Checking Role Validation... [0;32m✅ FOUND[0m
+Checking User Roles Model... [0;32m✅ FOUND[0m
+
+--- Admin-Only Endpoint Tests ---
+Testing admin-protected endpoints without authentication...
+Testing Admin admin-stats (No Auth)... [0;32m✅ PASS[0m (401, 0.000622s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Admin admin-users (No Auth)... [0;32m✅ PASS[0m (401, 0.000587s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Admin admin-pending-users (No Auth)... [0;32m✅ PASS[0m (401, 0.000580s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Admin admin-assignment-requests (No Auth)... [0;32m✅ PASS[0m (401, 0.000659s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+
+--- Regular User Endpoint Tests ---
+Testing regular user endpoints without authentication...
+Testing User reviews (No Auth)... [0;32m✅ PASS[0m (401, 0.000634s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing User settings (No Auth)... [0;32m✅ PASS[0m (401, 0.000531s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing User leaderboard (No Auth)... [0;32m✅ PASS[0m (401, 0.000479s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing User assignment-requests-my (No Auth)... [0;32m✅ PASS[0m (401, 0.000532s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+
+--- POST Endpoint Permission Tests ---
+Testing POST endpoints for proper permission enforcement...
+Testing User Onboarding (No Auth)... [0;32m✅ PASS[0m (401, 0.000567s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Assignment Request (No Auth)... [0;32m✅ PASS[0m (401, 0.001032s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Admin User Status Update (No Auth)... [0;32m✅ PASS[0m (401, 0.000562s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+
+--- Role Hierarchy Tests ---
+Testing role hierarchy and permission inheritance...
+Testing Mock Reviewer Token... [0;32m✅ PASS[0m (401, 0.000654s)
+    [0;34m🔒 Access denied: Invalid token.[0m
+Testing Mock Admin Token... [0;32m✅ PASS[0m (401, 0.000663s)
+    [0;34m🔒 Access denied: Invalid token.[0m
+
+--- Permission Consistency Tests ---
+Testing permission consistency across similar endpoints...
+Verifying all admin endpoints have consistent authentication requirements...
+Testing Admin stats Consistency... [0;32m✅ PASS[0m (401, 0.000480s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Admin users Consistency... [0;32m✅ PASS[0m (401, 0.000466s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Admin pending-users Consistency... [0;32m✅ PASS[0m (401, 0.000506s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Admin assignment-requests Consistency... [0;32m✅ PASS[0m (401, 0.000485s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+
+--- User Status & Approval Tests ---
+Testing user approval workflow and status validation...
+Checking User Approval System... [0;32m✅ FOUND[0m
+Checking Status Validation... [0;32m✅ FOUND[0m
+
+--- Permission Boundary Tests ---
+Testing edge cases and permission boundaries...
+Testing Cross-User Data Access... [0;32m✅ PASS[0m (401, 0.000523s)
+    [0;34m🔒 Access denied: Access denied. No token provided.[0m
+Testing Invalid Role Token... [0;32m✅ PASS[0m (401, 0.000622s)
+    [0;34m🔒 Access denied: Invalid token.[0m
+
+--- Database-Level Permission Tests ---
+Testing database-level access control...
+Checking Database Permission Checks... [0;32m✅ FOUND[0m
+Checking Ownership Validation... [0;32m✅ FOUND[0m
+
+=== Permission System Assessment ===
+Tests Run: 26
+Tests Passed: 26
+Permission Score: 100%
+[0;32m🔐 Permission System: EXCELLENT[0m
+   ✅ Role-based access control implemented
+   ✅ Admin privileges properly protected
+   ✅ User data access controlled
+   ✅ Consistent permission enforcement
+   ✅ Proper authentication requirements

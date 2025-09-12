@@ -73,7 +73,6 @@ Thumbs.db
 # LOGS & DEBUGGING
 # ========================================
 logs
-*.log
 coverage/
 .nyc_output
 
