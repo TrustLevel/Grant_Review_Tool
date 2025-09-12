@@ -7,28 +7,28 @@
 [![Next.js](https://img.shields.io/badge/Next.js-15+-black.svg)](https://nextjs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-7+-green.svg)](https://www.mongodb.com/)
 
-## 🌟 What is TrustLevel?
+## What is TrustLevel?
 
 TrustLevel is an intelligent proposal management system designed for decentralized funding programs like Cardano Catalyst. It combines smart assignment algorithms, quality control through peer reviews, and gamification to create a fair, efficient, and transparent review process.
 
-### 🎯 Key Features
+### Key Features
 
-- **🌡️ Temperature Check System**: Quick quality assessment before detailed reviews
-- **🧠 Smart Assignment Algorithm**: AI-powered matching based on expertise and interests
-- **👥 Peer Review Quality Control**: Multi-tier validation for review quality
-- **🎮 Gamification & REP System**: Reward reviewers with points and mission completion
-- **⚡ Administrative Control**: Comprehensive user management and analytics
-- **🔒 Secure Authentication**: Supabase integration with JWT tokens
-- **📊 AI-Enhanced Analysis**: Claude AI generates proposal summaries and insights
+- **Temperature Check System**: Quick quality assessment before detailed reviews
+- **Smart Assignment Algorithm**: AI-powered matching based on expertise and interests
+- **Peer Review Quality Control**: Multi-tier validation for review quality
+- **Gamification & REP System**: Reward reviewers with points and mission completion
+- **Administrative Control**: Comprehensive user management and analytics
+- **Secure Authentication**: Supabase integration with JWT tokens
+- **AI-Enhanced Analysis**: Claude AI generates proposal summaries and insights
 
-### 🏆 Perfect For
+### Perfect For
 
 - **DAOs & Grant Programs**: Streamline your proposal evaluation process
 - **Funding Organizations**: Ensure fair and consistent review standards
 - **Decentralized Communities**: Enable transparent, merit-based decision-making
 
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 TrustLevel is built with a modern, scalable architecture:
 
@@ -76,7 +76,7 @@ TrustLevel is built with a modern, scalable architecture:
                     └─────────────────┘
 ```
 
-## 🎮 How It Works
+## How It Works
 
 ### 1. User Onboarding
 - **Magic Link Authentication** via Supabase
@@ -119,15 +119,15 @@ proposal-reviewing-tool/
 └── README.md           # This file
 ```
 
-## 📖 Documentation
+## Full Documentation
 
-- **[📚 Full Documentation](./docs/README.md)** - Comprehensive guides and API reference
-- **[👤 User Guide](./docs/user-guide/getting-started.md)** - How to use TrustLevel as a reviewer
-- **[⚙️ Admin Guide](./docs/admin-guide/user-management.md)** - Administrative features and management
-- **[💻 Developer Guide](./docs/developer-guide/api-reference.md)** - Technical documentation and APIs
-- **[🚀 Deployment Guide](./docs/deployment/installation.md)** - Production setup and hosting
+- **[Full Documentation](./docs/README.md)** - Comprehensive guides and API reference
+- **[User Guide](./docs/user-guide/getting-started.md)** - How to use TrustLevel as a reviewer
+- **[Admin Guide](./docs/admin-guide/user-management.md)** - Administrative features and management
+- **[Developer Guide](./docs/developer-guide/api-reference.md)** - Technical documentation and APIs
+- **[Deployment Guide](./docs/deployment/installation.md)** - Production setup and hosting
 
-## 🧪 Testing
+## Testing
 
 TrustLevel includes a comprehensive testing suite covering:
 
@@ -139,29 +139,21 @@ TrustLevel includes a comprehensive testing suite covering:
 
 See [Testing Documentation](./tests/README.md) for detailed information.
 
-## 🚀 Deployment
+## Deployment
 
 For production deployment to AWS (App Runner + Amplify) and detailed configuration, see the [Deployment Guide](./docs/deployment/installation.md).
 
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
-
-- **Cardano Community** - Funded through Catalyst Fund 12
-- **Anthropic** - AI integration powered by Claude
-- **Open Source Community** - Built with amazing open-source tools
-
-## 📞 Support
+## Support
 
 - **Documentation**: [docs/](./docs/README.md)
 - **Issues**: [GitHub Issues](https://github.com/your-org/proposal-reviewing-tool/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/your-org/proposal-reviewing-tool/discussions)
 
 ---
-
-**Made with ❤️ for the decentralized future**
 
 *TrustLevel is an open-source project building the future of transparent, merit-based decision-making for decentralized communities.*

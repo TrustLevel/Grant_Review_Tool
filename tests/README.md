@@ -179,10 +179,10 @@ The `run-master-tests.sh` generates comprehensive reports including:
 - 🔒 **SECURITY**: Security-related test result
 
 ### Overall System Assessment
-- 🏆 **EXCELLENT** (85%+ success): Production-ready system
-- 👍 **GOOD** (70-84% success): Suitable for continued development
-- 🔧 **NEEDS IMPROVEMENT** (50-69% success): Requires focused development
-- 🚨 **CRITICAL ISSUES** (<50% success): Major development required
+- **EXCELLENT** (85%+ success): Production-ready system
+- **GOOD** (70-84% success): Suitable for continued development
+- **NEEDS IMPROVEMENT** (50-69% success): Requires focused development
+- **CRITICAL ISSUES** (<50% success): Major development required
 
 ## 🛠 Troubleshooting
 

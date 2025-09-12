@@ -2,7 +2,7 @@
 
 Welcome to TrustLevel! This guide will help you get started as a reviewer in the proposal evaluation system.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Sign Up & Authentication
 
@@ -19,13 +19,13 @@ After authentication, you'll be guided through a comprehensive onboarding proces
 - Choose your username
 - This will be visible to other reviewers
 
-#### **Areas of Expertise** ⭐
+#### **Areas of Expertise**
 Rate your expertise level (1-5) in:
 - **Technical Development**: Software, smart contracts, system architecture
 - **Community & Education**: Community building, marketing, outreach  
 - **Product & Innovation**: Business development, product strategy, research
 
-#### **Areas of Interest** ⭐
+#### **Areas of Interest**
 Select categories you're most interested in reviewing:
 - Governance, Education, Community & Outreach
 - Development & Tools, Identity & Security
@@ -67,7 +67,7 @@ Once approved, your dashboard shows:
 - **REP Points**: Your reputation score
 - **Next Deadline**: Current review phase end date
 
-## 🌡️ Temperature Check System
+## Temperature Check System
 
 Before diving into full reviews, TrustLevel uses a **Temperature Check** system:
 
@@ -90,7 +90,7 @@ If marking as low-quality, select reasons:
 ### **Early Exit**
 For low-quality proposals, you can submit an early review and move to the next proposal, saving time for promising ones.
 
-## 📝 Review Process
+## Review Process
 
 ### **6-Category Scoring System**
 Each proposal is evaluated across six dimensions using a -3 to +3 scale:
@@ -117,7 +117,7 @@ Each proposal is evaluated across six dimensions using a -3 to +3 scale:
 - Suggest improvements where applicable
 - Be professional and helpful
 
-## 👥 Peer Review Process
+## Peer Review Process
 
 ### **Purpose**
 Quality control system where reviews are evaluated by other reviewers.
@@ -133,12 +133,11 @@ Quality control system where reviews are evaluated by other reviewers.
 - **Constructive Feedback**: Are comments helpful to proposers?
 - **Scoring Consistency**: Are scores aligned with comments?
 
-## 🎮 REP Points & Rewards
+## REP Points & Rewards
 
 ### **Earning Points**
-- **Complete Review**: 50 REP points
+- **Complete Review**: 30 REP points
 - **Complete Peer Review**: 15 REP points
-- **Quality Bonus**: Additional points for exceptional reviews
 
 ### **Leaderboard**
 - View community rankings
@@ -148,19 +147,11 @@ Quality control system where reviews are evaluated by other reviewers.
 ### **Mission System**
 Complete missions to earn additional rewards:
 - Beta Tester Mission: Complete 5 reviews + 10 peer reviews
-- Quality Reviewer Mission: Maintain high peer review scores
-- Community Contributor Mission: Provide exceptional feedback
 
-## ❓ Frequently Asked Questions
+## Frequently Asked Questions
 
 **Q: How are proposals assigned to me?**  
 A: The system uses smart matching based on your interests first, then urgency. You'll primarily get proposals in categories you selected.
-
-**Q: Can I save my progress on a review?**  
-A: Yes! Click "Save Draft" anytime and return later to complete your review.
-
-**Q: What happens if I can't complete a review by the deadline?**  
-A: Contact an admin as soon as possible. Late reviews may affect your REP score.
 
 **Q: How do I know if my peer review is good quality?**  
 A: Other reviewers will peer-review your reviews. Consistent quality feedback will boost your REP score.
@@ -170,11 +161,5 @@ A: Yes! Use the "Request More Reviews" button on your dashboard.
 
 **Q: What if I disagree with a peer review of my work?**  
 A: Peer reviews are for improvement, not punishment. Use feedback to enhance future reviews.
-
-## 🆘 Getting Help
-
-- **Technical Issues**: Create an issue in the project repository
-- **Review Questions**: Ask in community discussions
-- **Account Issues**: Contact administrators through the platform
 
 ---
