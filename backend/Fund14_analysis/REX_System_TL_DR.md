@@ -5,7 +5,13 @@ The **REX (Reputation-Expertise) System** replaces simple averaging with intelli
 
 ## The Problem REX Solves
 **Traditional systems**: Expert (6/10) + Novice (9/10) + Unengaged (8/10) = 7.7/10 average
-**REX approach**: Expert opinion gets more weight, final score reflects actual quality
+
+The REX system fundamentally changes this by asking: **"How much should we trust each reviewer's opinion?"**
+
+Instead of equal weighting, REX calculates a dynamic trust score for each review based on two key factors:
+
+**Reputation (R)**: How reliable is this reviewer?
+**Expertise (Ex)**: How qualified are they for this specific proposal?
 
 ## How It Works (3 Phases)
 
@@ -31,12 +37,9 @@ REX = √(R_profile × E_total)
 ```
 
 **Expertise (E_total) = weighted combination:**
-- 20% Self-assessment (onboarding expertise)
-- 50% Expertise validation
-- 20% Confidence (pre-review self-confidence)
-- 10% Theme match (interests ∩ proposal tags)
-
-(That part will be replaced/complemented with a more robust "endorsement" approach)
+- **Domain Match**: Does the reviewer's background align with the proposal's technical focus?
+- **Confidence Level**: How confident is the reviewer in their assessment of this specific proposal?
+- **Administrative Validation**: What do expert administrators think of this reviewer's capabilities? (That part will be replaced/complemented with a more robust "endorsement" approach)
 
 ### Phase 3: Proposal Aggregation
 **Dual-channel Bayesian system:**
@@ -70,7 +73,7 @@ REX = √(R_profile × E_total)
 - **51% self-flagging rate** shows functional risk detection
 
 **Example Results:**
-- Top reviewer gets 2.3× more weight than weakest reviewer
+- Top reviewer gets more weight than weak reviewer
 - Only 1/27 proposals achieved HIGH status (strict classification)
 - System successfully differentiates reviewer quality
 
