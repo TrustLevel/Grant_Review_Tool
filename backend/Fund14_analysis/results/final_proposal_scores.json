@@ -1,0 +1,1326 @@
+{
+  "timestamp": "2025-09-23T13:27:24.560Z",
+  "totalProposals": 27,
+  "methodology": {
+    "qualityPrior": {
+      "alpha": 0.1,
+      "beta": 0.1
+    },
+    "riskPrior": {
+      "a": 1,
+      "b": 4
+    },
+    "thresholds": {
+      "high": 0.6,
+      "low": 0.4,
+      "riskHigh": 0.5,
+      "riskLow": 0.25,
+      "tau": 0.65
+    },
+    "lambda": 1
+  },
+  "proposals": [
+    {
+      "proposalTitle": "Masumi AI Agent Network 2.0 by Serviceplan Group  ",
+      "reviewCount": 4,
+      "totalWeight": 4.787,
+      "qualityScore": 0.805,
+      "pHigh": 0.633,
+      "pLow": 0.135,
+      "disagreement": 0.017,
+      "status": "HIGH",
+      "rankingScore": 7,
+      "betaPosterior": {
+        "alpha": 4.015042,
+        "beta": 0.971957999999999
+      },
+      "riskPosterior": {
+        "a": 1,
+        "b": 6.425000000000001
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.842,
+          "reliability": 0.797,
+          "qualityScore": 0.728,
+          "effectiveWeight": 1.594
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.677,
+          "reliability": 0.67,
+          "qualityScore": 0.701,
+          "effectiveWeight": 1.34
+        },
+        {
+          "reviewerId": "68c15120cab06b829d925d62",
+          "rex": 0.584,
+          "reliability": 0.584,
+          "qualityScore": 1,
+          "effectiveWeight": 1.167
+        },
+        {
+          "reviewerId": "68c2d4b5cab06b829d926996",
+          "rex": 0.338,
+          "reliability": 0.343,
+          "qualityScore": 0.945,
+          "effectiveWeight": 0.686
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Integrating USDA with zerohash to access TradFi institutions",
+      "reviewCount": 3,
+      "totalWeight": 4.375,
+      "qualityScore": 0.756,
+      "pHigh": 0.493,
+      "pLow": 0.138,
+      "disagreement": 0.015,
+      "status": "GREY",
+      "rankingScore": 6.5,
+      "betaPosterior": {
+        "alpha": 3.458324,
+        "beta": 1.1166759999999996
+      },
+      "riskPosterior": {
+        "a": 1,
+        "b": 6.25
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.893,
+          "reliability": 0.828,
+          "qualityScore": 0.704,
+          "effectiveWeight": 1.656
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.814,
+          "reliability": 0.779,
+          "qualityScore": 0.682,
+          "effectiveWeight": 1.557
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": 0.973,
+          "effectiveWeight": 1.162
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Open Sourcing Tempo.Vote for Cardano Governance",
+      "reviewCount": 3,
+      "totalWeight": 3.158,
+      "qualityScore": 0.753,
+      "pHigh": 0.412,
+      "pLow": 0.15,
+      "disagreement": 0.012,
+      "status": "GREY",
+      "rankingScore": 6.4,
+      "betaPosterior": {
+        "alpha": 2.52928,
+        "beta": 0.8287200000000001
+      },
+      "riskPosterior": {
+        "a": 1,
+        "b": 5.65
+      },
+      "reviews": [
+        {
+          "reviewerId": "68c15120cab06b829d925d62",
+          "rex": 0.643,
+          "reliability": 0.639,
+          "qualityScore": 0.658,
+          "effectiveWeight": 1.278
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": 0.783,
+          "effectiveWeight": 1.162
+        },
+        {
+          "reviewerId": "68c2d4b5cab06b829d926996",
+          "rex": 0.355,
+          "reliability": 0.359,
+          "qualityScore": 0.945,
+          "effectiveWeight": 0.718
+        }
+      ]
+    },
+    {
+      "proposalTitle": "High-Yield RWA on Cardano: Tokenized U.S. Real Estate",
+      "reviewCount": 5,
+      "totalWeight": 1.7309999999999999,
+      "qualityScore": 0.798,
+      "pHigh": 0.319,
+      "pLow": 0.347,
+      "disagreement": 0.931,
+      "status": "LOW",
+      "rankingScore": 5.2,
+      "betaPosterior": {
+        "alpha": 1.5417859999999999,
+        "beta": 0.38921400000000017
+      },
+      "riskPosterior": {
+        "a": 3.2880000000000003,
+        "b": 6.2
+      },
+      "reviews": [
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.651,
+          "reliability": 0.647,
+          "qualityScore": null,
+          "effectiveWeight": 1.294
+        },
+        {
+          "reviewerId": "68c32662cab06b829d927378",
+          "rex": 0.497,
+          "reliability": 0.497,
+          "qualityScore": null,
+          "effectiveWeight": 0.994
+        },
+        {
+          "reviewerId": "68c2d4b5cab06b829d926996",
+          "rex": 0.3,
+          "reliability": 0.31,
+          "qualityScore": 0.972,
+          "effectiveWeight": 0.62
+        },
+        {
+          "reviewerId": "68c3e1b9cab06b829d928059",
+          "rex": 0.285,
+          "reliability": 0.297,
+          "qualityScore": 0.694,
+          "effectiveWeight": 0.595
+        },
+        {
+          "reviewerId": "68c33a8ccab06b829d92773d",
+          "rex": 0.236,
+          "reliability": 0.258,
+          "qualityScore": 0.826,
+          "effectiveWeight": 0.516
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Tokenized Art Passport",
+      "reviewCount": 3,
+      "totalWeight": 2.33,
+      "qualityScore": 0.683,
+      "pHigh": 0.3,
+      "pLow": 0.31,
+      "disagreement": 0.43,
+      "status": "LOW",
+      "rankingScore": 4.7,
+      "betaPosterior": {
+        "alpha": 2.275064,
+        "beta": 1.054936
+      },
+      "riskPosterior": {
+        "a": 2.683,
+        "b": 5.975
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.917,
+          "reliability": 0.842,
+          "qualityScore": null,
+          "effectiveWeight": 1.683
+        },
+        {
+          "reviewerId": "68c15120cab06b829d925d62",
+          "rex": 0.643,
+          "reliability": 0.639,
+          "qualityScore": 0.858,
+          "effectiveWeight": 1.278
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.526,
+          "reliability": 0.526,
+          "qualityScore": 0.645,
+          "effectiveWeight": 1.052
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Cardano Institutional UX Stack: Compliance & BTC-Ready DeFi",
+      "reviewCount": 5,
+      "totalWeight": 3.3169999999999997,
+      "qualityScore": 0.709,
+      "pHigh": 0.348,
+      "pLow": 0.341,
+      "disagreement": 0.41,
+      "status": "LOW",
+      "rankingScore": 4.7,
+      "betaPosterior": {
+        "alpha": 2.493266,
+        "beta": 1.0237339999999997
+      },
+      "riskPosterior": {
+        "a": 3.5999999999999996,
+        "b": 6.949999999999999
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.893,
+          "reliability": 0.828,
+          "qualityScore": null,
+          "effectiveWeight": 1.656
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.748,
+          "reliability": 0.73,
+          "qualityScore": 0.696,
+          "effectiveWeight": 1.46
+        },
+        {
+          "reviewerId": "68c7fac252e2cabf79079a70",
+          "rex": 0.668,
+          "reliability": 0.662,
+          "qualityScore": 0.772,
+          "effectiveWeight": 1.324
+        },
+        {
+          "reviewerId": "68c30d56cab06b829d926dad",
+          "rex": 0.472,
+          "reliability": 0.472,
+          "qualityScore": null,
+          "effectiveWeight": 0.944
+        },
+        {
+          "reviewerId": "68c3e1b9cab06b829d928059",
+          "rex": 0.247,
+          "reliability": 0.266,
+          "qualityScore": 0.666,
+          "effectiveWeight": 0.533
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Rainforest Alliance: Blockchain Traceability Pilot",
+      "reviewCount": 6,
+      "totalWeight": 2.452,
+      "qualityScore": 0.785,
+      "pHigh": 0.402,
+      "pLow": 0.399,
+      "disagreement": 1.052,
+      "status": "GREY",
+      "rankingScore": 4.7,
+      "betaPosterior": {
+        "alpha": 2.08237,
+        "beta": 0.5696299999999999
+      },
+      "riskPosterior": {
+        "a": 4.9399999999999995,
+        "b": 7.45
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.893,
+          "reliability": 0.828,
+          "qualityScore": null,
+          "effectiveWeight": 1.656
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.677,
+          "reliability": 0.67,
+          "qualityScore": null,
+          "effectiveWeight": 1.34
+        },
+        {
+          "reviewerId": "68c7fac252e2cabf79079a70",
+          "rex": 0.668,
+          "reliability": 0.662,
+          "qualityScore": 0.791,
+          "effectiveWeight": 1.324
+        },
+        {
+          "reviewerId": "68c30d56cab06b829d926dad",
+          "rex": 0.472,
+          "reliability": 0.472,
+          "qualityScore": null,
+          "effectiveWeight": 0.944
+        },
+        {
+          "reviewerId": "68c3e1b9cab06b829d928059",
+          "rex": 0.285,
+          "reliability": 0.297,
+          "qualityScore": 0.777,
+          "effectiveWeight": 0.595
+        },
+        {
+          "reviewerId": "68c33a8ccab06b829d92773d",
+          "rex": 0.247,
+          "reliability": 0.267,
+          "qualityScore": 0.887,
+          "effectiveWeight": 0.533
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Ascent Rivals - Onboarding Next Million Users",
+      "reviewCount": 3,
+      "totalWeight": 1.782,
+      "qualityScore": 0.665,
+      "pHigh": 0.248,
+      "pLow": 0.295,
+      "disagreement": 0.432,
+      "status": "LOW",
+      "rankingScore": 4.7,
+      "betaPosterior": {
+        "alpha": 1.8495439999999999,
+        "beta": 0.9324560000000002
+      },
+      "riskPosterior": {
+        "a": 2.324,
+        "b": 5.55
+      },
+      "reviews": [
+        {
+          "reviewerId": "68c7fac252e2cabf79079a70",
+          "rex": 0.668,
+          "reliability": 0.662,
+          "qualityScore": null,
+          "effectiveWeight": 1.324
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": 0.702,
+          "effectiveWeight": 1.162
+        },
+        {
+          "reviewerId": "68c2d4b5cab06b829d926996",
+          "rex": 0.3,
+          "reliability": 0.31,
+          "qualityScore": 0.861,
+          "effectiveWeight": 0.62
+        }
+      ]
+    },
+    {
+      "proposalTitle": "EUR Stablecoin on Cardano - Fiat Backed and MiCA Compliant",
+      "reviewCount": 6,
+      "totalWeight": 3.3600000000000003,
+      "qualityScore": 0.747,
+      "pHigh": 0.415,
+      "pLow": 0.384,
+      "disagreement": 0.644,
+      "status": "GREY",
+      "rankingScore": 4.6,
+      "betaPosterior": {
+        "alpha": 2.6583400000000004,
+        "beta": 0.9016600000000001
+      },
+      "riskPosterior": {
+        "a": 4.564,
+        "b": 7.324999999999999
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.868,
+          "reliability": 0.813,
+          "qualityScore": null,
+          "effectiveWeight": 1.626
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.789,
+          "reliability": 0.76,
+          "qualityScore": 0.577,
+          "effectiveWeight": 1.52
+        },
+        {
+          "reviewerId": "68c7fac252e2cabf79079a70",
+          "rex": 0.668,
+          "reliability": 0.662,
+          "qualityScore": 0.946,
+          "effectiveWeight": 1.324
+        },
+        {
+          "reviewerId": "68c32662cab06b829d927378",
+          "rex": 0.497,
+          "reliability": 0.497,
+          "qualityScore": null,
+          "effectiveWeight": 0.994
+        },
+        {
+          "reviewerId": "68c30d56cab06b829d926dad",
+          "rex": 0.472,
+          "reliability": 0.472,
+          "qualityScore": null,
+          "effectiveWeight": 0.944
+        },
+        {
+          "reviewerId": "68c33a8ccab06b829d92773d",
+          "rex": 0.236,
+          "reliability": 0.258,
+          "qualityScore": 0.831,
+          "effectiveWeight": 0.516
+        }
+      ]
+    },
+    {
+      "proposalTitle": "DeFi Storage on Cardano: Unlocking $1B+ TVL and 1M Users",
+      "reviewCount": 4,
+      "totalWeight": 4.702,
+      "qualityScore": 0.588,
+      "pHigh": 0.209,
+      "pLow": 0.235,
+      "disagreement": 0.102,
+      "status": "LOW",
+      "rankingScore": 4.5,
+      "betaPosterior": {
+        "alpha": 2.882778,
+        "beta": 2.0192219999999996
+      },
+      "riskPosterior": {
+        "a": 2.162,
+        "b": 7.05
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.893,
+          "reliability": 0.828,
+          "qualityScore": 0.626,
+          "effectiveWeight": 1.656
+        },
+        {
+          "reviewerId": "6895bbb3ad61376a772c25c9",
+          "rex": 0.821,
+          "reliability": 0.783,
+          "qualityScore": 0.427,
+          "effectiveWeight": 1.566
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.762,
+          "reliability": 0.74,
+          "qualityScore": 0.728,
+          "effectiveWeight": 1.48
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": null,
+          "effectiveWeight": 1.162
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Revolut Tokeo Mercuryo – Onbaording via 60M Revolut Users",
+      "reviewCount": 4,
+      "totalWeight": 2.442,
+      "qualityScore": 0.689,
+      "pHigh": 0.314,
+      "pLow": 0.371,
+      "disagreement": 0.787,
+      "status": "LOW",
+      "rankingScore": 4.3,
+      "betaPosterior": {
+        "alpha": 2.371522,
+        "beta": 1.070478
+      },
+      "riskPosterior": {
+        "a": 4.2490000000000006,
+        "b": 7.2
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.917,
+          "reliability": 0.842,
+          "qualityScore": null,
+          "effectiveWeight": 1.683
+        },
+        {
+          "reviewerId": "6895bbb3ad61376a772c25c9",
+          "rex": 0.821,
+          "reliability": 0.783,
+          "qualityScore": null,
+          "effectiveWeight": 1.566
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.789,
+          "reliability": 0.76,
+          "qualityScore": 0.709,
+          "effectiveWeight": 1.52
+        },
+        {
+          "reviewerId": "68adda53140b47badeb83d08",
+          "rex": 0.461,
+          "reliability": 0.461,
+          "qualityScore": 0.861,
+          "effectiveWeight": 0.922
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Real World Adoption: Cardano Payments in Vending Machines",
+      "reviewCount": 3,
+      "totalWeight": 1.8980000000000001,
+      "qualityScore": 0.622,
+      "pHigh": 0.207,
+      "pLow": 0.312,
+      "disagreement": 0.419,
+      "status": "LOW",
+      "rankingScore": 4.3,
+      "betaPosterior": {
+        "alpha": 1.8031760000000001,
+        "beta": 1.094824
+      },
+      "riskPosterior": {
+        "a": 2.626,
+        "b": 5.8
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.868,
+          "reliability": 0.813,
+          "qualityScore": null,
+          "effectiveWeight": 1.626
+        },
+        {
+          "reviewerId": "68c15120cab06b829d925d62",
+          "rex": 0.643,
+          "reliability": 0.639,
+          "qualityScore": 0.602,
+          "effectiveWeight": 1.278
+        },
+        {
+          "reviewerId": "68c2d4b5cab06b829d926996",
+          "rex": 0.3,
+          "reliability": 0.31,
+          "qualityScore": 0.861,
+          "effectiveWeight": 0.62
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Launching the Frax Stablecoin & DeFi Ecosystem on Cardano",
+      "reviewCount": 3,
+      "totalWeight": 3.106,
+      "qualityScore": 0.571,
+      "pHigh": 0.18,
+      "pLow": 0.262,
+      "disagreement": 0.135,
+      "status": "LOW",
+      "rankingScore": 4.2,
+      "betaPosterior": {
+        "alpha": 2.3460520000000002,
+        "beta": 1.7599479999999996
+      },
+      "riskPosterior": {
+        "a": 2.162,
+        "b": 6.1
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.868,
+          "reliability": 0.813,
+          "qualityScore": 0.642,
+          "effectiveWeight": 1.626
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.762,
+          "reliability": 0.74,
+          "qualityScore": 0.542,
+          "effectiveWeight": 1.48
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": null,
+          "effectiveWeight": 1.162
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Enterprise-grade Verifiable Database,300x cheaper, 99%faster",
+      "reviewCount": 4,
+      "totalWeight": 0.718,
+      "qualityScore": 0.686,
+      "pHigh": 0.182,
+      "pLow": 0.428,
+      "disagreement": 4.439,
+      "status": "LOW",
+      "rankingScore": 3.9,
+      "betaPosterior": {
+        "alpha": 1.17851,
+        "beta": 0.53949
+      },
+      "riskPosterior": {
+        "a": 4.569,
+        "b": 6.1
+      },
+      "reviews": [
+        {
+          "reviewerId": "68c7fac252e2cabf79079a70",
+          "rex": 0.719,
+          "reliability": 0.706,
+          "qualityScore": null,
+          "effectiveWeight": 1.413
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": null,
+          "effectiveWeight": 1.162
+        },
+        {
+          "reviewerId": "68c32662cab06b829d927378",
+          "rex": 0.497,
+          "reliability": 0.497,
+          "qualityScore": null,
+          "effectiveWeight": 0.994
+        },
+        {
+          "reviewerId": "68c2d4b5cab06b829d926996",
+          "rex": 0.355,
+          "reliability": 0.359,
+          "qualityScore": 0.945,
+          "effectiveWeight": 0.718
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Space and Time: Secure Enterprise Data for Cardano",
+      "reviewCount": 3,
+      "totalWeight": 1.162,
+      "qualityScore": 0.621,
+      "pHigh": 0.17,
+      "pLow": 0.393,
+      "disagreement": 1.25,
+      "status": "LOW",
+      "rankingScore": 3.8,
+      "betaPosterior": {
+        "alpha": 1.34245,
+        "beta": 0.81955
+      },
+      "riskPosterior": {
+        "a": 3.7640000000000002,
+        "b": 5.825
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.788,
+          "reliability": 0.76,
+          "qualityScore": null,
+          "effectiveWeight": 1.519
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.625,
+          "reliability": 0.622,
+          "qualityScore": null,
+          "effectiveWeight": 1.245
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": 0.725,
+          "effectiveWeight": 1.162
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Scaling Cardano Adoption via K-12 Financial EdTech Platform",
+      "reviewCount": 4,
+      "totalWeight": 2.1719999999999997,
+      "qualityScore": 0.56,
+      "pHigh": 0.154,
+      "pLow": 0.352,
+      "disagreement": 0.411,
+      "status": "LOW",
+      "rankingScore": 3.6,
+      "betaPosterior": {
+        "alpha": 1.775012,
+        "beta": 1.3969879999999997
+      },
+      "riskPosterior": {
+        "a": 3.474,
+        "b": 6.4
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.893,
+          "reliability": 0.828,
+          "qualityScore": 0.511,
+          "effectiveWeight": 1.656
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.762,
+          "reliability": 0.74,
+          "qualityScore": null,
+          "effectiveWeight": 1.48
+        },
+        {
+          "reviewerId": "68c32662cab06b829d927378",
+          "rex": 0.497,
+          "reliability": 0.497,
+          "qualityScore": null,
+          "effectiveWeight": 0.994
+        },
+        {
+          "reviewerId": "68c33a8ccab06b829d92773d",
+          "rex": 0.236,
+          "reliability": 0.258,
+          "qualityScore": 0.831,
+          "effectiveWeight": 0.516
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Venture Capital Mentoring Program: Tritemius x Cardano",
+      "reviewCount": 3,
+      "totalWeight": 1.212,
+      "qualityScore": 0.578,
+      "pHigh": 0.14,
+      "pLow": 0.401,
+      "disagreement": 1.08,
+      "status": "LOW",
+      "rankingScore": 3.5,
+      "betaPosterior": {
+        "alpha": 1.278104,
+        "beta": 0.933896
+      },
+      "riskPosterior": {
+        "a": 4.176,
+        "b": 6.25
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.893,
+          "reliability": 0.828,
+          "qualityScore": null,
+          "effectiveWeight": 1.656
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.789,
+          "reliability": 0.76,
+          "qualityScore": null,
+          "effectiveWeight": 1.52
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.607,
+          "reliability": 0.606,
+          "qualityScore": 0.642,
+          "effectiveWeight": 1.212
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Bridge between Cardano, Polkadot, Ethereum and its L2s ",
+      "reviewCount": 3,
+      "totalWeight": 0.801,
+      "qualityScore": 0.587,
+      "pHigh": 0.124,
+      "pLow": 0.398,
+      "disagreement": 1.725,
+      "status": "LOW",
+      "rankingScore": 3.5,
+      "betaPosterior": {
+        "alpha": 1.057496,
+        "beta": 0.7435040000000002
+      },
+      "riskPosterior": {
+        "a": 3.8520000000000003,
+        "b": 5.825
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.815,
+          "reliability": 0.779,
+          "qualityScore": null,
+          "effectiveWeight": 1.558
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.651,
+          "reliability": 0.647,
+          "qualityScore": null,
+          "effectiveWeight": 1.294
+        },
+        {
+          "reviewerId": "68adda53140b47badeb83d08",
+          "rex": 0.399,
+          "reliability": 0.4,
+          "qualityScore": 0.696,
+          "effectiveWeight": 0.801
+        }
+      ]
+    },
+    {
+      "proposalTitle": "CADRIA.ORG Verifying AI by Human Digital Representatives",
+      "reviewCount": 6,
+      "totalWeight": 1.157,
+      "qualityScore": 0.607,
+      "pHigh": 0.158,
+      "pLow": 0.438,
+      "disagreement": 1.984,
+      "status": "LOW",
+      "rankingScore": 3.4,
+      "betaPosterior": {
+        "alpha": 1.308405,
+        "beta": 0.848595
+      },
+      "riskPosterior": {
+        "a": 5.7,
+        "b": 7.325
+      },
+      "reviews": [
+        {
+          "reviewerId": "6895bbb3ad61376a772c25c9",
+          "rex": 0.774,
+          "reliability": 0.75,
+          "qualityScore": null,
+          "effectiveWeight": 1.499
+        },
+        {
+          "reviewerId": "68c15120cab06b829d925d62",
+          "rex": 0.697,
+          "reliability": 0.687,
+          "qualityScore": null,
+          "effectiveWeight": 1.374
+        },
+        {
+          "reviewerId": "68c30d56cab06b829d926dad",
+          "rex": 0.472,
+          "reliability": 0.472,
+          "qualityScore": null,
+          "effectiveWeight": 0.944
+        },
+        {
+          "reviewerId": "68adda53140b47badeb83d08",
+          "rex": 0.441,
+          "reliability": 0.442,
+          "qualityScore": null,
+          "effectiveWeight": 0.883
+        },
+        {
+          "reviewerId": "68c3e1b9cab06b829d928059",
+          "rex": 0.302,
+          "reliability": 0.312,
+          "qualityScore": 0.666,
+          "effectiveWeight": 0.624
+        },
+        {
+          "reviewerId": "68c33a8ccab06b829d92773d",
+          "rex": 0.247,
+          "reliability": 0.267,
+          "qualityScore": 0.737,
+          "effectiveWeight": 0.533
+        }
+      ]
+    },
+    {
+      "proposalTitle": "OYA BusRide: ADA Transit Tickets, Manifest & Welfare System",
+      "reviewCount": 4,
+      "totalWeight": 0.624,
+      "qualityScore": 0.596,
+      "pHigh": 0.116,
+      "pLow": 0.439,
+      "disagreement": 3.59,
+      "status": "LOW",
+      "rankingScore": 3.3,
+      "betaPosterior": {
+        "alpha": 0.968,
+        "beta": 0.6560000000000001
+      },
+      "riskPosterior": {
+        "a": 4.983,
+        "b": 6.375
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.893,
+          "reliability": 0.828,
+          "qualityScore": null,
+          "effectiveWeight": 1.656
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.702,
+          "reliability": 0.691,
+          "qualityScore": null,
+          "effectiveWeight": 1.383
+        },
+        {
+          "reviewerId": "68c30d56cab06b829d926dad",
+          "rex": 0.472,
+          "reliability": 0.472,
+          "qualityScore": null,
+          "effectiveWeight": 0.944
+        },
+        {
+          "reviewerId": "68c3e1b9cab06b829d928059",
+          "rex": 0.302,
+          "reliability": 0.312,
+          "qualityScore": 0.75,
+          "effectiveWeight": 0.624
+        }
+      ]
+    },
+    {
+      "proposalTitle": "ADANSIE ASSET MANAGEMENT SYSTEM (Adansie= Evidence in Twi)",
+      "reviewCount": 4,
+      "totalWeight": 0.883,
+      "qualityScore": 0.565,
+      "pHigh": 0.115,
+      "pLow": 0.441,
+      "disagreement": 2.122,
+      "status": "LOW",
+      "rankingScore": 3.2,
+      "betaPosterior": {
+        "alpha": 1.0642369999999999,
+        "beta": 0.818763
+      },
+      "riskPosterior": {
+        "a": 5.589,
+        "b": 7.075
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.917,
+          "reliability": 0.842,
+          "qualityScore": null,
+          "effectiveWeight": 1.683
+        },
+        {
+          "reviewerId": "6895bbb3ad61376a772c25c9",
+          "rex": 0.821,
+          "reliability": 0.783,
+          "qualityScore": null,
+          "effectiveWeight": 1.566
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.677,
+          "reliability": 0.67,
+          "qualityScore": null,
+          "effectiveWeight": 1.34
+        },
+        {
+          "reviewerId": "68adda53140b47badeb83d08",
+          "rex": 0.441,
+          "reliability": 0.442,
+          "qualityScore": 0.639,
+          "effectiveWeight": 0.883
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Cardano Corporate PoC Lab - Japan (powered by Antler Ibex)",
+      "reviewCount": 6,
+      "totalWeight": 0.533,
+      "qualityScore": 0.625,
+      "pHigh": 0.124,
+      "pLow": 0.492,
+      "disagreement": 8.986,
+      "status": "LOW",
+      "rankingScore": 3.2,
+      "betaPosterior": {
+        "alpha": 0.957847,
+        "beta": 0.5751529999999999
+      },
+      "riskPosterior": {
+        "a": 7.491,
+        "b": 7.725
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.868,
+          "reliability": 0.813,
+          "qualityScore": null,
+          "effectiveWeight": 1.626
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.814,
+          "reliability": 0.779,
+          "qualityScore": null,
+          "effectiveWeight": 1.557
+        },
+        {
+          "reviewerId": "68c15120cab06b829d925d62",
+          "rex": 0.584,
+          "reliability": 0.584,
+          "qualityScore": null,
+          "effectiveWeight": 1.167
+        },
+        {
+          "reviewerId": "68c13259cab06b829d925459",
+          "rex": 0.574,
+          "reliability": 0.573,
+          "qualityScore": null,
+          "effectiveWeight": 1.147
+        },
+        {
+          "reviewerId": "68c32662cab06b829d927378",
+          "rex": 0.497,
+          "reliability": 0.497,
+          "qualityScore": null,
+          "effectiveWeight": 0.994
+        },
+        {
+          "reviewerId": "68c33a8ccab06b829d92773d",
+          "rex": 0.247,
+          "reliability": 0.267,
+          "qualityScore": 0.859,
+          "effectiveWeight": 0.533
+        }
+      ]
+    },
+    {
+      "proposalTitle": "NuNet: Hydra-Powered Micropayments for DePIN",
+      "reviewCount": 3,
+      "totalWeight": 1.294,
+      "qualityScore": 0.52,
+      "pHigh": 0.103,
+      "pLow": 0.397,
+      "disagreement": 0.694,
+      "status": "LOW",
+      "rankingScore": 3.1,
+      "betaPosterior": {
+        "alpha": 1.193584,
+        "beta": 1.100416
+      },
+      "riskPosterior": {
+        "a": 4.125,
+        "b": 6.275
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.868,
+          "reliability": 0.813,
+          "qualityScore": null,
+          "effectiveWeight": 1.626
+        },
+        {
+          "reviewerId": "6895bbb3ad61376a772c25c9",
+          "rex": 0.774,
+          "reliability": 0.75,
+          "qualityScore": null,
+          "effectiveWeight": 1.499
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.651,
+          "reliability": 0.647,
+          "qualityScore": 0.536,
+          "effectiveWeight": 1.294
+        }
+      ]
+    },
+    {
+      "proposalTitle": "TapDano & Petrobras - Hydra & NFC Presence Tracking System",
+      "reviewCount": 3,
+      "totalWeight": 1.383,
+      "qualityScore": 0.487,
+      "pHigh": 0.085,
+      "pLow": 0.393,
+      "disagreement": 0.537,
+      "status": "LOW",
+      "rankingScore": 3,
+      "betaPosterior": {
+        "alpha": 1.161074,
+        "beta": 1.221926
+      },
+      "riskPosterior": {
+        "a": 4.2490000000000006,
+        "b": 6.575
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.917,
+          "reliability": 0.842,
+          "qualityScore": null,
+          "effectiveWeight": 1.683
+        },
+        {
+          "reviewerId": "6895bbb3ad61376a772c25c9",
+          "rex": 0.821,
+          "reliability": 0.783,
+          "qualityScore": null,
+          "effectiveWeight": 1.566
+        },
+        {
+          "reviewerId": "689df9623513007d18f3aca6",
+          "rex": 0.702,
+          "reliability": 0.691,
+          "qualityScore": 0.478,
+          "effectiveWeight": 1.383
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Reviving IbileCoin ($BLC): A Pan-African DeFi Hub on Cardano",
+      "reviewCount": 4,
+      "totalWeight": 0.883,
+      "qualityScore": 0.53,
+      "pHigh": 0.095,
+      "pLow": 0.448,
+      "disagreement": 1.677,
+      "status": "LOW",
+      "rankingScore": 2.9,
+      "betaPosterior": {
+        "alpha": 0.9971289999999999,
+        "beta": 0.8858710000000001
+      },
+      "riskPosterior": {
+        "a": 5.672000000000001,
+        "b": 7
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.868,
+          "reliability": 0.813,
+          "qualityScore": null,
+          "effectiveWeight": 1.626
+        },
+        {
+          "reviewerId": "6895bbb3ad61376a772c25c9",
+          "rex": 0.821,
+          "reliability": 0.783,
+          "qualityScore": null,
+          "effectiveWeight": 1.566
+        },
+        {
+          "reviewerId": "689f318b3513007d18f3acee",
+          "rex": 0.762,
+          "reliability": 0.74,
+          "qualityScore": null,
+          "effectiveWeight": 1.48
+        },
+        {
+          "reviewerId": "68adda53140b47badeb83d08",
+          "rex": 0.441,
+          "reliability": 0.442,
+          "qualityScore": 0.563,
+          "effectiveWeight": 0.883
+        }
+      ]
+    },
+    {
+      "proposalTitle": "Patriot Pulse - AI & Blockchain-Powered Campaign Management",
+      "reviewCount": 3,
+      "totalWeight": 1.147,
+      "qualityScore": 0.444,
+      "pHigh": 0.059,
+      "pLow": 0.381,
+      "disagreement": 0.375,
+      "status": "LOW",
+      "rankingScore": 2.7,
+      "betaPosterior": {
+        "alpha": 0.953065,
+        "beta": 1.193935
+      },
+      "riskPosterior": {
+        "a": 3.7560000000000002,
+        "b": 6.1
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.842,
+          "reliability": 0.797,
+          "qualityScore": null,
+          "effectiveWeight": 1.594
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.582,
+          "reliability": 0.581,
+          "qualityScore": null,
+          "effectiveWeight": 1.162
+        },
+        {
+          "reviewerId": "68c13259cab06b829d925459",
+          "rex": 0.574,
+          "reliability": 0.573,
+          "qualityScore": 0.395,
+          "effectiveWeight": 1.147
+        }
+      ]
+    },
+    {
+      "proposalTitle": "RWA Hardware Assets Pre-Financing ",
+      "reviewCount": 3,
+      "totalWeight": 1.147,
+      "qualityScore": 0.416,
+      "pHigh": 0.046,
+      "pLow": 0.378,
+      "disagreement": 0.279,
+      "status": "LOW",
+      "rankingScore": 2.6,
+      "betaPosterior": {
+        "alpha": 0.892274,
+        "beta": 1.254726
+      },
+      "riskPosterior": {
+        "a": 3.7350000000000003,
+        "b": 6.15
+      },
+      "reviews": [
+        {
+          "reviewerId": "68adc353fb9e2c035447e770",
+          "rex": 0.917,
+          "reliability": 0.842,
+          "qualityScore": null,
+          "effectiveWeight": 1.683
+        },
+        {
+          "reviewerId": "68c13259cab06b829d925459",
+          "rex": 0.574,
+          "reliability": 0.573,
+          "qualityScore": 0.342,
+          "effectiveWeight": 1.147
+        },
+        {
+          "reviewerId": "68b5dc4811dab1ecb4737de2",
+          "rex": 0.526,
+          "reliability": 0.526,
+          "qualityScore": null,
+          "effectiveWeight": 1.052
+        }
+      ]
+    }
+  ]
+}

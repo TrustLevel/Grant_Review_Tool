@@ -30,11 +30,11 @@ const { authenticateToken, requireAdmin } = require('./middleware/auth');
 // Middleware
 app.use(cors({
   origin: [
-    'http://localhost:3000',  // Local development FRONTEND
-    'http://localhost:3001',  // Local development BACKEND
-    // Amplify Development
-    // Production Frontend
-    // Production Backend
+    'http://localhost:3000',  // Local development
+    'http://localhost:3001',  // Local development (alternative port)
+    'https://develop.d1z3bvrliu55jb.amplifyapp.com',  // Amplify Development
+    'https://app.trust-level.com',  // Production Frontend
+    'https://upncfiirk4.eu-west-1.awsapprunner.com'  // Production Backend
   ]
 }))
 app.use(express.json());
@@ -170,7 +170,7 @@ app.get('/api/reviews/completed', authenticateToken, async (req, res) => {
 
     const completedReviews = await Review.find({
       reviewerId: req.userId,
-      status: 'submitted',
+      status: { $in: ['submitted', 'completed'] },
       isDemo: { $ne: true } // Exclude demo reviews
     })
     .populate('proposalId', 'proposalTitle')
@@ -1607,7 +1607,8 @@ app.post('/api/user/complete-mission', authenticateToken, async (req, res) => {
       
       const completedReviews = await Review.find({
         reviewerId: req.userId,
-        status: 'submitted'
+        status: { $in: ['submitted', 'completed'] },
+        isDemo: { $ne: true }
       });
       
       const completedPeerReviews = await PeerReview.find({

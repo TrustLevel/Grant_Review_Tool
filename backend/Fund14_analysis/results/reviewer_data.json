@@ -1,0 +1,366 @@
+{
+  "timestamp": "2025-09-23T11:42:19.347Z",
+  "totalReviewers": 14,
+  "reviewers": {
+    "689df9623513007d18f3aca6": {
+      "peerStats": {
+        "avgPeerScore": 1.07,
+        "totalPeerReviews": 10
+      },
+      "flagStats": {
+        "flagsRaised": 6,
+        "flagsConfirmed": 5,
+        "flagsDisputed": 0,
+        "flagPrecision": 0.83
+      },
+      "missStats": {
+        "missedFlags": 2,
+        "flagOpportunities": 6,
+        "missRate": 0.33,
+        "missPenalty": 0.6699999999999999
+      },
+      "reputationScore": 0.679,
+      "reputationComponents": {
+        "peerReputation": 0.649,
+        "flagReputation": 0.718,
+        "missReputation": 0.67
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.8
+    },
+    "68adc353fb9e2c035447e770": {
+      "peerStats": {
+        "avgPeerScore": 1.14,
+        "totalPeerReviews": 12
+      },
+      "flagStats": {
+        "flagsRaised": 17,
+        "flagsConfirmed": 17,
+        "flagsDisputed": 0,
+        "flagPrecision": 1
+      },
+      "missStats": {
+        "missedFlags": 0,
+        "flagOpportunities": 11,
+        "missRate": 0,
+        "missPenalty": 1
+      },
+      "reputationScore": 0.886,
+      "reputationComponents": {
+        "peerReputation": 0.663,
+        "flagReputation": 0.997,
+        "missReputation": 1
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.9
+    },
+    "689f318b3513007d18f3acee": {
+      "peerStats": {
+        "avgPeerScore": 1.8,
+        "totalPeerReviews": 10
+      },
+      "flagStats": {
+        "flagsRaised": 4,
+        "flagsConfirmed": 4,
+        "flagsDisputed": 0,
+        "flagPrecision": 1
+      },
+      "missStats": {
+        "missedFlags": 0,
+        "flagOpportunities": 3,
+        "missRate": 0,
+        "missPenalty": 1
+      },
+      "reputationScore": 0.829,
+      "reputationComponents": {
+        "peerReputation": 0.75,
+        "flagReputation": 0.736,
+        "missReputation": 1
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.8
+    },
+    "68b5dc4811dab1ecb4737de2": {
+      "peerStats": {
+        "avgPeerScore": -0.46,
+        "totalPeerReviews": 13
+      },
+      "flagStats": {
+        "flagsRaised": 5,
+        "flagsConfirmed": 5,
+        "flagsDisputed": 0,
+        "flagPrecision": 1
+      },
+      "missStats": {
+        "missedFlags": 2,
+        "flagOpportunities": 5,
+        "missRate": 0.4,
+        "missPenalty": 0.6
+      },
+      "reputationScore": 0.615,
+      "reputationComponents": {
+        "peerReputation": 0.434,
+        "flagReputation": 0.811,
+        "missReputation": 0.6
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.5
+    },
+    "68adda53140b47badeb83d08": {
+      "peerStats": {
+        "avgPeerScore": 0.21,
+        "totalPeerReviews": 8
+      },
+      "flagStats": {
+        "flagsRaised": 1,
+        "flagsConfirmed": 1,
+        "flagsDisputed": 0,
+        "flagPrecision": 1
+      },
+      "missStats": {
+        "missedFlags": 3,
+        "flagOpportunities": 4,
+        "missRate": 0.75,
+        "missPenalty": 0.25
+      },
+      "reputationScore": 0.354,
+      "reputationComponents": {
+        "peerReputation": 0.528,
+        "flagReputation": 0.283,
+        "missReputation": 0.25
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.5
+    },
+    "68c13259cab06b829d925459": {
+      "peerStats": {
+        "avgPeerScore": 1.83,
+        "totalPeerReviews": 4
+      },
+      "flagStats": {
+        "flagsRaised": 1,
+        "flagsConfirmed": 1,
+        "flagsDisputed": 0,
+        "flagPrecision": 1
+      },
+      "missStats": {
+        "missedFlags": 2,
+        "flagOpportunities": 3,
+        "missRate": 0.67,
+        "missPenalty": 0.32999999999999996
+      },
+      "reputationScore": 0.439,
+      "reputationComponents": {
+        "peerReputation": 0.703,
+        "flagReputation": 0.283,
+        "missReputation": 0.33
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.7
+    },
+    "68c15120cab06b829d925d62": {
+      "peerStats": {
+        "avgPeerScore": 1.19,
+        "totalPeerReviews": 12
+      },
+      "flagStats": {
+        "flagsRaised": 2,
+        "flagsConfirmed": 2,
+        "flagsDisputed": 0,
+        "flagPrecision": 1
+      },
+      "missStats": {
+        "missedFlags": 0,
+        "flagOpportunities": 2,
+        "missRate": 0,
+        "missPenalty": 1
+      },
+      "reputationScore": 0.719,
+      "reputationComponents": {
+        "peerReputation": 0.67,
+        "flagReputation": 0.487,
+        "missReputation": 1
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.5
+    },
+    "6895bbb3ad61376a772c25c9": {
+      "peerStats": {
+        "avgPeerScore": 2,
+        "totalPeerReviews": 2
+      },
+      "flagStats": {
+        "flagsRaised": 6,
+        "flagsConfirmed": 4,
+        "flagsDisputed": 1,
+        "flagPrecision": 0.67
+      },
+      "missStats": {
+        "missedFlags": 0,
+        "flagOpportunities": 5,
+        "missRate": 0,
+        "missPenalty": 1
+      },
+      "reputationScore": 0.749,
+      "reputationComponents": {
+        "peerReputation": 0.667,
+        "flagReputation": 0.579,
+        "missReputation": 1
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.9
+    },
+    "68c2d4b5cab06b829d926996": {
+      "peerStats": {
+        "avgPeerScore": -0.14,
+        "totalPeerReviews": 14
+      },
+      "missStats": {
+        "missedFlags": 1,
+        "flagOpportunities": 1,
+        "missRate": 1,
+        "missPenalty": 0
+      },
+      "reputationScore": 0.24,
+      "reputationComponents": {
+        "peerReputation": 0.48,
+        "missReputation": 0
+      },
+      "availableComponents": 2,
+      "weightInfo": "1.00/1.00",
+      "expertiseValidation": 0.2
+    },
+    "68c3e1b9cab06b829d928059": {
+      "peerStats": {
+        "avgPeerScore": -0.67,
+        "totalPeerReviews": 10
+      },
+      "missStats": {
+        "missedFlags": 2,
+        "flagOpportunities": 2,
+        "missRate": 1,
+        "missPenalty": 0
+      },
+      "reputationScore": 0.203,
+      "reputationComponents": {
+        "peerReputation": 0.407,
+        "missReputation": 0
+      },
+      "availableComponents": 2,
+      "weightInfo": "1.00/1.00",
+      "expertiseValidation": 0.2
+    },
+    "68c33a8ccab06b829d92773d": {
+      "peerStats": {
+        "avgPeerScore": -1.92,
+        "totalPeerReviews": 13
+      },
+      "missStats": {
+        "missedFlags": 2,
+        "flagOpportunities": 2,
+        "missRate": 1,
+        "missPenalty": 0
+      },
+      "reputationScore": 0.111,
+      "reputationComponents": {
+        "peerReputation": 0.223,
+        "missReputation": 0
+      },
+      "availableComponents": 2,
+      "weightInfo": "1.00/1.00",
+      "expertiseValidation": 0.2
+    },
+    "68c7fac252e2cabf79079a70": {
+      "peerStats": {
+        "avgPeerScore": 1.56,
+        "totalPeerReviews": 3
+      },
+      "flagStats": {
+        "flagsRaised": 2,
+        "flagsConfirmed": 2,
+        "flagsDisputed": 0,
+        "flagPrecision": 1
+      },
+      "missStats": {
+        "missedFlags": 0,
+        "flagOpportunities": 1,
+        "missRate": 0,
+        "missPenalty": 1
+      },
+      "reputationScore": 0.714,
+      "reputationComponents": {
+        "peerReputation": 0.656,
+        "flagReputation": 0.487,
+        "missReputation": 1
+      },
+      "availableComponents": 3,
+      "weightInfo": "1.00/1.00/1.00",
+      "expertiseValidation": 0.8
+    },
+    "68c32662cab06b829d927378": {
+      "flagStats": {
+        "flagsRaised": 5,
+        "flagsConfirmed": 4,
+        "flagsDisputed": 0,
+        "flagPrecision": 0.8
+      },
+      "missStats": {
+        "missedFlags": 0,
+        "flagOpportunities": 2,
+        "missRate": 0,
+        "missPenalty": 1
+      },
+      "reputationScore": 0.824,
+      "reputationComponents": {
+        "flagReputation": 0.649,
+        "missReputation": 1
+      },
+      "availableComponents": 2,
+      "weightInfo": "1.00/1.00",
+      "expertiseValidation": 0.2
+    },
+    "68c30d56cab06b829d926dad": {
+      "flagStats": {
+        "flagsRaised": 5,
+        "flagsConfirmed": 3,
+        "flagsDisputed": 1,
+        "flagPrecision": 0.6
+      },
+      "missStats": {
+        "missedFlags": 0,
+        "flagOpportunities": 2,
+        "missRate": 0,
+        "missPenalty": 1
+      },
+      "reputationScore": 0.743,
+      "reputationComponents": {
+        "flagReputation": 0.487,
+        "missReputation": 1
+      },
+      "availableComponents": 2,
+      "weightInfo": "1.00/1.00",
+      "expertiseValidation": 0.2
+    }
+  },
+  "consensusLowQualityProposals": 13,
+  "totalOpportunities": 49,
+  "reputationMethodology": {
+    "description": "Reviewer Reputation - no defaults, only real data",
+    "changes": [
+      "Reduced Bayesian prior weight from 5 to 2",
+      "Changed prior from 0.6 to 0.5 (neutral)",
+      "No default values - skip reviewers without data",
+      "Keep miss penalty hard as requested",
+      "Quality-Adjusted Dynamic Weighting: (reviews × reliability) / 10",
+      "Miss-only reviewers get baseline 0.25 × missPenalty (poor but fair)"
+    ]
+  }
+}

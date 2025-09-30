@@ -27,7 +27,7 @@ router.get('/stats', authenticateToken, requireAdmin, async (req, res) => {
     // Get review stats
     const totalReviews = await Review.countDocuments({ isDemo: { $ne: true } });
     const completedReviews = await Review.countDocuments({ 
-      status: 'submitted',
+      status: { $in: ['submitted', 'completed'] },
       isDemo: { $ne: true }
     });
     
@@ -111,7 +111,7 @@ router.get('/proposal-overview', authenticateToken, requireAdmin, async (req, re
         reviewStats.total++;
         if (review.status === 'assigned') reviewStats.assigned++;
         else if (review.status === 'in_progress') reviewStats.in_progress++;
-        else if (review.status === 'submitted') reviewStats.submitted++;
+        else if (review.status === 'submitted' || review.status === 'completed') reviewStats.submitted++;
       });
 
       // Get peer-review stats for this proposal
@@ -246,7 +246,7 @@ router.get('/users', authenticateToken, requireAdmin, async (req, res) => {
           reviews.total += stat.count;
           if (stat._id === 'assigned') reviews.assigned = stat.count;
           else if (stat._id === 'in_progress') reviews.in_progress = stat.count;
-          else if (stat._id === 'submitted') reviews.submitted = stat.count;
+          else if (stat._id === 'submitted' || stat._id === 'completed') reviews.submitted += stat.count;
         });
 
         // Process peer-review stats
@@ -683,6 +683,177 @@ router.patch('/mark-reward-paid/:userId/:missionId', authenticateToken, requireA
     
   } catch (error) {
     console.error('Error marking reward as paid:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// =====================================================
+// ADMIN VALIDATION ROUTES (for REX System)
+// =====================================================
+
+// POST /api/admin/validate-review/:reviewId - Admin validates a review's expertise/quality
+router.post('/validate-review/:reviewId', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { reviewId } = req.params;
+    const { adminValidation, validationNotes, validationType } = req.body;
+
+    // Validation
+    if (adminValidation < 0 || adminValidation > 1) {
+      return res.status(400).json({ error: 'adminValidation must be between 0 and 1' });
+    }
+
+    if (!['expertise', 'quality', 'comprehensive'].includes(validationType)) {
+      return res.status(400).json({ error: 'validationType must be expertise, quality, or comprehensive' });
+    }
+
+    const review = await Review.findById(reviewId)
+      .populate('reviewerId', 'username email')
+      .populate('proposalId', 'proposalTitle');
+
+    if (!review) {
+      return res.status(404).json({ error: 'Review not found' });
+    }
+
+    // Add admin validation to reviewerAssessment
+    if (!review.reviewerAssessment) {
+      review.reviewerAssessment = {};
+    }
+
+    review.reviewerAssessment.adminValidation = adminValidation;
+    review.reviewerAssessment.adminValidatedBy = req.username;
+    review.reviewerAssessment.adminValidatedAt = new Date();
+    review.reviewerAssessment.adminValidationType = validationType;
+    if (validationNotes) {
+      review.reviewerAssessment.adminValidationNotes = validationNotes;
+    }
+
+    await review.save();
+
+    console.log(`✅ Admin ${req.username} validated review ${reviewId} with score ${adminValidation}`);
+
+    res.json({
+      success: true,
+      review: {
+        id: review._id,
+        reviewer: review.reviewerId?.username,
+        proposal: review.proposalId?.proposalTitle,
+        adminValidation: adminValidation,
+        validatedBy: req.username,
+        validatedAt: new Date()
+      }
+    });
+
+  } catch (error) {
+    console.error('Admin validate review error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET /api/admin/reviews-for-validation - Get reviews pending admin validation
+router.get('/reviews-for-validation', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const { status, limit = 50, page = 1 } = req.query;
+
+    // Build query
+    const query = {
+      status: status || { $in: ['submitted', 'completed'] },
+      isDemo: { $ne: true },
+      'reviewerAssessment.adminValidation': { $exists: false } // Not yet validated
+    };
+
+    const reviews = await Review.find(query)
+      .populate('reviewerId', 'username email repPoints')
+      .populate('proposalId', 'proposalTitle proposer budget')
+      .select('scores categoryComments reviewerAssessment submittedAt status')
+      .sort({ submittedAt: -1 })
+      .limit(parseInt(limit))
+      .skip((parseInt(page) - 1) * parseInt(limit));
+
+    // Get total count
+    const total = await Review.countDocuments(query);
+
+    // Format for admin interface
+    const formattedReviews = reviews.map(review => ({
+      id: review._id,
+      reviewer: {
+        id: review.reviewerId?._id,
+        username: review.reviewerId?.username,
+        email: review.reviewerId?.email,
+        repPoints: review.reviewerId?.repPoints
+      },
+      proposal: {
+        id: review.proposalId?._id,
+        title: review.proposalId?.proposalTitle,
+        author: review.proposalId?.proposer?.entity || review.proposalId?.proposer?.name,
+        budget: review.proposalId?.budget?.total
+      },
+      scores: review.scores,
+      selfExpertise: review.reviewerAssessment?.selfExpertiseLevel,
+      temperatureCheck: review.reviewerAssessment?.temperatureCheck,
+      submittedAt: review.submittedAt,
+      status: review.status
+    }));
+
+    res.json({
+      reviews: formattedReviews,
+      pagination: {
+        page: parseInt(page),
+        limit: parseInt(limit),
+        total,
+        pages: Math.ceil(total / parseInt(limit))
+      }
+    });
+
+  } catch (error) {
+    console.error('Get reviews for validation error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET /api/admin/validation-stats - Get validation statistics
+router.get('/validation-stats', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const stats = await Review.aggregate([
+      {
+        $match: {
+          isDemo: { $ne: true },
+          status: { $in: ['submitted', 'completed'] }
+        }
+      },
+      {
+        $group: {
+          _id: null,
+          totalReviews: { $sum: 1 },
+          validatedReviews: {
+            $sum: {
+              $cond: [{ $exists: ['$reviewerAssessment.adminValidation'] }, 1, 0]
+            }
+          },
+          avgAdminValidation: {
+            $avg: '$reviewerAssessment.adminValidation'
+          },
+          validationsByType: {
+            $push: '$reviewerAssessment.adminValidationType'
+          }
+        }
+      }
+    ]);
+
+    const result = stats[0] || {
+      totalReviews: 0,
+      validatedReviews: 0,
+      avgAdminValidation: null
+    };
+
+    // Calculate validation percentage
+    result.validationPercentage = result.totalReviews > 0
+      ? Math.round((result.validatedReviews / result.totalReviews) * 100)
+      : 0;
+
+    res.json(result);
+
+  } catch (error) {
+    console.error('Get validation stats error:', error);
     res.status(500).json({ error: error.message });
   }
 });

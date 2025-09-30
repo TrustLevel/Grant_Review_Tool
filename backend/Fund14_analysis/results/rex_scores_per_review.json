@@ -1,0 +1,2369 @@
+{
+  "timestamp": "2025-09-23T13:00:11.335Z",
+  "totalReviews": 105,
+  "methodology": {
+    "expertiseWeights": {
+      "self": 0.2,
+      "adminValidation": 0.5,
+      "confidence": 0.2,
+      "themeMatch": 0.1
+    },
+    "rexFormula": "sqrt(R_profile * E_total)",
+    "reliabilityFormula": "1 / (1 + exp(-4*(REX-0.5)))",
+    "effectiveWeight": "2 * reliability"
+  },
+  "reviews": [
+    {
+      "reviewId": "68ade10537379d0c423faa99",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Revolut Tokeo Mercuryo – Onbaording via 60M Revolut Users",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.95
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.917,
+      "reliability": 0.842,
+      "effectiveWeight": 1.683,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68ade10637379d0c423faab4",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "TapDano & Petrobras - Hydra & NFC Presence Tracking System",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.95
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.917,
+      "reliability": 0.842,
+      "effectiveWeight": 1.683,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68ade10637379d0c423faabd",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "ADANSIE ASSET MANAGEMENT SYSTEM (Adansie= Evidence in Twi)",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.95
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.917,
+      "reliability": 0.842,
+      "effectiveWeight": 1.683,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68ade10637379d0c423faac0",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "RWA Hardware Assets Pre-Financing ",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.95
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.917,
+      "reliability": 0.842,
+      "effectiveWeight": 1.683,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68ade10737379d0c423faad2",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Tokenized Art Passport",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.95
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.917,
+      "reliability": 0.842,
+      "effectiveWeight": 1.683,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa86",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "DeFi Storage on Cardano: Unlocking $1B+ TVL and 1M Users",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.893,
+      "reliability": 0.828,
+      "effectiveWeight": 1.656,
+      "qualityScore": 0.626,
+      "originalScores": {
+        "budget": -3,
+        "feasibility": 1,
+        "impact": 1,
+        "innovation": 1,
+        "relevance": 1,
+        "team": 2
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa8a",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Venture Capital Mentoring Program: Tritemius x Cardano",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.893,
+      "reliability": 0.828,
+      "effectiveWeight": 1.656,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa93",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Scaling Cardano Adoption via K-12 Financial EdTech Platform",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.893,
+      "reliability": 0.828,
+      "effectiveWeight": 1.656,
+      "qualityScore": 0.511,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": -1,
+        "impact": 0,
+        "innovation": 0,
+        "relevance": 1,
+        "team": -1
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa96",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Integrating USDA with zerohash to access TradFi institutions",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.893,
+      "reliability": 0.828,
+      "effectiveWeight": 1.656,
+      "qualityScore": 0.704,
+      "originalScores": {
+        "relevance": 2,
+        "innovation": 2,
+        "impact": 0,
+        "feasibility": 1,
+        "team": 2,
+        "budget": 0
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10637379d0c423faab7",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Cardano Institutional UX Stack: Compliance & BTC-Ready DeFi",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.893,
+      "reliability": 0.828,
+      "effectiveWeight": 1.656,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10737379d0c423faac9",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "OYA BusRide: ADA Transit Tickets, Manifest & Welfare System",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.893,
+      "reliability": 0.828,
+      "effectiveWeight": 1.656,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10737379d0c423faacc",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Rainforest Alliance: Blockchain Traceability Pilot",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.893,
+      "reliability": 0.828,
+      "effectiveWeight": 1.656,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa80",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Cardano Corporate PoC Lab - Japan (powered by Antler Ibex)",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.85
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.868,
+      "reliability": 0.813,
+      "effectiveWeight": 1.626,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa8d",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "EUR Stablecoin on Cardano - Fiat Backed and MiCA Compliant",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.85
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.868,
+      "reliability": 0.813,
+      "effectiveWeight": 1.626,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa90",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Launching the Frax Stablecoin & DeFi Ecosystem on Cardano",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.85
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.868,
+      "reliability": 0.813,
+      "effectiveWeight": 1.626,
+      "qualityScore": 0.642,
+      "originalScores": {
+        "budget": -2,
+        "feasibility": 0,
+        "impact": 0,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 2
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa9c",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Reviving IbileCoin ($BLC): A Pan-African DeFi Hub on Cardano",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.85
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.868,
+      "reliability": 0.813,
+      "effectiveWeight": 1.626,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68ade10637379d0c423faaa5",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "NuNet: Hydra-Powered Micropayments for DePIN",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 0,
+        "total": 0.85
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.868,
+      "reliability": 0.813,
+      "effectiveWeight": 1.626,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68ade10637379d0c423faac3",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Real World Adoption: Cardano Payments in Vending Machines",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.85
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.868,
+      "reliability": 0.813,
+      "effectiveWeight": 1.626,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68ade10537379d0c423faa9f",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Masumi AI Agent Network 2.0 by Serviceplan Group  ",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.8
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.842,
+      "reliability": 0.797,
+      "effectiveWeight": 1.594,
+      "qualityScore": 0.728,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 2,
+        "impact": 1,
+        "innovation": 0,
+        "relevance": 2,
+        "team": 2
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10637379d0c423faaa2",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Patriot Pulse - AI & Blockchain-Powered Campaign Management",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.8
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.842,
+      "reliability": 0.797,
+      "effectiveWeight": 1.594,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae583",
+      "reviewerId": "6895bbb3ad61376a772c25c9",
+      "proposalTitle": "TapDano & Petrobras - Hydra & NFC Presence Tracking System",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.749,
+      "rex": 0.821,
+      "reliability": 0.783,
+      "effectiveWeight": 1.566,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae587",
+      "reviewerId": "6895bbb3ad61376a772c25c9",
+      "proposalTitle": "DeFi Storage on Cardano: Unlocking $1B+ TVL and 1M Users",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.749,
+      "rex": 0.821,
+      "reliability": 0.783,
+      "effectiveWeight": 1.566,
+      "qualityScore": 0.427,
+      "originalScores": {
+        "relevance": -1,
+        "innovation": 0,
+        "impact": -1,
+        "feasibility": -1,
+        "team": 1,
+        "budget": -1
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae581",
+      "reviewerId": "6895bbb3ad61376a772c25c9",
+      "proposalTitle": "Revolut Tokeo Mercuryo – Onbaording via 60M Revolut Users",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.749,
+      "rex": 0.821,
+      "reliability": 0.783,
+      "effectiveWeight": 1.566,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae586",
+      "reviewerId": "6895bbb3ad61376a772c25c9",
+      "proposalTitle": "Reviving IbileCoin ($BLC): A Pan-African DeFi Hub on Cardano",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.749,
+      "rex": 0.821,
+      "reliability": 0.783,
+      "effectiveWeight": 1.566,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae580",
+      "reviewerId": "6895bbb3ad61376a772c25c9",
+      "proposalTitle": "ADANSIE ASSET MANAGEMENT SYSTEM (Adansie= Evidence in Twi)",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.9
+      },
+      "rProfilePrior": 0.749,
+      "rex": 0.821,
+      "reliability": 0.783,
+      "effectiveWeight": 1.566,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68ade10637379d0c423faaba",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Bridge between Cardano, Polkadot, Ethereum and its L2s ",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.75
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.815,
+      "reliability": 0.779,
+      "effectiveWeight": 1.558,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae553",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "Integrating USDA with zerohash to access TradFi institutions",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.8
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.814,
+      "reliability": 0.779,
+      "effectiveWeight": 1.557,
+      "qualityScore": 0.682,
+      "originalScores": {
+        "relevance": 1,
+        "innovation": 2,
+        "impact": -1,
+        "feasibility": 2,
+        "team": 2,
+        "budget": 0
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae558",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "Cardano Corporate PoC Lab - Japan (powered by Antler Ibex)",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.8
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.814,
+      "reliability": 0.779,
+      "effectiveWeight": 1.557,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae555",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "Venture Capital Mentoring Program: Tritemius x Cardano",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.75
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.789,
+      "reliability": 0.76,
+      "effectiveWeight": 1.52,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae557",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "EUR Stablecoin on Cardano - Fiat Backed and MiCA Compliant",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.75
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.789,
+      "reliability": 0.76,
+      "effectiveWeight": 1.52,
+      "qualityScore": 0.577,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": -2,
+        "impact": 0,
+        "innovation": 1,
+        "relevance": 2,
+        "team": 0
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae559",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "Revolut Tokeo Mercuryo – Onbaording via 60M Revolut Users",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.75
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.789,
+      "reliability": 0.76,
+      "effectiveWeight": 1.52,
+      "qualityScore": 0.709,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": 0,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 3,
+        "team": 0
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68ade10637379d0c423faaa8",
+      "reviewerId": "68adc353fb9e2c035447e770",
+      "proposalTitle": "Space and Time: Secure Enterprise Data for Cardano",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.9,
+        "confidence": 0.25,
+        "themeMatch": 0,
+        "total": 0.7
+      },
+      "rProfilePrior": 0.886,
+      "rex": 0.788,
+      "reliability": 0.76,
+      "effectiveWeight": 1.519,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 2
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae585",
+      "reviewerId": "6895bbb3ad61376a772c25c9",
+      "proposalTitle": "NuNet: Hydra-Powered Micropayments for DePIN",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.9,
+        "confidence": 1,
+        "themeMatch": 0,
+        "total": 0.8
+      },
+      "rProfilePrior": 0.749,
+      "rex": 0.774,
+      "reliability": 0.75,
+      "effectiveWeight": 1.499,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae57f",
+      "reviewerId": "6895bbb3ad61376a772c25c9",
+      "proposalTitle": "CADRIA.ORG Verifying AI by Human Digital Representatives",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.9,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.8
+      },
+      "rProfilePrior": 0.749,
+      "rex": 0.774,
+      "reliability": 0.75,
+      "effectiveWeight": 1.499,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae552",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "DeFi Storage on Cardano: Unlocking $1B+ TVL and 1M Users",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.7
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.762,
+      "reliability": 0.74,
+      "effectiveWeight": 1.48,
+      "qualityScore": 0.728,
+      "originalScores": {
+        "relevance": 2,
+        "innovation": 0,
+        "impact": 2,
+        "feasibility": 1,
+        "team": 2,
+        "budget": 1
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae554",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "Launching the Frax Stablecoin & DeFi Ecosystem on Cardano",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.7
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.762,
+      "reliability": 0.74,
+      "effectiveWeight": 1.48,
+      "qualityScore": 0.542,
+      "originalScores": {
+        "budget": -1,
+        "feasibility": 1,
+        "impact": -1,
+        "innovation": 0,
+        "relevance": 2,
+        "team": 0
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae556",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "Reviving IbileCoin ($BLC): A Pan-African DeFi Hub on Cardano",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.7
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.762,
+      "reliability": 0.74,
+      "effectiveWeight": 1.48,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae55a",
+      "reviewerId": "689f318b3513007d18f3acee",
+      "proposalTitle": "Scaling Cardano Adoption via K-12 Financial EdTech Platform",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.7
+      },
+      "rProfilePrior": 0.829,
+      "rex": 0.762,
+      "reliability": 0.74,
+      "effectiveWeight": 1.48,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae55b",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "Cardano Institutional UX Stack: Compliance & BTC-Ready DeFi",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.825
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.748,
+      "reliability": 0.73,
+      "effectiveWeight": 1.46,
+      "qualityScore": 0.696,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 1,
+        "impact": 1,
+        "innovation": 2,
+        "relevance": 1,
+        "team": 1
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c7fcd3c31ac6359dbd4951",
+      "reviewerId": "68c7fac252e2cabf79079a70",
+      "proposalTitle": "Enterprise-grade Verifiable Database,300x cheaper, 99%faster",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.725
+      },
+      "rProfilePrior": 0.714,
+      "rex": 0.719,
+      "reliability": 0.706,
+      "effectiveWeight": 1.413,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae55c",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "TapDano & Petrobras - Hydra & NFC Presence Tracking System",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.725
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.702,
+      "reliability": 0.691,
+      "effectiveWeight": 1.383,
+      "qualityScore": 0.478,
+      "originalScores": {
+        "budget": -1,
+        "feasibility": 0,
+        "impact": 0,
+        "innovation": -1,
+        "relevance": 1,
+        "team": 0
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae55f",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "OYA BusRide: ADA Transit Tickets, Manifest & Welfare System",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 1,
+        "themeMatch": 0,
+        "total": 0.725
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.702,
+      "reliability": 0.691,
+      "effectiveWeight": 1.383,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c1557d1cbb12cb3b55578a",
+      "reviewerId": "68c15120cab06b829d925d62",
+      "proposalTitle": "CADRIA.ORG Verifying AI by Human Digital Representatives",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.5,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.675
+      },
+      "rProfilePrior": 0.719,
+      "rex": 0.697,
+      "reliability": 0.687,
+      "effectiveWeight": 1.374,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae55e",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "ADANSIE ASSET MANAGEMENT SYSTEM (Adansie= Evidence in Twi)",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.675
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.677,
+      "reliability": 0.67,
+      "effectiveWeight": 1.34,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae561",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "Rainforest Alliance: Blockchain Traceability Pilot",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.675
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.677,
+      "reliability": 0.67,
+      "effectiveWeight": 1.34,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae563",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "Masumi AI Agent Network 2.0 by Serviceplan Group  ",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.675
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.677,
+      "reliability": 0.67,
+      "effectiveWeight": 1.34,
+      "qualityScore": 0.701,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 1,
+        "impact": 1,
+        "innovation": 1,
+        "relevance": 0,
+        "team": 3
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c7fcd3c31ac6359dbd4953",
+      "reviewerId": "68c7fac252e2cabf79079a70",
+      "proposalTitle": "Ascent Rivals - Onboarding Next Million Users",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.625
+      },
+      "rProfilePrior": 0.714,
+      "rex": 0.668,
+      "reliability": 0.662,
+      "effectiveWeight": 1.324,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c7fcd3c31ac6359dbd4955",
+      "reviewerId": "68c7fac252e2cabf79079a70",
+      "proposalTitle": "EUR Stablecoin on Cardano - Fiat Backed and MiCA Compliant",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.625
+      },
+      "rProfilePrior": 0.714,
+      "rex": 0.668,
+      "reliability": 0.662,
+      "effectiveWeight": 1.324,
+      "qualityScore": 0.946,
+      "originalScores": {
+        "budget": 3,
+        "feasibility": 3,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c7fcd4c31ac6359dbd4959",
+      "reviewerId": "68c7fac252e2cabf79079a70",
+      "proposalTitle": "Cardano Institutional UX Stack: Compliance & BTC-Ready DeFi",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.625
+      },
+      "rProfilePrior": 0.714,
+      "rex": 0.668,
+      "reliability": 0.662,
+      "effectiveWeight": 1.324,
+      "qualityScore": 0.772,
+      "originalScores": {
+        "budget": -2,
+        "feasibility": 2,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c7fcd3c31ac6359dbd4957",
+      "reviewerId": "68c7fac252e2cabf79079a70",
+      "proposalTitle": "Rainforest Alliance: Blockchain Traceability Pilot",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.625
+      },
+      "rProfilePrior": 0.714,
+      "rex": 0.668,
+      "reliability": 0.662,
+      "effectiveWeight": 1.324,
+      "qualityScore": 0.791,
+      "originalScores": {
+        "budget": -3,
+        "feasibility": 2,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae560",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "NuNet: Hydra-Powered Micropayments for DePIN",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.625
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.651,
+      "reliability": 0.647,
+      "effectiveWeight": 1.294,
+      "qualityScore": 0.536,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": -1,
+        "impact": 1,
+        "innovation": 1,
+        "relevance": -1,
+        "team": 1
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae55d",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "Bridge between Cardano, Polkadot, Ethereum and its L2s ",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.625
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.651,
+      "reliability": 0.647,
+      "effectiveWeight": 1.294,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68beb2d93f09ccd2a4585009",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "High-Yield RWA on Cardano: Tokenized U.S. Real Estate",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.625
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.651,
+      "reliability": 0.647,
+      "effectiveWeight": 1.294,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c1557d1cbb12cb3b555786",
+      "reviewerId": "68c15120cab06b829d925d62",
+      "proposalTitle": "Tokenized Art Passport",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.575
+      },
+      "rProfilePrior": 0.719,
+      "rex": 0.643,
+      "reliability": 0.639,
+      "effectiveWeight": 1.278,
+      "qualityScore": 0.858,
+      "originalScores": {
+        "budget": -2,
+        "feasibility": 2,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c1557d1cbb12cb3b555788",
+      "reviewerId": "68c15120cab06b829d925d62",
+      "proposalTitle": "Open Sourcing Tempo.Vote for Cardano Governance",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.575
+      },
+      "rProfilePrior": 0.719,
+      "rex": 0.643,
+      "reliability": 0.639,
+      "effectiveWeight": 1.278,
+      "qualityScore": 0.658,
+      "originalScores": {
+        "budget": -3,
+        "feasibility": 3,
+        "impact": 0,
+        "innovation": -3,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c1557d1cbb12cb3b55578c",
+      "reviewerId": "68c15120cab06b829d925d62",
+      "proposalTitle": "Real World Adoption: Cardano Payments in Vending Machines",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.575
+      },
+      "rProfilePrior": 0.719,
+      "rex": 0.643,
+      "reliability": 0.639,
+      "effectiveWeight": 1.278,
+      "qualityScore": 0.602,
+      "originalScores": {
+        "budget": -1,
+        "feasibility": 3,
+        "impact": -1,
+        "innovation": 0,
+        "relevance": 2,
+        "team": 0
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae562",
+      "reviewerId": "689df9623513007d18f3aca6",
+      "proposalTitle": "Space and Time: Secure Enterprise Data for Cardano",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.8,
+        "confidence": 0.25,
+        "themeMatch": 0,
+        "total": 0.575
+      },
+      "rProfilePrior": 0.679,
+      "rex": 0.625,
+      "reliability": 0.622,
+      "effectiveWeight": 1.245,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 2
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae566",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Venture Capital Mentoring Program: Tritemius x Cardano",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.6
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.607,
+      "reliability": 0.606,
+      "effectiveWeight": 1.212,
+      "qualityScore": 0.642,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": 1,
+        "impact": 0,
+        "innovation": 1,
+        "relevance": 1,
+        "team": 2
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c1597ed0934fb3c415c2b2",
+      "reviewerId": "68c15120cab06b829d925d62",
+      "proposalTitle": "Cardano Corporate PoC Lab - Japan (powered by Antler Ibex)",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.475
+      },
+      "rProfilePrior": 0.719,
+      "rex": 0.584,
+      "reliability": 0.584,
+      "effectiveWeight": 1.167,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c1597ed0934fb3c415c2b4",
+      "reviewerId": "68c15120cab06b829d925d62",
+      "proposalTitle": "Masumi AI Agent Network 2.0 by Serviceplan Group  ",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.475
+      },
+      "rProfilePrior": 0.719,
+      "rex": 0.584,
+      "reliability": 0.584,
+      "effectiveWeight": 1.167,
+      "qualityScore": 1,
+      "originalScores": {
+        "budget": 3,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae568",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Patriot Pulse - AI & Blockchain-Powered Campaign Management",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae56b",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Launching the Frax Stablecoin & DeFi Ecosystem on Cardano",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae56c",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Integrating USDA with zerohash to access TradFi institutions",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": 0.973,
+      "originalScores": {
+        "budget": 3,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 2,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae565",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Enterprise-grade Verifiable Database,300x cheaper, 99%faster",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae569",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "DeFi Storage on Cardano: Unlocking $1B+ TVL and 1M Users",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae56a",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Space and Time: Secure Enterprise Data for Cardano",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": 0.725,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": 1,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 1
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae564",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Ascent Rivals - Onboarding Next Million Users",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": 0.702,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": -1,
+        "impact": 1,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 2
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae567",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Open Sourcing Tempo.Vote for Cardano Governance",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.582,
+      "reliability": 0.581,
+      "effectiveWeight": 1.162,
+      "qualityScore": 0.783,
+      "originalScores": {
+        "budget": 2,
+        "feasibility": 0,
+        "impact": 2,
+        "innovation": 1,
+        "relevance": 2,
+        "team": 3
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c136021cbb12cb3b554d24",
+      "reviewerId": "68c13259cab06b829d925459",
+      "proposalTitle": "Cardano Corporate PoC Lab - Japan (powered by Antler Ibex)",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.7,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.75
+      },
+      "rProfilePrior": 0.439,
+      "rex": 0.574,
+      "reliability": 0.573,
+      "effectiveWeight": 1.147,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c136021cbb12cb3b554d28",
+      "reviewerId": "68c13259cab06b829d925459",
+      "proposalTitle": "Patriot Pulse - AI & Blockchain-Powered Campaign Management",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.7,
+        "confidence": 1,
+        "themeMatch": 0,
+        "total": 0.75
+      },
+      "rProfilePrior": 0.439,
+      "rex": 0.574,
+      "reliability": 0.573,
+      "effectiveWeight": 1.147,
+      "qualityScore": 0.395,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": -2,
+        "impact": -1,
+        "innovation": -1,
+        "relevance": 0,
+        "team": 0
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c136021cbb12cb3b554d2a",
+      "reviewerId": "68c13259cab06b829d925459",
+      "proposalTitle": "RWA Hardware Assets Pre-Financing ",
+      "expertise": {
+        "self": 1,
+        "adminValidation": 0.7,
+        "confidence": 1,
+        "themeMatch": 0,
+        "total": 0.75
+      },
+      "rProfilePrior": 0.439,
+      "rex": 0.574,
+      "reliability": 0.573,
+      "effectiveWeight": 1.147,
+      "qualityScore": 0.342,
+      "originalScores": {
+        "budget": -1,
+        "feasibility": -2,
+        "impact": -2,
+        "innovation": 0,
+        "relevance": -1,
+        "team": 0
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c05138cab06b829d924ea6",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "RWA Hardware Assets Pre-Financing ",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.45
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.526,
+      "reliability": 0.526,
+      "effectiveWeight": 1.052,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c05138cab06b829d924ea8",
+      "reviewerId": "68b5dc4811dab1ecb4737de2",
+      "proposalTitle": "Tokenized Art Passport",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.45
+      },
+      "rProfilePrior": 0.615,
+      "rex": 0.526,
+      "reliability": 0.526,
+      "effectiveWeight": 1.052,
+      "qualityScore": 0.645,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": -1,
+        "impact": 0,
+        "innovation": 1,
+        "relevance": 2,
+        "team": 2
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b482696c65436da7fc57",
+      "reviewerId": "68c32662cab06b829d927378",
+      "proposalTitle": "Enterprise-grade Verifiable Database,300x cheaper, 99%faster",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.824,
+      "rex": 0.497,
+      "reliability": 0.497,
+      "effectiveWeight": 0.994,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b482696c65436da7fc59",
+      "reviewerId": "68c32662cab06b829d927378",
+      "proposalTitle": "Scaling Cardano Adoption via K-12 Financial EdTech Platform",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.824,
+      "rex": 0.497,
+      "reliability": 0.497,
+      "effectiveWeight": 0.994,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b481696c65436da7fc51",
+      "reviewerId": "68c32662cab06b829d927378",
+      "proposalTitle": "EUR Stablecoin on Cardano - Fiat Backed and MiCA Compliant",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.824,
+      "rex": 0.497,
+      "reliability": 0.497,
+      "effectiveWeight": 0.994,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b481696c65436da7fc53",
+      "reviewerId": "68c32662cab06b829d927378",
+      "proposalTitle": "Cardano Corporate PoC Lab - Japan (powered by Antler Ibex)",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.824,
+      "rex": 0.497,
+      "reliability": 0.497,
+      "effectiveWeight": 0.994,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b482696c65436da7fc55",
+      "reviewerId": "68c32662cab06b829d927378",
+      "proposalTitle": "High-Yield RWA on Cardano: Tokenized U.S. Real Estate",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.824,
+      "rex": 0.497,
+      "reliability": 0.497,
+      "effectiveWeight": 0.994,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b4dc696c65436da7fe75",
+      "reviewerId": "68c30d56cab06b829d926dad",
+      "proposalTitle": "Cardano Institutional UX Stack: Compliance & BTC-Ready DeFi",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.743,
+      "rex": 0.472,
+      "reliability": 0.472,
+      "effectiveWeight": 0.944,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b4ec696c65436da7fe8d",
+      "reviewerId": "68c30d56cab06b829d926dad",
+      "proposalTitle": "OYA BusRide: ADA Transit Tickets, Manifest & Welfare System",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.743,
+      "rex": 0.472,
+      "reliability": 0.472,
+      "effectiveWeight": 0.944,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b4dc696c65436da7fe77",
+      "reviewerId": "68c30d56cab06b829d926dad",
+      "proposalTitle": "EUR Stablecoin on Cardano - Fiat Backed and MiCA Compliant",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.743,
+      "rex": 0.472,
+      "reliability": 0.472,
+      "effectiveWeight": 0.944,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b4ec696c65436da7fe91",
+      "reviewerId": "68c30d56cab06b829d926dad",
+      "proposalTitle": "CADRIA.ORG Verifying AI by Human Digital Representatives",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.743,
+      "rex": 0.472,
+      "reliability": 0.472,
+      "effectiveWeight": 0.944,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b4ec696c65436da7fe93",
+      "reviewerId": "68c30d56cab06b829d926dad",
+      "proposalTitle": "Rainforest Alliance: Blockchain Traceability Pilot",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.743,
+      "rex": 0.472,
+      "reliability": 0.472,
+      "effectiveWeight": 0.944,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae579",
+      "reviewerId": "68adda53140b47badeb83d08",
+      "proposalTitle": "Revolut Tokeo Mercuryo – Onbaording via 60M Revolut Users",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.6
+      },
+      "rProfilePrior": 0.354,
+      "rex": 0.461,
+      "reliability": 0.461,
+      "effectiveWeight": 0.922,
+      "qualityScore": 0.861,
+      "originalScores": {
+        "budget": 2,
+        "feasibility": 2,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 3
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae577",
+      "reviewerId": "68adda53140b47badeb83d08",
+      "proposalTitle": "ADANSIE ASSET MANAGEMENT SYSTEM (Adansie= Evidence in Twi)",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.354,
+      "rex": 0.441,
+      "reliability": 0.442,
+      "effectiveWeight": 0.883,
+      "qualityScore": 0.639,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 1,
+        "impact": 1,
+        "innovation": 1,
+        "relevance": 1,
+        "team": 0
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae576",
+      "reviewerId": "68adda53140b47badeb83d08",
+      "proposalTitle": "CADRIA.ORG Verifying AI by Human Digital Representatives",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.354,
+      "rex": 0.441,
+      "reliability": 0.442,
+      "effectiveWeight": 0.883,
+      "qualityScore": null,
+      "originalScores": {},
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae57b",
+      "reviewerId": "68adda53140b47badeb83d08",
+      "proposalTitle": "Reviving IbileCoin ($BLC): A Pan-African DeFi Hub on Cardano",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.354,
+      "rex": 0.441,
+      "reliability": 0.442,
+      "effectiveWeight": 0.883,
+      "qualityScore": 0.563,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": -1,
+        "impact": 2,
+        "innovation": 0,
+        "relevance": 2,
+        "team": -2
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68b95b23c27f28bcb45ae578",
+      "reviewerId": "68adda53140b47badeb83d08",
+      "proposalTitle": "Bridge between Cardano, Polkadot, Ethereum and its L2s ",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.5,
+        "confidence": 0,
+        "themeMatch": 1,
+        "total": 0.45
+      },
+      "rProfilePrior": 0.354,
+      "rex": 0.399,
+      "reliability": 0.4,
+      "effectiveWeight": 0.801,
+      "qualityScore": 0.696,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 0,
+        "impact": 2,
+        "innovation": 1,
+        "relevance": 0,
+        "team": 3
+      },
+      "selfExpertiseLevel": 1
+    },
+    {
+      "reviewId": "68c2db5f696c65436da7edae",
+      "reviewerId": "68c2d4b5cab06b829d926996",
+      "proposalTitle": "Enterprise-grade Verifiable Database,300x cheaper, 99%faster",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.2,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.525
+      },
+      "rProfilePrior": 0.24,
+      "rex": 0.355,
+      "reliability": 0.359,
+      "effectiveWeight": 0.718,
+      "qualityScore": 0.945,
+      "originalScores": {
+        "budget": 3,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 3
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c2db5f696c65436da7edb0",
+      "reviewerId": "68c2d4b5cab06b829d926996",
+      "proposalTitle": "Open Sourcing Tempo.Vote for Cardano Governance",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.2,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.525
+      },
+      "rProfilePrior": 0.24,
+      "rex": 0.355,
+      "reliability": 0.359,
+      "effectiveWeight": 0.718,
+      "qualityScore": 0.945,
+      "originalScores": {
+        "budget": 2,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 2,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c2db5f696c65436da7edb2",
+      "reviewerId": "68c2d4b5cab06b829d926996",
+      "proposalTitle": "Masumi AI Agent Network 2.0 by Serviceplan Group  ",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.475
+      },
+      "rProfilePrior": 0.24,
+      "rex": 0.338,
+      "reliability": 0.343,
+      "effectiveWeight": 0.686,
+      "qualityScore": 0.945,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c3e55a696c65436da80e95",
+      "reviewerId": "68c3e1b9cab06b829d928059",
+      "proposalTitle": "CADRIA.ORG Verifying AI by Human Digital Representatives",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.45
+      },
+      "rProfilePrior": 0.203,
+      "rex": 0.302,
+      "reliability": 0.312,
+      "effectiveWeight": 0.624,
+      "qualityScore": 0.666,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": 0,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 0
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c3e55a696c65436da80e99",
+      "reviewerId": "68c3e1b9cab06b829d928059",
+      "proposalTitle": "OYA BusRide: ADA Transit Tickets, Manifest & Welfare System",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.45
+      },
+      "rProfilePrior": 0.203,
+      "rex": 0.302,
+      "reliability": 0.312,
+      "effectiveWeight": 0.624,
+      "qualityScore": 0.75,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 2,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 0
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c2db5f696c65436da7edb4",
+      "reviewerId": "68c2d4b5cab06b829d926996",
+      "proposalTitle": "High-Yield RWA on Cardano: Tokenized U.S. Real Estate",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.375
+      },
+      "rProfilePrior": 0.24,
+      "rex": 0.3,
+      "reliability": 0.31,
+      "effectiveWeight": 0.62,
+      "qualityScore": 0.972,
+      "originalScores": {
+        "budget": 2,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c2db5f696c65436da7edb6",
+      "reviewerId": "68c2d4b5cab06b829d926996",
+      "proposalTitle": "Ascent Rivals - Onboarding Next Million Users",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.375
+      },
+      "rProfilePrior": 0.24,
+      "rex": 0.3,
+      "reliability": 0.31,
+      "effectiveWeight": 0.62,
+      "qualityScore": 0.861,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 2,
+        "impact": 3,
+        "innovation": 1,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c2db5f696c65436da7edb8",
+      "reviewerId": "68c2d4b5cab06b829d926996",
+      "proposalTitle": "Real World Adoption: Cardano Payments in Vending Machines",
+      "expertise": {
+        "self": 0.625,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 0,
+        "total": 0.375
+      },
+      "rProfilePrior": 0.24,
+      "rex": 0.3,
+      "reliability": 0.31,
+      "effectiveWeight": 0.62,
+      "qualityScore": 0.861,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 2,
+        "relevance": 3,
+        "team": 2
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c3e55a696c65436da80e93",
+      "reviewerId": "68c3e1b9cab06b829d928059",
+      "proposalTitle": "Rainforest Alliance: Blockchain Traceability Pilot",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.4
+      },
+      "rProfilePrior": 0.203,
+      "rex": 0.285,
+      "reliability": 0.297,
+      "effectiveWeight": 0.595,
+      "qualityScore": 0.777,
+      "originalScores": {
+        "budget": 2,
+        "feasibility": 2,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 0
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3e55a696c65436da80e97",
+      "reviewerId": "68c3e1b9cab06b829d928059",
+      "proposalTitle": "High-Yield RWA on Cardano: Tokenized U.S. Real Estate",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 1,
+        "total": 0.4
+      },
+      "rProfilePrior": 0.203,
+      "rex": 0.285,
+      "reliability": 0.297,
+      "effectiveWeight": 0.595,
+      "qualityScore": 0.694,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": 1,
+        "impact": 2,
+        "innovation": 2,
+        "relevance": 2,
+        "team": 0
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b424696c65436da7fae2",
+      "reviewerId": "68c33a8ccab06b829d92773d",
+      "proposalTitle": "Cardano Corporate PoC Lab - Japan (powered by Antler Ibex)",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.2,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.111,
+      "rex": 0.247,
+      "reliability": 0.267,
+      "effectiveWeight": 0.533,
+      "qualityScore": 0.859,
+      "originalScores": {
+        "budget": 3,
+        "feasibility": 0,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 2,
+        "team": 2
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c3b424696c65436da7fae6",
+      "reviewerId": "68c33a8ccab06b829d92773d",
+      "proposalTitle": "CADRIA.ORG Verifying AI by Human Digital Representatives",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.2,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.111,
+      "rex": 0.247,
+      "reliability": 0.267,
+      "effectiveWeight": 0.533,
+      "qualityScore": 0.737,
+      "originalScores": {
+        "budget": -3,
+        "feasibility": 3,
+        "impact": 0,
+        "innovation": 3,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c3b424696c65436da7fae8",
+      "reviewerId": "68c33a8ccab06b829d92773d",
+      "proposalTitle": "Rainforest Alliance: Blockchain Traceability Pilot",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.2,
+        "confidence": 1,
+        "themeMatch": 1,
+        "total": 0.55
+      },
+      "rProfilePrior": 0.111,
+      "rex": 0.247,
+      "reliability": 0.267,
+      "effectiveWeight": 0.533,
+      "qualityScore": 0.887,
+      "originalScores": {
+        "budget": 3,
+        "feasibility": 0,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 2,
+        "team": 3
+      },
+      "selfExpertiseLevel": 5
+    },
+    {
+      "reviewId": "68c3e55a696c65436da80e9b",
+      "reviewerId": "68c3e1b9cab06b829d928059",
+      "proposalTitle": "Cardano Institutional UX Stack: Compliance & BTC-Ready DeFi",
+      "expertise": {
+        "self": 0.5,
+        "adminValidation": 0.2,
+        "confidence": 0.5,
+        "themeMatch": 0,
+        "total": 0.3
+      },
+      "rProfilePrior": 0.203,
+      "rex": 0.247,
+      "reliability": 0.266,
+      "effectiveWeight": 0.533,
+      "qualityScore": 0.666,
+      "originalScores": {
+        "budget": 1,
+        "feasibility": 1,
+        "impact": 1,
+        "innovation": 2,
+        "relevance": 1,
+        "team": 0
+      },
+      "selfExpertiseLevel": 3
+    },
+    {
+      "reviewId": "68c3b424696c65436da7fae0",
+      "reviewerId": "68c33a8ccab06b829d92773d",
+      "proposalTitle": "EUR Stablecoin on Cardano - Fiat Backed and MiCA Compliant",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.5
+      },
+      "rProfilePrior": 0.111,
+      "rex": 0.236,
+      "reliability": 0.258,
+      "effectiveWeight": 0.516,
+      "qualityScore": 0.831,
+      "originalScores": {
+        "budget": 3,
+        "feasibility": 0,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 2,
+        "team": 1
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c3b424696c65436da7fae4",
+      "reviewerId": "68c33a8ccab06b829d92773d",
+      "proposalTitle": "High-Yield RWA on Cardano: Tokenized U.S. Real Estate",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.5
+      },
+      "rProfilePrior": 0.111,
+      "rex": 0.236,
+      "reliability": 0.258,
+      "effectiveWeight": 0.516,
+      "qualityScore": 0.826,
+      "originalScores": {
+        "budget": -2,
+        "feasibility": 3,
+        "impact": 3,
+        "innovation": 2,
+        "relevance": 3,
+        "team": 3
+      },
+      "selfExpertiseLevel": 4
+    },
+    {
+      "reviewId": "68c3b424696c65436da7faea",
+      "reviewerId": "68c33a8ccab06b829d92773d",
+      "proposalTitle": "Scaling Cardano Adoption via K-12 Financial EdTech Platform",
+      "expertise": {
+        "self": 0.75,
+        "adminValidation": 0.2,
+        "confidence": 0.75,
+        "themeMatch": 1,
+        "total": 0.5
+      },
+      "rProfilePrior": 0.111,
+      "rex": 0.236,
+      "reliability": 0.258,
+      "effectiveWeight": 0.516,
+      "qualityScore": 0.831,
+      "originalScores": {
+        "budget": 0,
+        "feasibility": 1,
+        "impact": 3,
+        "innovation": 3,
+        "relevance": 2,
+        "team": 3
+      },
+      "selfExpertiseLevel": 4
+    }
+  ]
+}
