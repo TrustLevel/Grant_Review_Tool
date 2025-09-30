@@ -28,7 +28,7 @@ The REX system fundamentally changes this by asking: **"How much should we trust
 
 Instead of equal weighting, REX calculates a dynamic trust score for each review based on two key factors:
 
-**Reputation (R)**: How reliable has this reviewer been historically?
+**Reputation (R)**: How reliable is this reviewer?
 **Expertise (Ex)**: How qualified are they for this specific proposal?
 
 
@@ -760,9 +760,9 @@ The REX system is built on rigorous mathematical principles:
 - **Phase 3**: O(p×r_p) where p = proposals, r_p = reviews per proposal
 
 ### Scalability
-- Designed for 10-1000 reviewers
-- Handles 100-10000 reviews efficiently
-- Supports 10-1000 proposals per evaluation round
+- Designed for 10-10000 reviewers
+- Handles 100-100000 reviews efficiently
+- Supports 10-10000 proposals per evaluation round
 
 ## Integration Benefits
 

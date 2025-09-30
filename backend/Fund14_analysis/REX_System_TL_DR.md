@@ -18,7 +18,7 @@ The **REX (Reputation-Expertise) System** replaces simple averaging with intelli
 2. **Flag Reputation**: How accurately do they identify problematic proposals?
    - Formula: `Precision × (1-e^(-flags/3))`
 
-3. **Miss Reputation**: Do they catch consensus low-quality proposals (≥60% flagged)?
+3. **Miss Reputation**: Do they catch consensus low-quality proposals (≥50% flagged)?
    - Formula: `1 - missRate`
 
 4. **Addition for next version: Historical Accuracy**: How good was the reviewer in the past?
