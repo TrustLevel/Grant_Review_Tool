@@ -35,44 +35,83 @@ function arrayToCSV(data, headers) {
   return [csvHeaders, ...csvRows].join('\n');
 }
 
-// Calculate weighted score for a proposal
+// Calculate weighted score for a proposal with low-quality flag handling
 async function calculateWeightedScore(proposalId) {
   const reviews = await Review.find({
     proposalId: proposalId,
-    status: 'submitted'
+    status: { $in: ['submitted', 'completed'] },
+    isDemo: { $ne: true } // Exclude demo reviews from scoring
   }).populate('reviewerId', 'username');
-  
+
   if (reviews.length === 0) {
     return {
       finalScore: null,
       reviewCount: 0,
       weightedAverage: null,
-      unweightedAverage: null
+      unweightedAverage: null,
+      lowQualityFlags: 0,
+      confirmedFlags: 0,
+      flaggedReviews: [],
+      disqualified: false,
+      disqualificationReason: null
     };
   }
-  
+
   const categories = ['relevance', 'innovation', 'impact', 'feasibility', 'team', 'budget'];
   let totalWeightedScore = 0;
   let totalWeight = 0;
   let totalUnweightedScore = 0;
-  
+  let lowQualityFlags = 0;
+  let confirmedFlags = 0;
+  let flaggedReviews = [];
+
   for (const review of reviews) {
-    // Get peer-reviews for this review
+    // Check if this is an early-exit review (flagged as low-quality)
+    const isEarlyExit = review.reviewerAssessment?.earlyExit || false;
+    const isLowQuality = review.reviewerAssessment?.temperatureCheck === 'low-quality';
+
+    if (isEarlyExit || isLowQuality) {
+      lowQualityFlags++;
+
+      // Check if this flag is confirmed by peer-reviews
+      const peerReviewConfirmations = await PeerReview.find({
+        reviewId: review._id,
+        status: 'completed',
+        assessmentType: 'low-quality-agreement',
+        'lowQualityAgreement.agree': true
+      });
+
+      if (peerReviewConfirmations.length > 0) {
+        confirmedFlags++;
+        flaggedReviews.push({
+          reviewId: review._id.toString(),
+          reviewer: review.reviewerId?.username || 'Unknown',
+          flagReason: review.reviewerAssessment?.qualityIssues?.join(', ') || 'Low quality',
+          confirmations: peerReviewConfirmations.length
+        });
+
+        // Apply score reduction for confirmed low-quality flag
+        // Each confirmed flag reduces the effective score by applying a penalty
+        continue; // Skip this review from normal score calculation
+      }
+    }
+
+    // Get peer-reviews for normal scoring (only for non-flagged reviews)
     const peerReviews = await PeerReview.find({
       reviewId: review._id,
       status: 'completed',
       assessmentType: 'normal'
     });
-    
+
     // Calculate review weight based on peer-review quality
     let reviewWeight = 1.0; // Default weight if no peer-reviews
-    
+
     if (peerReviews.length > 0) {
       const avgPeerScore = peerReviews.reduce((sum, pr) => sum + (pr.overallScore || 0), 0) / peerReviews.length;
       reviewWeight = Math.max(0.1, (avgPeerScore + 9) / 18); // Normalize to 0.1-1.0
     }
-    
-    // Add scores for each category
+
+    // Add scores for each category (only for non-flagged reviews)
     categories.forEach(category => {
       const score = review.scores[category];
       if (typeof score === 'number') {
@@ -82,15 +121,57 @@ async function calculateWeightedScore(proposalId) {
       }
     });
   }
-  
-  const weightedAverage = totalWeight > 0 ? totalWeightedScore / totalWeight : 0;
-  const unweightedAverage = (reviews.length * categories.length) > 0 ? totalUnweightedScore / (reviews.length * categories.length) : 0;
-  
+
+  // Check disqualification rule: >50% confirmed flags
+  const flagRate = reviews.length > 0 ? confirmedFlags / reviews.length : 0;
+  const disqualified = flagRate > 0.5;
+
+  let finalScore = null;
+  let weightedAverage = null;
+  let unweightedAverage = null;
+
+  if (disqualified) {
+    // Proposal is disqualified due to too many confirmed low-quality flags
+    return {
+      finalScore: null,
+      reviewCount: reviews.length,
+      weightedAverage: null,
+      unweightedAverage: null,
+      lowQualityFlags,
+      confirmedFlags,
+      flaggedReviews,
+      disqualified: true,
+      disqualificationReason: `>50% of reviews flagged as low-quality (${confirmedFlags}/${reviews.length})`
+    };
+  }
+
+  // Calculate scores for non-disqualified proposals
+  if (totalWeight > 0) {
+    weightedAverage = totalWeightedScore / totalWeight;
+
+    // Apply score reduction for each confirmed flag
+    const flagPenalty = confirmedFlags * 0.5; // Each confirmed flag reduces score by 0.5
+    weightedAverage = Math.max(0, weightedAverage - flagPenalty);
+
+    finalScore = Math.round(weightedAverage * 100) / 100;
+    weightedAverage = Math.round(weightedAverage * 100) / 100;
+  }
+
+  if (reviews.length * categories.length > 0) {
+    unweightedAverage = totalUnweightedScore / (reviews.length * categories.length);
+    unweightedAverage = Math.round(unweightedAverage * 100) / 100;
+  }
+
   return {
-    finalScore: Math.round(weightedAverage * 100) / 100,
+    finalScore,
     reviewCount: reviews.length,
-    weightedAverage: Math.round(weightedAverage * 100) / 100,
-    unweightedAverage: Math.round(unweightedAverage * 100) / 100
+    weightedAverage,
+    unweightedAverage,
+    lowQualityFlags,
+    confirmedFlags,
+    flaggedReviews,
+    disqualified: false,
+    disqualificationReason: null
   };
 }
 
@@ -121,6 +202,11 @@ async function exportProposalsWithScores() {
       weightedAverage: scoreData.weightedAverage,
       unweightedAverage: scoreData.unweightedAverage,
       reviewCount: scoreData.reviewCount,
+      lowQualityFlags: scoreData.lowQualityFlags,
+      confirmedFlags: scoreData.confirmedFlags,
+      disqualified: scoreData.disqualified,
+      disqualificationReason: scoreData.disqualificationReason || '',
+      flaggedReviews: scoreData.flaggedReviews?.map(fr => `${fr.reviewer}(${fr.confirmations})`).join(';') || '',
       tags: proposal.metadata?.tags?.join(';') || '',
       problemStatement: proposal.content?.problemStatement || '',
       solutionSummary: proposal.content?.solutionSummary || ''
@@ -134,7 +220,8 @@ async function exportDetailedReviews() {
   console.log('🔍 Fetching detailed review data...');
   
   const reviews = await Review.find({
-    status: 'submitted'
+    status: { $in: ['submitted', 'completed'] },
+    isDemo: { $ne: true } // Exclude demo reviews from detailed export
   })
   .populate('proposalId', 'proposalTitle budget')
   .populate('reviewerId', 'username')
@@ -270,6 +357,7 @@ async function main() {
     const proposalCSV = arrayToCSV(proposalData, [
       'proposalId', 'proposalTitle', 'budget', 'currency', 'status',
       'finalScore', 'weightedAverage', 'unweightedAverage', 'reviewCount',
+      'lowQualityFlags', 'confirmedFlags', 'disqualified', 'disqualificationReason', 'flaggedReviews',
       'tags', 'problemStatement', 'solutionSummary'
     ]);
     

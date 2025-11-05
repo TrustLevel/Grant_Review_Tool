@@ -4,9 +4,9 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const User = require('../src/models/User');
-const Review = require('../src/models/Review');
-const PeerReview = require('../src/models/PeerReview');
+const User = require('../../backend/src/models/User');
+const Review = require('../../backend/src/models/Review');
+const PeerReview = require('../../backend/src/models/PeerReview');
 
 async function calculatePeerReputation() {
   try {
