@@ -1,14 +1,14 @@
-# REX System: TL;DR
+# Proposal Evaluation System: TL;DR
 
 ## What is REX?
-The **REX (Reputation-Expertise) System** replaces simple averaging with intelligent weighting based on reviewer track record and expertise. Instead of treating all opinions equally, REX asks: "How much should we trust each reviewer's opinion?"
+Our proposal evalution system replaces simple averaging with intelligent weighting based on reviewer track record and expertise. Instead of treating all opinions equally, the systems asks: "How much should we trust each reviewer's opinion?"
 
-## The Problem REX Solves
+## The Problem We Solves
 **Traditional systems**: Expert (6/10) + Novice (9/10) + Unengaged (8/10) = 7.7/10 average
 
-The REX system fundamentally changes this by asking: **"How much should we trust each reviewer's opinion?"**
+The system fundamentally changes this by asking: **"How much should we trust each reviewer's opinion?"**
 
-Instead of equal weighting, REX calculates a dynamic trust score for each review based on two key factors:
+Instead of equal weighting, we calculates a dynamic trust score for each review based on two key factors:
 
 **Reputation (R)**: How reliable is this reviewer?
 **Expertise (Ex)**: How qualified are they for this specific proposal?
@@ -86,4 +86,4 @@ REX = √(R_profile × E_total)
 ✅ **Provides uncertainty quantification**
 ✅ **Scales efficiently with data volume**
 
-**Bottom Line**: REX transforms subjective, variable-quality reviews into objective, mathematically-grounded proposal rankings while maintaining fairness and transparency.
+**Bottom Line**: We transforms subjective, variable-quality reviews into objective, mathematically-grounded proposal rankings while maintaining fairness and transparency.
