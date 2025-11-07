@@ -1,10 +1,10 @@
-# REX System: Technical Documentation - Alpha Version
+# Proposal Evaluation System: Technical Documentation - Alpha Version
 
 ## Executive Summary
 
-The **REX (Reputation-Expertise) System** is a sophisticated framework that transforms individual reviews into weighted, reliable proposal rankings through Bayesian modeling.
+Our proposal evalution method is a sophisticated framework that transforms individual reviews into weighted, reliable proposal rankings through Bayesian modeling.
 
-Unlike traditional averaging systems that treat all opinions equally, REX dynamically weighting reviewer contributions based on demonstrated expertise and historical performance.
+Unlike traditional averaging systems that treat all opinions equally, we dynamically weighting reviewer contributions based on demonstrated expertise and historical performance.
 
 ---
 
@@ -22,7 +22,7 @@ Most proposal evaluation systems simply average reviewer scores, treating all op
 
 The novice's overenthusiastic rating and the unengaged reviewer's superficial assessment carry the same weight as the expert's informed judgment. The result misleads decision-makers about true proposal quality.
 
-## The REX Innovation: Reputation-Expertise Weighting
+## The REX Innovation: Reputation-Expertise (REX) Weighting
 
 The REX system fundamentally changes this by asking: **"How much should we trust each reviewer's opinion?"**
 
