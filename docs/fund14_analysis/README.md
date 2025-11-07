@@ -1,10 +1,12 @@
-# Fund14 REX System Analysis ✅ MVP COMPLETE
+# Fund14 - Methodology Analysis ✅ MVP COMPLETE
 
-**Production-Ready REX Implementation for Fund14: Reputation → Review-Level REX → Proposal Aggregation**
+**Production-Ready Proposal Evaluation System Implementation for Fund14: Reputation → Review-Level REX → Proposal Aggregation**
+
+REX = Reputation and Expertise Score
 
 ## 🎯 Goals - ALL ACHIEVED
 
-**Complete REX System** successfully implemented and tested with real Fund14 data:
+**Complete Proposal Evaluation System** successfully implemented and tested with real Fund14 data:
 
 ### **Phase 1: Reputation System** ✅
 1. **Peer Reputation**: ✅ Peer-Assessment Scores [-3,+3] → [0,1] with Bayesian Shrinkage (Prior 0.5)
@@ -40,7 +42,7 @@
 
 **0 reviewers** excluded - Miss Component enables evaluation of all active reviewers.
 
-### 🏅 Review-Level REX: `results/rex_scores_per_review.json`
+### 🏅 Review-Level REX Scores: `results/rex_scores_per_review.json`
 
 **105 reviews** with calculated REX scores:
 - **REX Range**: 0.236 - 0.917
@@ -76,7 +78,7 @@ node Fund14_analysis/3_miss_penalty_analysis.js
 node Fund14_analysis/4_reputation_calculator.js
 node Fund14_analysis/5_expertise_validation.js
 
-# Phase 2: Review-Level REX
+# Phase 2: Review-Level REX Scores
 node Fund14_analysis/6_review_rex_calculator.js
 
 # Phase 3: Proposal Aggregation
@@ -114,7 +116,7 @@ node Fund14_analysis/7_proposal_aggregation.js
 
 ## 🚀 Status: MVP PRODUCTION READY
 
-The **complete REX System** is validated, optimized and ready for deployment:
+The **complete proposal evaluation method** is validated, optimized and ready for deployment:
 
 ### **✅ Phase 1: Reputation System**
 - **Miss Component Integration**: Independent 3rd component for comprehensive evaluation
@@ -122,7 +124,7 @@ The **complete REX System** is validated, optimized and ready for deployment:
 - **Unified Data Structure**: All data in `reviewer_data.json` for better maintainability
 - **Mathematics validated**: +38% improvement for good reviewers, -38% for poor ones
 
-### **✅ Phase 2: Review-Level REX**
+### **✅ Phase 2: Review-Level REX Scores**
 - **Expertise optimized**: 50% Admin-Validation (instead of 40%) for more objective evaluation
 - **Separate Confidence**: Pre-review self-assessment separated from onboarding expertise
 - **REX Performance**: +9.7% average improvement, range 0.236-0.917
