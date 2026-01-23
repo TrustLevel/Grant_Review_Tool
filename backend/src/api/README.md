@@ -1,8 +1,7 @@
 # Catalyst API Documentation
 
 - Last Updated: 2026-01-23
-
-This document maps the official Catalyst proposal structure to our internal Proposal model and compares it with what's available through the Catalyst Explorer API.
+- This document maps the official Catalyst proposal structure to our internal Proposal model and compares it with what's available through the Catalyst Explorer API.
 ---
 
 ## 1a. Official Catalyst Proposal Structure
@@ -277,8 +276,8 @@ To be implemented - will show:
 | Feature from 1c | Explorer API Field | Our Model Field | API Status |
 |-----------------|-------------------|-----------------|------------|
 | **AI Summary** |
-| AI Summary Text | ❌ Not in API | `aiSummary` | ✅ Available (via TrustLevel) |
-| Generation Timestamp | ❌ Not in API | `aiSummaryGeneratedAt` | ✅ Available (vie TrustLevel) |
+| AI Summary Text | | `aiSummary` | ✅ Available (via TrustLevel) |
+| Generation Timestamp | | `aiSummaryGeneratedAt` | ✅ Available (vie TrustLevel) |
 | **Proposer/Team Statistics (TBD)** |
 | Submitted proposals (overall) | ❌ Not in API | N/A | ❌ Missing |
 | Submitted proposals (this fund) | ❌ Not in API | N/A | ❌ Missing |
