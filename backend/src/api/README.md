@@ -71,7 +71,7 @@ Array of milestones, each containing:
 ```
 
 #### Team (for each team member)
-````
+```
 - Name
 - Position
 - Links
@@ -110,10 +110,8 @@ Data NOT part of official Catalyst platform, but implemented as custom tool feat
 ### AI Summary (Implementation already done by TrustLevel)
 
 ```
-{
-  aiSummary: String,              // Generated summary text
-  aiSummaryGeneratedAt: Date      // Timestamp when generated
-}
+- aiSummary: String,              // Generated summary text
+- aiSummaryGeneratedAt: Date      // Timestamp when generated
 ```
 
 ---
